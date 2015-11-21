@@ -1,9 +1,11 @@
 " Vim Color File
 " Name:       onedark.vim
-" Version:    1.1
+" Version:    1.2
 " Maintainer: https://github.com/joshdick/onedark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
+
+" A companion [vim-airline](https://github.com/bling/vim-airline) theme is available at: https://github.com/joshdick/airline-onedark.vim
 
 " +----------------+
 " | Initialization |
