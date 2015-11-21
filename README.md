@@ -19,9 +19,19 @@ Place `onedark.vim` in your `~/.vim/colors/` directory either manually or by usi
 
 ## Options
 
-* `g:onedark_termcolors`: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native colors. A 16-color palette for this theme is not available yet.
+* `g:onedark_termcolors`: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native colors (see below).
 
 * `g:onedark_terminal_italics`: Set to `1` if your terminal emulator supports italics; `0` otherwise (the default).
+
+## 16-Color Mode
+
+Setting `g:onedark_termcolors=16` will cause the theme to use your terminal emulator's native 16 colors.
+
+This theme looks best in 16-color mode **when using its custom 16-color palette**. If you don't use the custom 16-color palette in your terminal emulator while 16-color mode is enabled, the theme's colors will not display correctly.
+
+The canonical version of the 16-color palette is an [iTerm2](https://iterm2.com) color scheme called `One Dark.itermcolors`, which lives in the root of this repository.
+
+You should be able to easily convert the iTerm2 color scheme for use with your terminal emulator of choice by using a tool like [termcolors](https://github.com/stayradiated/termcolors).
 
 ## vim-airline Theme
 
