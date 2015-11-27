@@ -1,6 +1,6 @@
 " Vim Color File
 " Name:       onedark.vim
-" Version:    1.21
+" Version:    1.3
 " Maintainer: https://github.com/joshdick/onedark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
@@ -96,14 +96,14 @@ let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
 " +---------------------------------------------------------+
 
 call s:h("Comment", { "fg": s:comment_grey, "gui": "italic", "cterm": "italic" }) " any comment
-call s:h("Constant", {}) " any constant
+call s:h("Constant", { "fg": s:cyan }) " any constant
 call s:h("String", { "fg": s:green }) " a string constant: "this is a string"
 call s:h("Character", { "fg": s:green }) " a character constant: 'c', '\n'
 call s:h("Number", { "fg": s:dark_yellow }) " a number constant: 234, 0xff
 call s:h("Boolean", { "fg": s:dark_yellow }) " a boolean constant: TRUE, false
 call s:h("Float", { "fg": s:dark_yellow }) " a floating point constant: 2.3e10
 call s:h("Identifier", { "fg": s:red }) " any variable name
-call s:h("Function", {}) " function name (also: methods for classes)
+call s:h("Function", { "fg": s:blue }) " function name (also: methods for classes)
 call s:h("Statement", { "fg": s:purple }) " any statement
 call s:h("Conditional", { "fg": s:purple }) " if, then, else, endif, switch, etc.
 call s:h("Repeat", { "fg": s:purple }) " for, do, while, etc.
@@ -112,11 +112,11 @@ call s:h("Operator", {}) " sizeof", "+", "*", etc.
 call s:h("Keyword", { "fg": s:red }) " any other keyword
 call s:h("Exception", { "fg": s:purple }) " try, catch, throw
 call s:h("PreProc", { "fg": s:yellow }) " generic Preprocessor
-call s:h("Include", {}) " preprocessor #include
-call s:h("Define", {}) " preprocessor #define
+call s:h("Include", { "fg": s:blue }) " preprocessor #include
+call s:h("Define", { "fg": s:purple }) " preprocessor #define
 call s:h("Macro", {}) " same as Define
 call s:h("PreCondit", {}) " preprocessor #if, #else, #endif, etc.
-call s:h("Type", {}) " int, long, char, etc.
+call s:h("Type", { "fg": s:yellow }) " int, long, char, etc.
 call s:h("StorageClass", {}) " static, register, volatile, etc.
 call s:h("Structure", {}) " struct, union, enum, etc.
 call s:h("Typedef", {}) " A typedef
@@ -180,6 +180,18 @@ call s:h("Visual", { "fg": s:visual_black, "bg": s:visual_grey }) " Visual mode 
 call s:h("VisualNOS", { "bg": s:visual_grey }) " Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
 call s:h("WarningMsg", { "fg": s:red }) " warning messages
 call s:h("WildMenu", {}) " current match in 'wildmenu' completion
+
+" +--------------------------------+
+" | Language-Specific Highlighting |
+" +--------------------------------+
+
+call s:h("javaScriptBraces", { "fg": s:white })
+call s:h("javaScriptIdentifier", { "fg": s:purple })
+call s:h("javaScriptNull", { "fg": s:dark_yellow })
+call s:h("javaScriptNumber", { "fg": s:dark_yellow })
+call s:h("rubyBlockParameterList", { "fg": s:red })
+call s:h("rubyInterpolation", { "fg": s:green })
+call s:h("rubyInterpolationDelimiter", { "fg": s:red })
 
 " +---------------------+
 " | Plugin Highlighting |
