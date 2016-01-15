@@ -1,6 +1,6 @@
 " Vim Color File
 " Name:       onedark.vim
-" Version:    1.41
+" Version:    1.42
 " Maintainer: https://github.com/joshdick/onedark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
@@ -60,23 +60,23 @@ endfunction
 " | Color Variables |
 " +-----------------+
 
-let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1"} " Alternate cterm: 168
-"let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9"}
+let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" } " Alternate cterm: 168
+"let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9" }
 
-let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2"}
-"let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10"}
+let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2" }
+"let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10" }
 
-let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3"}
-let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11"}
+let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" }
+let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
 
-let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4"} " Alternate cterm: 75
-"let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12"}
+let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" } " Alternate cterm: 75
+"let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12" }
 
-let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5"} " Alternate cterm: 176
-"let s:dark_purple = { "gui": "#8d73de", "cterm": "55", "cterm16": "13"}
+let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5" } " Alternate cterm: 176
+"let s:dark_purple = { "gui": "#8d73de", "cterm": "55", "cterm16": "13" }
 
-let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6"} " Alternate cterm: 73
-"let s:dark_cyan = { "gui": "#53d3d2", "cterm": "110", "cterm16": "14"}
+let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" } " Alternate cterm: 73
+"let s:dark_cyan = { "gui": "#53d3d2", "cterm": "110", "cterm16": "14" }
 
 let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
 
@@ -154,7 +154,7 @@ call s:h("SignColumn", {}) " column where signs are displayed
 call s:h("IncSearch", { "fg": s:visual_black, "bg": s:visual_grey }) " 'incsearch' highlighting; also used for the text replaced with ":s///c"
 call s:h("LineNr", { "fg": s:gutter_fg_grey, "bg": s:gutter_bg_grey }) " Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 call s:h("CursorLineNr", {}) " Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-call s:h("MatchParen", {}) " The character under the cursor or just before it, if it is a paired bracket, and its match.
+call s:h("MatchParen", { "fg": s:blue, "gui": "underline" }) " The character under the cursor or just before it, if it is a paired bracket, and its match.
 call s:h("ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
 call s:h("MoreMsg", {}) " more-prompt
 call s:h("NonText", { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
