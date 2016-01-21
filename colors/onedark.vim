@@ -1,6 +1,6 @@
 " Vim Color File
 " Name:       onedark.vim
-" Version:    1.42
+" Version:    1.43
 " Maintainer: https://github.com/joshdick/onedark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
@@ -28,7 +28,7 @@ if !exists("g:onedark_termcolors")
   let g:onedark_termcolors = 256
 endif
 
-" Mot all terminals support italics properly. If yours does, opt-in.
+" Not all terminals support italics properly. If yours does, opt-in.
 if !exists("g:onedark_terminal_italics")
   let g:onedark_terminal_italics = 0
 endif
