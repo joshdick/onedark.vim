@@ -205,3 +205,27 @@ call s:h("GitGutterAdd", { "fg": s:green, "bg": s:gutter_bg_grey })
 call s:h("GitGutterDelete", { "fg": s:red, "bg": s:gutter_bg_grey })
 call s:h("GitGutterChange", { "fg": s:yellow, "bg": s:gutter_bg_grey })
 call s:h("GitGutterChangeDelete", { "fg": s:red, "bg": s:gutter_bg_grey })
+
+" +------------------+
+" | Git Highlighting |
+" +------------------+
+
+call s:h("gitcommitComment", {})
+call s:h("gitcommitUnmerged", { "fg": s:green })
+call s:h("gitcommitOnBranch", {})
+call s:h("gitcommitBranch", { "fg": s:purple })
+call s:h("gitcommitDiscardedType", { "fg": s:red })
+call s:h("gitcommitSelectedType", { "fg": s:green })
+call s:h("gitcommitHeader", {})
+call s:h("gitcommitUntrackedFile", { "fg": s:cyan })
+call s:h("gitcommitDiscardedFile", { "fg": s:red })
+call s:h("gitcommitSelectedFile", { "fg": s:green })
+call s:h("gitcommitUnmergedFile", { "fg": s:yellow })
+call s:h("gitcommitFile", {})
+hi link gitcommitNoBranch gitcommitBranch
+hi link gitcommitUntracked gitcommitComment
+hi link gitcommitDiscarded gitcommitComment
+hi link gitcommitSelected  gitcommitComment
+hi link gitcommitDiscardedArrow gitcommitDiscardedFile
+hi link gitcommitSelectedArrow  gitcommitSelectedFile
+hi link gitcommitUnmergedArrow  gitcommitUnmergedFile
