@@ -225,7 +225,7 @@ call s:h("gitcommitFile", {})
 hi link gitcommitNoBranch gitcommitBranch
 hi link gitcommitUntracked gitcommitComment
 hi link gitcommitDiscarded gitcommitComment
-hi link gitcommitSelected  gitcommitComment
+hi link gitcommitSelected gitcommitComment
 hi link gitcommitDiscardedArrow gitcommitDiscardedFile
-hi link gitcommitSelectedArrow  gitcommitSelectedFile
-hi link gitcommitUnmergedArrow  gitcommitUnmergedFile
+hi link gitcommitSelectedArrow gitcommitSelectedFile
+hi link gitcommitUnmergedArrow gitcommitUnmergedFile
