@@ -6,7 +6,7 @@ A dark Vim colorscheme for the GUI and 16/256-color terminals, based on [FlatCol
 
 Preview image taken using:
 
-* [iTerm2](https://iterm2.com/) terminal emulator on Mac OS X
+* [iTerm2 beta](https://iterm2.com/) terminal emulator on Mac OS X
 * 12 pt. [PragmataPro Mono](http://www.fsd.it/fonts/pragmatapro.htm#.VlDa1q6rTOY) font
 * [airline-onedark.vim](https://github.com/joshdick/airline-onedark.vim) theme for [vim-airline](https://github.com/bling/vim-airline)
 
@@ -29,7 +29,7 @@ Setting `g:onedark_termcolors=16` will cause the theme to use your terminal emul
 
 This theme looks best in 16-color mode **when using its custom 16-color palette**. If you don't use the custom 16-color palette in your terminal emulator while 16-color mode is enabled, the theme's colors will not display correctly.
 
-The canonical version of the 16-color palette is an [iTerm2](https://iterm2.com) color scheme called `One Dark.itermcolors`, which lives in the root of this repository.
+The canonical version of the 16-color palette is an [iTerm2](https://iterm2.com) color scheme called `One Dark.itermcolors`, which lives in the root of this repository. This iTerm2 theme will only work on iTerm2 equal or greater than 2.9.* (currently the beta version).
 
 You should be able to easily convert the iTerm2 color scheme for use with your terminal emulator of choice by using a tool like [termcolors](https://github.com/stayradiated/termcolors).
 
