@@ -33,6 +33,20 @@ The canonical version of the 16-color palette is an [iTerm2](https://iterm2.com)
 
 You should be able to easily convert the iTerm2 color scheme for use with your terminal emulator of choice by using a tool like [termcolors](https://github.com/stayradiated/termcolors).
 
+### Neovim
+
+If you're using [Neovim](http://neovim.io) and your terminal supports true colors, you may choose to use Neovim's [true color terminal support](https://github.com/neovim/neovim/pull/2198) **instead of** using this theme's 16-color mode and associated terminal color palette as described above.
+
+This prevents you from needing to use this theme's 16-color terminal palette in order to see proper colors when using this theme in terminal Neovim. (When using this approach, if your terminal's background color doesn't match the theme's background color, you may see a border around Neovim.)
+
+To use Neovim's true color terminal support, simply add the following lines to your `~/.vimrc` (or just add `let $NVIM_TUI_ENABLE_TRUE_COLOR=1` without the `if` statement if you're using Neovim-specific configuration):
+
+```vim
+if has("nvim")
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+```
+
 ## vim-airline Theme
 
 A companion [vim-airline](https://github.com/bling/vim-airline) theme for this theme is available at [joshdick/airline-onedark.vim](https://github.com/joshdick/airline-onedark.vim).
