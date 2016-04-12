@@ -1,6 +1,6 @@
 " Vim Color File
 " Name:       onedark.vim
-" Version:    1.43
+" Version:    1.44
 " Maintainer: https://github.com/joshdick/onedark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
