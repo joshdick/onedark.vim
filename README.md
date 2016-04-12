@@ -19,13 +19,15 @@ Place `onedark.vim` in your `~/.vim/colors/` directory either manually or by usi
 
 ## Options
 
+**Note:** All options should be set **before** the `colorscheme onedark` line in your `~/.vimrc`.
+
 * `g:onedark_termcolors`: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native colors (see below).
 
 * `g:onedark_terminal_italics`: Set to `1` if your terminal emulator supports italics; `0` otherwise (the default).
 
 ## 16-Color Mode
 
-Setting `g:onedark_termcolors=16` will cause the theme to use your terminal emulator's native 16 colors.
+Adding `let g:onedark_termcolors=16` to your `~/.vimrc` will cause the theme to use your terminal emulator's native 16 colors. (Make sure this line appears **before** the `colorscheme onedark` line!)
 
 This theme looks best in 16-color mode **when using its custom 16-color palette**. If you don't use the custom 16-color palette in your terminal emulator while 16-color mode is enabled, the theme's colors will not display correctly.
 
