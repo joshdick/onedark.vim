@@ -1,6 +1,6 @@
 " Vim Color File
 " Name:       onedark.vim
-" Version:    1.44
+" Version:    1.45
 " Maintainer: https://github.com/joshdick/onedark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
@@ -205,6 +205,10 @@ call s:h("GitGutterAdd", { "fg": s:green, "bg": s:gutter_bg_grey })
 call s:h("GitGutterDelete", { "fg": s:red, "bg": s:gutter_bg_grey })
 call s:h("GitGutterChange", { "fg": s:yellow, "bg": s:gutter_bg_grey })
 call s:h("GitGutterChangeDelete", { "fg": s:red, "bg": s:gutter_bg_grey })
+
+" Fugitive
+call s:h("diffAdded", { "fg": s:green })
+call s:h("diffRemoved", { "fg": s:red })
 
 " +------------------+
 " | Git Highlighting |
