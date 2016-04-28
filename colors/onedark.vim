@@ -1,6 +1,6 @@
 " Vim Color File
 " Name:       onedark.vim
-" Version:    1.45
+" Version:    1.46
 " Maintainer: https://github.com/joshdick/onedark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
@@ -61,22 +61,22 @@ endfunction
 " +-----------------+
 
 let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" } " Alternate cterm: 168
-"let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9" }
+let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9" }
 
 let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2" }
-"let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10" }
+let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10" }
 
 let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" }
 let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
 
 let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" } " Alternate cterm: 75
-"let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12" }
+let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12" }
 
 let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5" } " Alternate cterm: 176
-"let s:dark_purple = { "gui": "#8d73de", "cterm": "55", "cterm16": "13" }
+let s:dark_purple = { "gui": "#8d73de", "cterm": "55", "cterm16": "13" }
 
 let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" } " Alternate cterm: 73
-"let s:dark_cyan = { "gui": "#53d3d2", "cterm": "110", "cterm16": "14" }
+let s:dark_cyan = { "gui": "#53d3d2", "cterm": "110", "cterm16": "14" }
 
 let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
 
@@ -90,6 +90,8 @@ let s:cursor_grey =  { "gui": "#2C323B", "cterm": "236", "cterm16": "8" }
 let s:visual_grey = { "gui": "#3E4451", "cterm": "237", "cterm16": "15" }
 let s:special_grey = { "gui": "#383C45", "cterm": "238", "cterm16": "15" }
 let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
+
+let s:default_bg = { "gui": "#282C34", "cterm": "234", "cterm16": "0" }
 
 " +---------------------------------------------------------+
 " | Syntax Groups (descriptions and ordering from `:h w18`) |
@@ -158,7 +160,7 @@ call s:h("MatchParen", { "fg": s:blue, "gui": "underline" }) " The character und
 call s:h("ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
 call s:h("MoreMsg", {}) " more-prompt
 call s:h("NonText", { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-call s:h("Normal", { "fg": s:white, "bg": s:black }) " normal text
+call s:h("Normal", { "fg": s:white, "bg": s:default_bg }) " normal text
 call s:h("Pmenu", {}) " Popup menu: normal item.
 call s:h("PmenuSel", { "bg": s:visual_grey }) " Popup menu: selected item.
 call s:h("PmenuSbar", { "bg": s:visual_grey }) " Popup menu: scrollbar.
@@ -190,8 +192,34 @@ call s:h("javaScriptIdentifier", { "fg": s:purple })
 call s:h("javaScriptNull", { "fg": s:dark_yellow })
 call s:h("javaScriptNumber", { "fg": s:dark_yellow })
 call s:h("rubyBlockParameterList", { "fg": s:red })
-call s:h("rubyInterpolation", { "fg": s:green })
+call s:h("rubyControl", { "fg": s:purple })
+call s:h("rubyInterpolation", { "fg": s:cyan })
 call s:h("rubyInterpolationDelimiter", { "fg": s:red })
+call s:h("rubyClass", { "fg": s:purple})
+call s:h("rubyFunction", { "fg": s:blue})
+call s:h("rubyInterpolationDelimiter", { "fg": s:red})
+call s:h("rubySymbol", { "fg": s:cyan})
+call s:h("rubyConstant", { "fg": s:yellow})
+call s:h("rubyStringDelimiter", { "fg": s:green})
+call s:h("rubyBlockParameter", { "fg": s:red})
+call s:h("rubyInstanceVariable", { "fg": s:red})
+call s:h("rubyInclude", { "fg": s:blue})
+call s:h("rubyIncluderubyGlobalVariable", { "fg": s:red}) " need to check color "
+call s:h("rubyGlobalVariable", { "fg": s:red})
+call s:h("rubyRegexp", { "fg": s:cyan})
+call s:h("rubyRegexpDelimiter", { "fg": s:cyan})
+call s:h("rubyEscape", { "fg": s:red}) " need to check color "
+call s:h("rubyClassVariable", { "fg": s:red}) "need to check color "
+call s:h("rubyOperator", { "fg": s:red}) " need to check color "
+call s:h("rubyException", { "fg": s:red}) " need to check color "
+call s:h("rubyPseudoVariable", { "fg": s:red}) " need to check color "
+call s:h("rubyRailsUserClass", { "fg": s:red}) " need to check color "
+call s:h("rubyRailsARAssociationMethod", { "fg": s:red}) " need to check color "
+call s:h("rubyRailsRenderMethod", { "fg": s:red}) " need to check color "
+call s:h("rubyRailsMethod", { "fg": s:red}) " need to check color "
+call s:h("erubyDelimiter", { "fg": s:red}) " need to check color "
+call s:h("erubyComment", { "fg": s:red}) " need to check color "
+call s:h("erubyRailsMethod", { "fg": s:red}) " need to check color "
 
 " +---------------------+
 " | Plugin Highlighting |
