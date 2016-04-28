@@ -62,22 +62,22 @@ endfunction
 " +-----------------+
 
 let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" } " Alternate cterm: 168
-let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9" }
+"let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9" }
 
 let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2" }
-let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10" }
+"let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10" }
 
 let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" }
-let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
+"let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
 
 let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" } " Alternate cterm: 75
-let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12" }
+"let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12" }
 
 let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5" } " Alternate cterm: 176
-let s:dark_purple = { "gui": "#8d73de", "cterm": "55", "cterm16": "13" }
+"let s:dark_purple = { "gui": "#8d73de", "cterm": "55", "cterm16": "13" }
 
 let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" } " Alternate cterm: 73
-let s:dark_cyan = { "gui": "#53d3d2", "cterm": "110", "cterm16": "14" }
+"let s:dark_cyan = { "gui": "#53d3d2", "cterm": "110", "cterm16": "14" }
 
 let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
 
@@ -205,22 +205,22 @@ call s:h("rubyStringDelimiter", { "fg": s:green})
 call s:h("rubyBlockParameter", { "fg": s:red})
 call s:h("rubyInstanceVariable", { "fg": s:red})
 call s:h("rubyInclude", { "fg": s:blue})
-call s:h("rubyIncluderubyGlobalVariable", { "fg": s:red}) " need to check color "
+call s:h("rubyIncluderubyGlobalVariable", { "fg": s:red})
 call s:h("rubyGlobalVariable", { "fg": s:red})
 call s:h("rubyRegexp", { "fg": s:cyan})
 call s:h("rubyRegexpDelimiter", { "fg": s:cyan})
-call s:h("rubyEscape", { "fg": s:red}) " need to check color "
-call s:h("rubyClassVariable", { "fg": s:red}) "need to check color "
-call s:h("rubyOperator", { "fg": s:red}) " need to check color "
-call s:h("rubyException", { "fg": s:red}) " need to check color "
-call s:h("rubyPseudoVariable", { "fg": s:red}) " need to check color "
-call s:h("rubyRailsUserClass", { "fg": s:red}) " need to check color "
-call s:h("rubyRailsARAssociationMethod", { "fg": s:red}) " need to check color "
-call s:h("rubyRailsRenderMethod", { "fg": s:red}) " need to check color "
-call s:h("rubyRailsMethod", { "fg": s:red}) " need to check color "
-call s:h("erubyDelimiter", { "fg": s:red}) " need to check color "
-call s:h("erubyComment", { "fg": s:red}) " need to check color "
-call s:h("erubyRailsMethod", { "fg": s:red}) " need to check color "
+call s:h("rubyEscape", { "fg": s:red})
+call s:h("rubyClassVariable", { "fg": s:red})
+call s:h("rubyOperator", { "fg": s:red}) 
+call s:h("rubyException", { "fg": s:red}) 
+call s:h("rubyPseudoVariable", { "fg": s:red}) 
+call s:h("rubyRailsUserClass", { "fg": s:red})
+call s:h("rubyRailsARAssociationMethod", { "fg": s:red}) 
+call s:h("rubyRailsRenderMethod", { "fg": s:red})
+call s:h("rubyRailsMethod", { "fg": s:red})
+call s:h("erubyDelimiter", { "fg": s:red}) 
+call s:h("erubyComment", { "fg": s:red}) 
+call s:h("erubyRailsMethod", { "fg": s:red}) 
 
 " +---------------------+
 " | Plugin Highlighting |
