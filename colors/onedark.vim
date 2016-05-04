@@ -81,7 +81,7 @@ let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" } " Alternate cte
 
 let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
 
-let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
+let s:black = { "gui": "#282C34", "cterm": "234", "cterm16": "0" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
 
 let s:comment_grey = { "gui": "#5C6670", "cterm": "59", "cterm16": "15" }
@@ -91,8 +91,6 @@ let s:cursor_grey =  { "gui": "#2C323B", "cterm": "236", "cterm16": "8" }
 let s:visual_grey = { "gui": "#3E4451", "cterm": "237", "cterm16": "15" }
 let s:special_grey = { "gui": "#383C45", "cterm": "238", "cterm16": "15" }
 let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
-
-let s:default_bg = { "gui": "#282C34", "cterm": "234", "cterm16": "0" }
 
 " +---------------------------------------------------------+
 " | Syntax Groups (descriptions and ordering from `:h w18`) |
@@ -161,7 +159,7 @@ call s:h("MatchParen", { "fg": s:blue, "gui": "underline" }) " The character und
 call s:h("ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
 call s:h("MoreMsg", {}) " more-prompt
 call s:h("NonText", { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-call s:h("Normal", { "fg": s:white, "bg": s:default_bg }) " normal text
+call s:h("Normal", { "fg": s:white, "bg": s:black }) " normal text
 call s:h("Pmenu", {}) " Popup menu: normal item.
 call s:h("PmenuSel", { "bg": s:visual_grey }) " Popup menu: selected item.
 call s:h("PmenuSbar", { "bg": s:visual_grey }) " Popup menu: scrollbar.
@@ -210,17 +208,6 @@ call s:h("rubyGlobalVariable", { "fg": s:red})
 call s:h("rubyRegexp", { "fg": s:cyan})
 call s:h("rubyRegexpDelimiter", { "fg": s:cyan})
 call s:h("rubyEscape", { "fg": s:red})
-call s:h("rubyClassVariable", { "fg": s:red})
-call s:h("rubyOperator", { "fg": s:red}) 
-call s:h("rubyException", { "fg": s:red}) 
-call s:h("rubyPseudoVariable", { "fg": s:red}) 
-call s:h("rubyRailsUserClass", { "fg": s:red})
-call s:h("rubyRailsARAssociationMethod", { "fg": s:red}) 
-call s:h("rubyRailsRenderMethod", { "fg": s:red})
-call s:h("rubyRailsMethod", { "fg": s:red})
-call s:h("erubyDelimiter", { "fg": s:red}) 
-call s:h("erubyComment", { "fg": s:red}) 
-call s:h("erubyRailsMethod", { "fg": s:red}) 
 
 " +---------------------+
 " | Plugin Highlighting |
