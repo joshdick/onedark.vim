@@ -19,7 +19,6 @@ if exists("syntax_on")
   syntax reset
 endif
 
-set t_Co=256
 let g:colors_name="onedark"
 
 " Set to "256" for 256-color terminals, or
@@ -81,7 +80,7 @@ let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" } " Alternate cte
 
 let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
 
-let s:black = { "gui": "#282C34", "cterm": "234", "cterm16": "0" }
+let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
 
 let s:comment_grey = { "gui": "#5C6670", "cterm": "59", "cterm16": "15" }
