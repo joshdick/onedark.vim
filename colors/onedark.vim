@@ -192,6 +192,9 @@ call s:h("javaScriptNumber", { "fg": s:dark_yellow })
 call s:h("rubyBlockParameterList", { "fg": s:red })
 call s:h("rubyInterpolation", { "fg": s:green })
 call s:h("rubyInterpolationDelimiter", { "fg": s:red })
+call s:h("jsonKeyword", { "fg": s:red })
+call s:h("jsonQuote", { "fg": s:white })
+call s:h("jsonString", { "fg": s:green })
 
 " +---------------------+
 " | Plugin Highlighting |
