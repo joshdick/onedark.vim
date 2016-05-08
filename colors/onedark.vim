@@ -184,6 +184,18 @@ call s:h("WildMenu", {}) " current match in 'wildmenu' completion
 " | Language-Specific Highlighting |
 " +--------------------------------+
 
+" HTML
+call s:h("htmlTagName", { "fg": s:red })
+call s:h("htmlSpecialTagName", { "fg": s:red })
+call s:h("htmlSpecialChar", { "fg": s:dark_yellow })
+call s:h("htmlTag", { "fg": s:white })
+call s:h("htmlLink", { "fg": s:purple })
+call s:h("htmlEndTag", { "fg": s:white })
+call s:h("htmlArg", { "fg": s:dark_yellow })
+call s:h("htmlH1", { "fg": s:white })
+call s:h("Title", { "fg": s:white })
+
+" JavaScript
 call s:h("javaScriptBraces", { "fg": s:white })
 call s:h("javaScriptIdentifier", { "fg": s:purple })
 call s:h("javaScriptNull", { "fg": s:dark_yellow })
