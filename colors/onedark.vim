@@ -214,7 +214,7 @@ call s:h("diffRemoved", { "fg": s:red })
 " | Git Highlighting |
 " +------------------+
 
-call s:h("gitcommitComment", {})
+call s:h("gitcommitComment", { "fg": s:comment_grey })
 call s:h("gitcommitUnmerged", { "fg": s:green })
 call s:h("gitcommitOnBranch", {})
 call s:h("gitcommitBranch", { "fg": s:purple })
