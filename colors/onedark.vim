@@ -148,7 +148,7 @@ call s:h("DiffDelete", { "fg": s:red }) " diff mode: Deleted line
 call s:h("DiffText", { "fg": s:blue }) " diff mode: Changed text within a changed line
 call s:h("ErrorMsg", {}) " error messages on the command line
 call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
-call s:h("Folded", {}) " line used for closed folds
+call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
 call s:h("FoldColumn", {}) " 'foldcolumn'
 call s:h("SignColumn", {}) " column where signs are displayed
 call s:h("IncSearch", { "fg": s:visual_black, "bg": s:visual_grey }) " 'incsearch' highlighting; also used for the text replaced with ":s///c"
