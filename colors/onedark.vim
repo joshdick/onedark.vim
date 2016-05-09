@@ -207,6 +207,9 @@ call s:h("rubyGlobalVariable", { "fg": s:red})
 call s:h("rubyRegexp", { "fg": s:cyan})
 call s:h("rubyRegexpDelimiter", { "fg": s:cyan})
 call s:h("rubyEscape", { "fg": s:red})
+call s:h("jsonKeyword", { "fg": s:red })
+call s:h("jsonQuote", { "fg": s:white })
+call s:h("jsonString", { "fg": s:green })
 
 " +---------------------+
 " | Plugin Highlighting |
