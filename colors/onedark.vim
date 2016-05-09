@@ -1,6 +1,6 @@
 " Vim Color File
 " Name:       onedark.vim
-" Version:    1.45
+" Version:    1.46
 " Maintainer: https://github.com/joshdick/onedark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
@@ -190,8 +190,23 @@ call s:h("javaScriptIdentifier", { "fg": s:purple })
 call s:h("javaScriptNull", { "fg": s:dark_yellow })
 call s:h("javaScriptNumber", { "fg": s:dark_yellow })
 call s:h("rubyBlockParameterList", { "fg": s:red })
-call s:h("rubyInterpolation", { "fg": s:green })
+call s:h("rubyControl", { "fg": s:purple })
+call s:h("rubyInterpolation", { "fg": s:cyan })
 call s:h("rubyInterpolationDelimiter", { "fg": s:red })
+call s:h("rubyClass", { "fg": s:purple})
+call s:h("rubyFunction", { "fg": s:blue})
+call s:h("rubyInterpolationDelimiter", { "fg": s:red})
+call s:h("rubySymbol", { "fg": s:cyan})
+call s:h("rubyConstant", { "fg": s:yellow})
+call s:h("rubyStringDelimiter", { "fg": s:green})
+call s:h("rubyBlockParameter", { "fg": s:red})
+call s:h("rubyInstanceVariable", { "fg": s:red})
+call s:h("rubyInclude", { "fg": s:blue})
+call s:h("rubyIncluderubyGlobalVariable", { "fg": s:red})
+call s:h("rubyGlobalVariable", { "fg": s:red})
+call s:h("rubyRegexp", { "fg": s:cyan})
+call s:h("rubyRegexpDelimiter", { "fg": s:cyan})
+call s:h("rubyEscape", { "fg": s:red})
 
 " +---------------------+
 " | Plugin Highlighting |
