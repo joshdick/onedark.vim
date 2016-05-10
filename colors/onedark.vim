@@ -60,34 +60,33 @@ endfunction
 " +-----------------+
 
 let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" } " Alternate cterm: 168
-let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9" }
+let s:dark_red = { "gui": "#BE5046", "cterm": "196", "cterm16": "9" }
 
 let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2" }
-let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10" }
+let s:dark_green = { "gui": "#6DC35C", "cterm": "36", "cterm16": "10" }
 
 let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" }
 let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
 
 let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" } " Alternate cterm: 75
-"let s:dark_blue = { "gui": "#6097dc", "cterm": "32", "cterm16": "12" }
+"let s:dark_blue = { "gui": "#6097DC", "cterm": "32", "cterm16": "12" }
 
 let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5" } " Alternate cterm: 176
-"let s:dark_purple = { "gui": "#8d73de", "cterm": "55", "cterm16": "13" }
+"let s:dark_purple = { "gui": "#8D73DE", "cterm": "55", "cterm16": "13" }
 
 let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" } " Alternate cterm: 73
-"let s:dark_cyan = { "gui": "#53d3d2", "cterm": "110", "cterm16": "14" }
+"let s:dark_cyan = { "gui": "#53D3D2", "cterm": "110", "cterm16": "14" }
 
 let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
 
 let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
 
-let s:comment_grey = { "gui": "#5C6670", "cterm": "59", "cterm16": "15" }
-let s:gutter_fg_grey = { "gui": "#636D83", "cterm": "238", "cterm16": "15" }
-let s:gutter_bg_grey = { "gui": "#2C313A", "cterm": "NONE", "cterm16": "NONE" }
-let s:cursor_grey =  { "gui": "#2C323B", "cterm": "236", "cterm16": "8" }
+let s:comment_grey = { "gui": "#5C6370", "cterm": "59", "cterm16": "15" }
+let s:gutter_fg_grey = { "gui": "#4B5263", "cterm": "238", "cterm16": "15" }
+let s:cursor_grey =  { "gui": "#2C323C", "cterm": "236", "cterm16": "8" }
 let s:visual_grey = { "gui": "#3E4451", "cterm": "237", "cterm16": "15" }
-let s:special_grey = { "gui": "#383C45", "cterm": "238", "cterm16": "15" }
+let s:special_grey = { "gui": "#3B4048", "cterm": "238", "cterm16": "15" }
 let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
 
 " +---------------------------------------------------------+
@@ -127,7 +126,7 @@ call s:h("SpecialComment", {}) " special things inside a comment
 call s:h("Debug", {}) " debugging statements
 call s:h("Underlined", {}) " text that stands out, HTML links
 call s:h("Ignore", {}) " left blank, hidden
-call s:h("Error", { "fg": s:red, "bg": s:gutter_bg_grey }) " any erroneous construct
+call s:h("Error", { "fg": s:red }) " any erroneous construct
 call s:h("Todo", { "fg": s:purple }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 " +----------------------------------------------------------------------+
@@ -151,7 +150,7 @@ call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
 call s:h("FoldColumn", {}) " 'foldcolumn'
 call s:h("SignColumn", {}) " column where signs are displayed
 call s:h("IncSearch", { "fg": s:black, "bg": s:yellow }) " 'incsearch' highlighting; also used for the text replaced with ":s///c"
-call s:h("LineNr", { "fg": s:gutter_fg_grey, "bg": s:gutter_bg_grey }) " Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+call s:h("LineNr", { "fg": s:gutter_fg_grey }) " Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 call s:h("CursorLineNr", {}) " Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
 call s:h("MatchParen", { "fg": s:blue, "gui": "underline" }) " The character under the cursor or just before it, if it is a paired bracket, and its match.
 call s:h("ModeMsg", {}) " 'showmode' message (e.g., "-- INSERT --")
@@ -292,9 +291,9 @@ call s:h("sassMixing", { "fg": s:purple })
 " +---------------------+
 
 " mhinz/vim-signify
-call s:h("SignifySignAdd", { "fg": s:green, "bg": s:gutter_bg_grey })
-call s:h("SignifySignChange", { "fg": s:yellow, "bg": s:gutter_bg_grey })
-call s:h("SignifySignDelete", { "fg": s:red, "bg": s:gutter_bg_grey })
+call s:h("SignifySignAdd", { "fg": s:green })
+call s:h("SignifySignChange", { "fg": s:yellow })
+call s:h("SignifySignDelete", { "fg": s:red })
 
 " airblade/vim-gitgutter
 hi link GitGutterAdd    SignifySignAdd
