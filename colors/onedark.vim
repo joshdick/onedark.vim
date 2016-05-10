@@ -263,16 +263,17 @@ call s:h("jsonString", { "fg": s:green })
 " | Plugin Highlighting |
 " +---------------------+
 
-" Signify, git-gutter
-hi link SignifySignAdd              LineNr
-hi link SignifySignDelete           LineNr
-hi link SignifySignChange           LineNr
-call s:h("GitGutterAdd", { "fg": s:green, "bg": s:gutter_bg_grey })
-call s:h("GitGutterDelete", { "fg": s:red, "bg": s:gutter_bg_grey })
-call s:h("GitGutterChange", { "fg": s:yellow, "bg": s:gutter_bg_grey })
-call s:h("GitGutterChangeDelete", { "fg": s:red, "bg": s:gutter_bg_grey })
+" mhinz/vim-signify
+call s:h("SignifySignAdd", { "fg": s:green, "bg": s:gutter_bg_grey })
+call s:h("SignifySignChange", { "fg": s:yellow, "bg": s:gutter_bg_grey })
+call s:h("SignifySignDelete", { "fg": s:red, "bg": s:gutter_bg_grey })
 
-" Fugitive
+" airblade/vim-gitgutter
+hi link GitGutterAdd    SignifySignAdd
+hi link GitGutterChange SignifySignChange
+hi link GitGutterDelete SignifySignDelete
+
+" tpope/vim-fugitive
 call s:h("diffAdded", { "fg": s:green })
 call s:h("diffRemoved", { "fg": s:red })
 
