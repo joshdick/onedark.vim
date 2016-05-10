@@ -314,6 +314,31 @@ call s:h("sassMixin", { "fg": s:purple })
 call s:h("sassMixinName", { "fg": s:blue })
 call s:h("sassMixing", { "fg": s:purple })
 
+" Markdown
+call s:h("markdownCode", { "fg": s:green })
+call s:h("markdownCodeBlock", { "fg": s:green })
+call s:h("markdownCodeDelimiter", { "fg": s:green })
+call s:h("markdownHeadingDelimiter", { "fg": s:red })
+call s:h("markdownRule", { "fg": s:comment_grey })
+call s:h("markdownHeadingRule", { "fg": s:comment_grey })
+call s:h("markdownH1", { "fg": s:red })
+call s:h("markdownH2", { "fg": s:red })
+call s:h("markdownH3", { "fg": s:red })
+call s:h("markdownH4", { "fg": s:red })
+call s:h("markdownH5", { "fg": s:red })
+call s:h("markdownH6", { "fg": s:red })
+call s:h("markdownIdDelimiter", { "fg": s:purple })
+call s:h("markdownId", { "fg": s:purple })
+call s:h("markdownBlockquote", { "fg": s:comment_grey })
+call s:h("markdownItalic", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
+call s:h("markdownBold", { "fg": s:dark_yellow })
+call s:h("markdownListMarker", { "fg": s:red })
+call s:h("markdownOrderedListMarker", { "fg": s:red })
+call s:h("markdownIdDeclaration", { "fg": s:blue })
+call s:h("markdownLinkText", { "fg": s:blue })
+call s:h("markdownLinkDelimiter", { "fg": s:white })
+call s:h("markdownUrl", { "fg": s:purple })
+
 " +---------------------+
 " | Plugin Highlighting |
 " +---------------------+
