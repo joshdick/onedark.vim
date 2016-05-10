@@ -60,10 +60,10 @@ endfunction
 " +-----------------+
 
 let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" } " Alternate cterm: 168
-"let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9" }
+let s:dark_red = { "gui": "#e64040", "cterm": "196", "cterm16": "9" }
 
 let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2" }
-"let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10" }
+let s:dark_green = { "gui": "#6dc35c", "cterm": "36", "cterm16": "10" }
 
 let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" }
 let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
@@ -219,8 +219,34 @@ call s:h("htmlTagName", { "fg": s:red })
 " JavaScript
 call s:h("javaScriptBraces", { "fg": s:white })
 call s:h("javaScriptIdentifier", { "fg": s:purple })
+call s:h("javaScriptReserved", { "fg": s:purple })
+call s:h("javaScriptFunction", { "fg": s:purple })
 call s:h("javaScriptNull", { "fg": s:dark_yellow })
 call s:h("javaScriptNumber", { "fg": s:dark_yellow })
+call s:h("javaScriptRequire", { "fg": s:cyan })
+" https://github.com/pangloss/vim-javascript
+call s:h("jsStorageClass", { "fg": s:purple })
+call s:h("jsFunction", { "fg": s:purple })
+call s:h("jsClassKeywords", { "fg": s:purple })
+call s:h("jsThis", { "fg": s:red })
+call s:h("jsTemplateBraces", { "fg": s:dark_red })
+call s:h("jsTemplateVar", { "fg": s:dark_green })
+call s:h("jsOperator", { "fg": s:purple })
+call s:h("jsUndefined", { "fg": s:dark_yellow })
+call s:h("jsThis", { "fg": s:red })
+call s:h("jsArrowFunction", { "fg": s:purple })
+call s:h("jsFuncCall", { "fg": s:blue })
+call s:h("jsNull", { "fg": s:dark_yellow })
+call s:h("jsGlobalObjects", { "fg": s:yellow })
+" https://github.com/othree/yajs.vim
+call s:h("javascriptEndColons", { "fg": s:white })
+call s:h("javascriptFuncArg", { "fg": s:white })
+call s:h("javascriptObjectLabel", { "fg": s:white })
+call s:h("javascriptFuncKeyword", { "fg": s:purple })
+call s:h("javascriptVariable", { "fg": s:purple })
+call s:h("javascriptPropertyName", { "fg": s:green })
+call s:h("javascriptTemplateSB", { "fg": s:dark_red })
+call s:h("javascriptArrowFunc", { "fg": s:purple })
 
 " JSON
 call s:h("jsonKeyword", { "fg": s:red })
