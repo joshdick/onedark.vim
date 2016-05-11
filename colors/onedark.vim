@@ -59,33 +59,29 @@ endfunction
 " | Color Variables |
 " +-----------------+
 
-let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" } " Alternate cterm: 168
-let s:dark_red = { "gui": "#BE5046", "cterm": "196", "cterm16": "9" }
+let s:red = { "gui": "#E26B73", "cterm": "204", "cterm16": "1" } " Alternate cterm: 168
+let s:dark_red = { "gui": "#C04F43", "cterm": "196", "cterm16": "9" }
 
-let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2" }
-let s:dark_green = { "gui": "#6DC35C", "cterm": "36", "cterm16": "10" }
+let s:green = { "gui": "#97C475", "cterm": "114", "cterm16": "2" }
 
-let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" }
-let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
+let s:yellow = { "gui": "#E6C176", "cterm": "180", "cterm16": "3" }
+let s:dark_yellow = { "gui": "#D29B62", "cterm": "173", "cterm16": "11" }
 
-let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" } " Alternate cterm: 75
-"let s:dark_blue = { "gui": "#6097DC", "cterm": "32", "cterm16": "12" }
+let s:blue = { "gui": "#5DAEF2", "cterm": "39", "cterm16": "4" } " Alternate cterm: 75
 
-let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5" } " Alternate cterm: 176
-"let s:dark_purple = { "gui": "#8D73DE", "cterm": "55", "cterm16": "13" }
+let s:purple = { "gui": "#C775DF", "cterm": "170", "cterm16": "5" } " Alternate cterm: 176
 
-let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" } " Alternate cterm: 73
-"let s:dark_cyan = { "gui": "#53D3D2", "cterm": "110", "cterm16": "14" }
+let s:cyan = { "gui": "#51B6C3", "cterm": "38", "cterm16": "6" } " Alternate cterm: 73
 
-let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+let s:white = { "gui": "#ABB2C0", "cterm": "145", "cterm16" : "7" }
 
 let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
 
-let s:comment_grey = { "gui": "#5C6370", "cterm": "59", "cterm16": "15" }
-let s:gutter_fg_grey = { "gui": "#4B5263", "cterm": "238", "cterm16": "15" }
+let s:comment_grey = { "gui": "#5C6371", "cterm": "59", "cterm16": "15" }
+let s:gutter_fg_grey = { "gui": "#4B5264", "cterm": "238", "cterm16": "15" }
 let s:cursor_grey =  { "gui": "#2C323C", "cterm": "236", "cterm16": "8" }
-let s:visual_grey = { "gui": "#3E4451", "cterm": "237", "cterm16": "15" }
+let s:visual_grey = { "gui": "#3E4452", "cterm": "237", "cterm16": "15" }
 let s:special_grey = { "gui": "#3B4048", "cterm": "238", "cterm16": "15" }
 let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
 
@@ -235,7 +231,7 @@ call s:h("jsNull", { "fg": s:dark_yellow })
 call s:h("jsOperator", { "fg": s:purple })
 call s:h("jsStorageClass", { "fg": s:purple })
 call s:h("jsTemplateBraces", { "fg": s:dark_red })
-call s:h("jsTemplateVar", { "fg": s:dark_green })
+call s:h("jsTemplateVar", { "fg": s:green })
 call s:h("jsThis", { "fg": s:red })
 call s:h("jsUndefined", { "fg": s:dark_yellow })
 " https://github.com/othree/yajs.vim
