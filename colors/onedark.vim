@@ -56,7 +56,9 @@ let g:colors_name="onedark"
 
 " Set to "256" for 256-color terminals, or
 " set to "16" to use your terminal emulator's native colors
-" (a 16-color palette for this theme is not available yet.)
+" (a 16-color palette for this color scheme is available; see
+" < https://github.com/joshdick/onedark.vim/blob/master/README.md >
+" for more information.)
 if !exists("g:onedark_termcolors")
   let g:onedark_termcolors = 256
 endif
