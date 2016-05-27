@@ -291,9 +291,15 @@ call s:h("javascriptTemplateSB", { "fg": s:dark_red })
 call s:h("javascriptVariable", { "fg": s:purple })
 
 " JSON
+call s:h("jsonCommentError", { "fg": s:white })
 call s:h("jsonKeyword", { "fg": s:red })
 call s:h("jsonQuote", { "fg": s:white })
+call s:h("jsonMissingCommaError", { "fg": s:red, "gui": "reverse" })
+call s:h("jsonNoQuotesError", { "fg": s:red, "gui": "reverse" })
+call s:h("jsonNumError", { "fg": s:red, "gui": "reverse" })
 call s:h("jsonString", { "fg": s:green })
+call s:h("jsonStringSQError", { "fg": s:red, "gui": "reverse" })
+call s:h("jsonSemicolonError", { "fg": s:red, "gui": "reverse" })
 
 " Markdown
 call s:h("markdownCode", { "fg": s:green })
