@@ -52,6 +52,8 @@ if exists("syntax_on")
   syntax reset
 endif
 
+set t_Co=256
+
 let g:colors_name="onedark"
 
 " Set to "256" for 256-color terminals, or
