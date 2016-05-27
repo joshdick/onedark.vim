@@ -394,3 +394,28 @@ hi link gitcommitSelected gitcommitComment
 hi link gitcommitDiscardedArrow gitcommitDiscardedFile
 hi link gitcommitSelectedArrow gitcommitSelectedFile
 hi link gitcommitUnmergedArrow gitcommitUnmergedFile
+
+" +------------------------+
+" | Neovim terminal colors |
+" +------------------------+
+
+if has("nvim")
+  let g:terminal_color_0 =  s:black.gui
+  let g:terminal_color_1 =  s:red.gui
+  let g:terminal_color_2 =  s:green.gui
+  let g:terminal_color_3 =  s:yellow.gui
+  let g:terminal_color_4 =  s:blue.gui
+  let g:terminal_color_5 =  s:purple.gui
+  let g:terminal_color_6 =  s:cyan.gui
+  let g:terminal_color_7 =  s:white.gui
+  let g:terminal_color_8 =  s:visual_grey.gui
+  let g:terminal_color_9 =  s:dark_red.gui
+  let g:terminal_color_10 = s:green.gui " No dark version
+  let g:terminal_color_11 = s:dark_yellow.gui
+  let g:terminal_color_12 = s:blue.gui " No dark version
+  let g:terminal_color_13 = s:purple.gui " No dark version
+  let g:terminal_color_14 = s:cyan.gui " No dark version
+  let g:terminal_color_15 = s:comment_grey.gui
+  let g:terminal_color_background = g:terminal_color_0
+  let g:terminal_color_foreground = g:terminal_color_7
+endif
