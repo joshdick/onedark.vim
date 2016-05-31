@@ -6,9 +6,10 @@ A dark Vim color scheme for the GUI and 16/256-color terminals, based on [FlatCo
 
 Preview image taken using:
 
-* [iTerm2](https://iterm2.com/) terminal emulator on Mac OS X
+* [iTerm2](https://iterm2.com) terminal emulator on Mac OS X
 * 12 pt. [PragmataPro Mono](http://www.fsd.it/fonts/pragmatapro.htm#.VlDa1q6rTOY) font
 * [airline-onedark.vim](https://github.com/joshdick/airline-onedark.vim) theme for [vim-airline](https://github.com/bling/vim-airline)
+* [vim-polyglot](https://github.com/sheerun/vim-polyglot) plug-in
 
 ## Installation
 
