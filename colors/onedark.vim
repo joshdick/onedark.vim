@@ -289,6 +289,8 @@ call s:h("javascriptOpSymbols", { "fg": s:cyan })
 call s:h("javascriptPropertyName", { "fg": s:green })
 call s:h("javascriptTemplateSB", { "fg": s:dark_red })
 call s:h("javascriptVariable", { "fg": s:purple })
+call s:h("javascriptDocNotation", { "fg": s:blue })
+call s:h("javascriptDocTags", { "fg": s:blue })
 
 " JSON
 call s:h("jsonCommentError", { "fg": s:white })
