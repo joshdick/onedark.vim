@@ -63,12 +63,12 @@ Preview image taken using:
 
     ```vim
     syntax on
-    color scheme onedark
+    colorscheme onedark
     ```
 
 ## Options
 
-**Note:** All options should be set **before** the `color scheme onedark` line in your `~/.vimrc`.
+**Note:** All options should be set **before** the `colorscheme onedark` line in your `~/.vimrc`.
 
 * `g:onedark_termcolors` **(see [Installation](#installation) (above) before using this setting)**: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native colors.
 
