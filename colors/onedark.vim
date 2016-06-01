@@ -291,6 +291,7 @@ call s:h("javascriptTemplateSB", { "fg": s:dark_red })
 call s:h("javascriptVariable", { "fg": s:purple })
 call s:h("javascriptDocNotation", { "fg": s:purple })
 call s:h("javascriptDocTags", { "fg": s:purple })
+call s:h("javascriptDocParamName", { "fg": s:blue })
 
 " JSON
 call s:h("jsonCommentError", { "fg": s:white })
