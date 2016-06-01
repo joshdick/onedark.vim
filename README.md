@@ -66,6 +66,8 @@ Preview image taken using:
     colorscheme onedark
     ```
 
+3. Installing the [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) plug-in is recommended for improved syntax highlighting for various languages, but is not required.
+
 ## Options
 
 **Note:** All options should be set **before** the `colorscheme onedark` line in your `~/.vimrc`.
