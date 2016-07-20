@@ -174,7 +174,7 @@ call s:h("Cursor", { "fg": s:black, "bg": s:blue }) " the character under the cu
 call s:h("CursorIM", {}) " like Cursor, but used when in IME mode
 call s:h("CursorColumn", { "bg": s:cursor_grey }) " the screen column that the cursor is in when 'cursorcolumn' is set
 call s:h("CursorLine", { "bg": s:cursor_grey }) " the screen line that the cursor is in when 'cursorline' is set
-call s:h("Directory", {}) " directory names (and other special names in listings)
+call s:h("Directory", { "fg": s:blue }) " directory names (and other special names in listings)
 call s:h("DiffAdd", { "fg": s:green }) " diff mode: Added line
 call s:h("DiffChange", { "fg": s:dark_yellow }) " diff mode: Changed line
 call s:h("DiffDelete", { "fg": s:red }) " diff mode: Deleted line
@@ -240,7 +240,7 @@ call s:h("cssSelectorOp2", { "fg": s:purple })
 call s:h("cssTagName", { "fg": s:red })
 
 " HTML
-call s:h("Title", { "fg": s:white })
+call s:h("htmlTitle", { "fg": s:white })
 call s:h("htmlArg", { "fg": s:dark_yellow })
 call s:h("htmlEndTag", { "fg": s:white })
 call s:h("htmlH1", { "fg": s:white })
