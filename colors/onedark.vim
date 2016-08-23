@@ -255,6 +255,11 @@ call s:h("htmlSpecialTagName", { "fg": s:red })
 call s:h("htmlTag", { "fg": s:white })
 call s:h("htmlTagName", { "fg": s:red })
 
+" TypeScript
+call s:h("typescriptReserved", { "fg": s:purple })
+call s:h("typescriptEndColons", { "fg": s:white })
+call s:h("typescriptBraces", { "fg": s:white })
+
 " JavaScript
 call s:h("javaScriptBraces", { "fg": s:white })
 call s:h("javaScriptFunction", { "fg": s:purple })
