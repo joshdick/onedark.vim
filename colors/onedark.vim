@@ -373,6 +373,11 @@ call s:h("sassMixin", { "fg": s:purple })
 call s:h("sassMixinName", { "fg": s:blue })
 call s:h("sassMixing", { "fg": s:purple })
 
+" TypeScript
+call s:h("typescriptReserved", { "fg": s:purple })
+call s:h("typescriptEndColons", { "fg": s:white })
+call s:h("typescriptBraces", { "fg": s:white })
+
 " XML
 call s:h("xmlAttrib", { "fg": s:dark_yellow })
 call s:h("xmlEndTag", { "fg": s:red })
