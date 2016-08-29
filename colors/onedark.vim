@@ -383,15 +383,20 @@ call s:h("xmlTagName", { "fg": s:red })
 " | Plugin Highlighting |
 " +---------------------+
 
+" airblade/vim-gitgutter
+hi link GitGutterAdd    SignifySignAdd
+hi link GitGutterChange SignifySignChange
+hi link GitGutterDelete SignifySignDelete
+
 " mhinz/vim-signify
 call s:h("SignifySignAdd", { "fg": s:green })
 call s:h("SignifySignChange", { "fg": s:yellow })
 call s:h("SignifySignDelete", { "fg": s:red })
 
-" airblade/vim-gitgutter
-hi link GitGutterAdd    SignifySignAdd
-hi link GitGutterChange SignifySignChange
-hi link GitGutterDelete SignifySignDelete
+" neomake/neomake
+call s:h("NeomakeWarningSign", { "fg": s:yellow })
+call s:h("NeomakeErrorSign", { "fg": s:red })
+call s:h("NeomakeInfoSign", { "fg": s:blue })
 
 " tpope/vim-fugitive
 call s:h("diffAdded", { "fg": s:green })
