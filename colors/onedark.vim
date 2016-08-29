@@ -255,11 +255,6 @@ call s:h("htmlSpecialTagName", { "fg": s:red })
 call s:h("htmlTag", { "fg": s:white })
 call s:h("htmlTagName", { "fg": s:red })
 
-" TypeScript
-call s:h("typescriptReserved", { "fg": s:purple })
-call s:h("typescriptEndColons", { "fg": s:white })
-call s:h("typescriptBraces", { "fg": s:white })
-
 " JavaScript
 call s:h("javaScriptBraces", { "fg": s:white })
 call s:h("javaScriptFunction", { "fg": s:purple })
@@ -375,6 +370,11 @@ call s:h("sassMediaOperators", { "fg": s:white })
 call s:h("sassMixin", { "fg": s:purple })
 call s:h("sassMixinName", { "fg": s:blue })
 call s:h("sassMixing", { "fg": s:purple })
+
+" TypeScript
+call s:h("typescriptReserved", { "fg": s:purple })
+call s:h("typescriptEndColons", { "fg": s:white })
+call s:h("typescriptBraces", { "fg": s:white })
 
 " XML
 call s:h("xmlAttrib", { "fg": s:dark_yellow })
