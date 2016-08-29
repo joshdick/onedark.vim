@@ -397,6 +397,11 @@ hi link GitGutterDelete SignifySignDelete
 call s:h("diffAdded", { "fg": s:green })
 call s:h("diffRemoved", { "fg": s:red })
 
+" neomake
+call s:h("NeomakeWarningSign", { "fg": s:yellow })
+call s:h("NeomakeErrorSign", { "fg": s:red })
+call s:h("NeomakeInfoSign", { "fg": s:blue })
+
 " +------------------+
 " | Git Highlighting |
 " +------------------+
