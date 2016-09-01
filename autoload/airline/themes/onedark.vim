@@ -1,9 +1,9 @@
 " [onedark.vim](https://github.com/joshdick/onedark.vim/)
 
-" This is a [vim-airline](https://github.com/bling/vim-airline) theme for use with
+" This is a [vim-airline](https://github.com/vim-airline/vim-airline) theme for use with
 " the [onedark.vim](https://github.com/joshdick/onedark.vim) colorscheme.
 
-" It is based on vim-airline's ["tomorrow" theme](https://github.com/bling/vim-airline/blob/master/autoload/airline/themes/tomorrow.vim).
+" It is based on vim-airline's ["tomorrow" theme](https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/tomorrow.vim).
 
 let g:airline#themes#onedark#palette = {}
 

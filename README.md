@@ -73,13 +73,13 @@ A dark Vim color scheme for the GUI and 16/256-color terminals, based on [FlatCo
 
 ![airline-onedark.vim Preview](https://raw.github.com/joshdick/onedark.vim/master/preview_airline.png)
 
-This repository includes a companion [vim-airline](https://github.com/bling/vim-airline) theme for use with onedark.vim.
+This repository includes a companion [vim-airline](https://github.com/vim-airline/vim-airline) theme for use with onedark.vim.
 
 The vim-airline theme:
 
 * Depends on onedark.vim for its colors, and must therefore be used in conjunction with it.
 * Works with both color modes available in onedark.vim (16 or 256 colors), as specified in the configuration for onedark.vim.
-* Is based on vim-airline's ["tomorrow" theme](https://github.com/bling/vim-airline/blob/master/autoload/airline/themes/tomorrow.vim).
+* Is based on vim-airline's ["tomorrow" theme](https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/tomorrow.vim).
 
 ### Installation
 
