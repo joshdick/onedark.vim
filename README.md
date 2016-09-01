@@ -4,13 +4,6 @@ A dark Vim color scheme for the GUI and 16/256-color terminals, based on [FlatCo
 
 ![onedark.vim Preview](https://raw.githubusercontent.com/joshdick/onedark.vim/master/preview.png)
 
-Preview image taken using:
-
-* [iTerm2](https://iterm2.com) terminal emulator on Mac OS X
-* 12 pt. [PragmataPro Mono](http://www.fsd.it/fonts/pragmatapro.htm#.VlDa1q6rTOY) font
-* [airline-onedark.vim](https://github.com/joshdick/airline-onedark.vim) theme for [vim-airline](https://github.com/bling/vim-airline)
-* [vim-polyglot](https://github.com/sheerun/vim-polyglot) plug-in
-
 ## Installation
 
 1. If you use Vim in the terminal, determine whether [your terminal emulator has 24-bit color ("true color") support](https://gist.github.com/XVilka/8346728).
@@ -78,5 +71,30 @@ Preview image taken using:
 
 ## vim-airline Theme
 
-A companion [vim-airline](https://github.com/bling/vim-airline) theme for this color scheme is available at [joshdick/airline-onedark.vim](https://github.com/joshdick/airline-onedark.vim).
+![airline-onedark.vim Preview](https://raw.github.com/joshdick/onedark.vim/master/preview_airline.png)
 
+This repository includes a companion [vim-airline](https://github.com/bling/vim-airline) theme for use with onedark.vim.
+
+The vim-airline theme:
+
+* Depends on onedark.vim for its colors, and must therefore be used in conjunction with it.
+* Works with both color modes available in onedark.vim (16 or 256 colors), as specified in the configuration for onedark.vim.
+* Is based on vim-airline's ["tomorrow" theme](https://github.com/bling/vim-airline/blob/master/autoload/airline/themes/tomorrow.vim).
+
+### Installation
+
+(These instructions assume that vim-airline and onedark.vim are already installed and configured to your liking.)
+
+Place `onedark.vim` in your `~/.vim/autoload/airline/themes/` directory either manually or by using your Vim plug-in manager of choice, then add the following line to your `~/.vimrc`:
+
+    ```vim
+    let g:airline_theme='onedark'
+    ```
+
+---
+
+Preview images were taken using:
+
+* [iTerm2](https://iterm2.com) terminal emulator on Mac OS X
+* 12 pt. [PragmataPro Mono](http://www.fsd.it/fonts/pragmatapro.htm#.VlDa1q6rTOY) font
+* [vim-polyglot](https://github.com/sheerun/vim-polyglot) plug-in
