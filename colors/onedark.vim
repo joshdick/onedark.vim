@@ -180,10 +180,10 @@ call s:h("CursorIM", {}) " like Cursor, but used when in IME mode
 call s:h("CursorColumn", { "bg": s:cursor_grey }) " the screen column that the cursor is in when 'cursorcolumn' is set
 call s:h("CursorLine", { "bg": s:cursor_grey }) " the screen line that the cursor is in when 'cursorline' is set
 call s:h("Directory", { "fg": s:blue }) " directory names (and other special names in listings)
-call s:h("DiffAdd", { "fg": s:green }) " diff mode: Added line
-call s:h("DiffChange", { "fg": s:dark_yellow }) " diff mode: Changed line
+call s:h("DiffAdd", { "bg": s:visual_grey}) " diff mode: Added line
+call s:h("DiffChange", { "bg": s:visual_grey }) " diff mode: Changed line
 call s:h("DiffDelete", { "fg": s:red }) " diff mode: Deleted line
-call s:h("DiffText", { "fg": s:blue }) " diff mode: Changed text within a changed line
+call s:h("DiffText", { "bg": s:white, "fg": s:black }) " diff mode: Changed text within a changed line
 call s:h("ErrorMsg", {}) " error messages on the command line
 call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
 call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
