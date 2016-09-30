@@ -183,7 +183,7 @@ call s:h("Directory", { "fg": s:blue }) " directory names (and other special nam
 call s:h("DiffAdd", { "bg": s:visual_grey}) " diff mode: Added line
 call s:h("DiffChange", { "bg": s:visual_grey }) " diff mode: Changed line
 call s:h("DiffDelete", { "fg": s:red }) " diff mode: Deleted line
-call s:h("DiffText", { "bg": s:white, "fg": s:black }) " diff mode: Changed text within a changed line
+call s:h("DiffText", { "bg": s:visual_grey, "fg": s:yellow }) " diff mode: Changed text within a changed line
 call s:h("ErrorMsg", {}) " error messages on the command line
 call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
 call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
