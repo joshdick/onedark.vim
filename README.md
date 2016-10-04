@@ -87,9 +87,9 @@ The vim-airline theme:
 
 Place `onedark.vim` in your `~/.vim/autoload/airline/themes/` directory either manually or by using your Vim plug-in manager of choice, then add the following line to your `~/.vimrc`:
 
-    ```vim
-    let g:airline_theme='onedark'
-    ```
+```vim
+let g:airline_theme='onedark'
+```
 
 ---
 
