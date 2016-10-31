@@ -67,7 +67,7 @@ A dark Vim color scheme for the GUI and 16/256-color terminals, based on [FlatCo
 
 * `g:onedark_termcolors` **(see [Installation](#installation) (above) before using this setting)**: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native colors.
 
-* `g:onedark_terminal_italics`: Set to `1` if your terminal emulator supports italics; `0` otherwise (the default).
+* `g:onedark_terminal_italics`: Set to `1` if your terminal emulator supports italics; `0` otherwise (the default). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
 
 ## vim-airline Theme
 
@@ -95,6 +95,6 @@ let g:airline_theme='onedark'
 
 Preview images were taken using:
 
-* [iTerm2](https://iterm2.com) terminal emulator on Mac OS X
+* [iTerm2](https://iterm2.com) terminal emulator on macOS
 * 12 pt. [PragmataPro Mono](http://www.fsd.it/fonts/pragmatapro.htm#.VlDa1q6rTOY) font
 * [vim-polyglot](https://github.com/sheerun/vim-polyglot) plug-in
