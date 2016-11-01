@@ -29,7 +29,7 @@ let s:p.tabline.left = [ [ s:white, s:grey ] ]
 let s:p.tabline.tabsel = [ [ s:black, s:white ] ]
 let s:p.tabline.middle = [ [ s:white, s:black ] ]
 let s:p.tabline.right = [ [ s:white, s:grey ] ]
-let s:p.normal.error = [ [ s:white, s:red ] ]
+let s:p.normal.error = [ [ s:black, s:red ] ]
 let s:p.normal.warning = [ [ s:black, s:yellow ] ]
 
 let g:lightline#colorscheme#onedark#palette = lightline#colorscheme#flatten(s:p)
