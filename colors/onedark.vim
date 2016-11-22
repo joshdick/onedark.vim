@@ -127,7 +127,6 @@ let s:cursor_grey =  { "gui": "#2C323C", "cterm": "236", "cterm16": "8" }
 let s:visual_grey = { "gui": "#3E4452", "cterm": "237", "cterm16": "15" }
 let s:menu_grey = { "gui": s:visual_grey.gui, "cterm": s:visual_grey.cterm, "cterm16": "8" }
 let s:special_grey = { "gui": "#3B4048", "cterm": "238", "cterm16": "15" }
-let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
 
 " +---------------------------------------------------------+
 " | Syntax Groups (descriptions and ordering from `:h w18`) |
@@ -185,7 +184,7 @@ call s:h("DiffChange", { "bg": s:visual_grey }) " diff mode: Changed line
 call s:h("DiffDelete", { "fg": s:red }) " diff mode: Deleted line
 call s:h("DiffText", { "bg": s:visual_grey, "fg": s:yellow }) " diff mode: Changed text within a changed line
 call s:h("ErrorMsg", {}) " error messages on the command line
-call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
+call s:h("VertSplit", { "fg": s:cursor_grey }) " the column separating vertically split windows
 call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
 call s:h("FoldColumn", {}) " 'foldcolumn'
 call s:h("SignColumn", {}) " column where signs are displayed
