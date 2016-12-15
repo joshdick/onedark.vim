@@ -431,6 +431,16 @@ hi link gitcommitDiscardedArrow gitcommitDiscardedFile
 hi link gitcommitSelectedArrow gitcommitSelectedFile
 hi link gitcommitUnmergedArrow gitcommitUnmergedFile
 
+
+"public {{
+
+function! onedark#set_highlight(group, style)
+	call s:h(a:group, a:style)
+endfunction
+
+"public end }}
+
+
 " +------------------------+
 " | Neovim terminal colors |
 " +------------------------+
