@@ -114,6 +114,22 @@ Place `onedark.vim/autoload/airline/themes/onedark.vim` in your `~/.vim/autoload
 let g:airline_theme='onedark'
 ```
 
+### FAQ
+
+- **I want change style or color but maintainer against to accept my idea.**
+
+  You can always forked this project, but you also can add inside VIMRC yours changes. For this you should call ```onedark#set_highlight``` and send first argument name of color group, in second style data parameter.
+
+  For example if you wanna change color for background you should add next code.
+
+  ```vim
+  let s:white = { "gui": "#ffffff", "cterm": "145", "cterm16" : "7" }
+  let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
+
+  call onedark#set_highlight("Normal", { "fg": s:black, "bg": s:white }) " change background
+
+  ```
+
 ---
 
 Preview images were taken using:
