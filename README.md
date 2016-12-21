@@ -69,6 +69,29 @@ A dark Vim color scheme for the GUI and 16/256-color terminals, based on [FlatCo
 
 * `g:onedark_terminal_italics`: Set to `1` if your terminal emulator supports italics; `0` otherwise (the default). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
 
+## lightline.vim Colorscheme
+
+![lightline-onedark.vim Preview](https://raw.github.com/joshdick/onedark.vim/master/preview_lightline.png)
+
+This repository includes a companion [lightline.vim](https://github.com/itchyny/lightline.vim) colorscheme for use with onedark.vim.
+
+The lightline.vim colorscheme:
+
+* Depends on onedark.vim for its colors, and must therefore be used in conjunction with it.
+* Works with both color modes available in onedark.vim (16 or 256 colors), as specified in the configuration for onedark.vim.
+
+### Installation
+
+(These instructions assume that lightline.vim and onedark.vim are already installed and configured to your liking.)
+
+Place `onedark.vim/autoload/lightline/colorscheme/onedark.vim` in your `~/.vim/autoload/lightline/colorscheme/` directory either manually or by using your Vim plug-in manager of choice, then add the following lines to your `~/.vimrc` (or merge them into your existing lightline.vim configuration):
+
+```vim
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
+```
+
 ## vim-airline Theme
 
 ![airline-onedark.vim Preview](https://raw.github.com/joshdick/onedark.vim/master/preview_airline.png)
@@ -85,7 +108,7 @@ The vim-airline theme:
 
 (These instructions assume that vim-airline and onedark.vim are already installed and configured to your liking.)
 
-Place `onedark.vim` in your `~/.vim/autoload/airline/themes/` directory either manually or by using your Vim plug-in manager of choice, then add the following line to your `~/.vimrc`:
+Place `onedark.vim/autoload/airline/themes/onedark.vim` in your `~/.vim/autoload/airline/themes/` directory either manually or by using your Vim plug-in manager of choice, then add the following line to your `~/.vimrc`:
 
 ```vim
 let g:airline_theme='onedark'
