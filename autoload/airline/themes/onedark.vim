@@ -4,10 +4,10 @@
 " the [onedark.vim](https://github.com/joshdick/onedark.vim) colorscheme.
 
 " It is based on vim-airline's ["tomorrow" theme](https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/tomorrow.vim).
-
-let g:airline#themes#onedark#palette = {}
-
 function! airline#themes#onedark#refresh()
+
+  let g:airline#themes#onedark#palette = {}
+
   let g:airline#themes#onedark#palette.accents = {
         \ 'red': airline#themes#get_highlight('Constant'),
         \ }
@@ -47,6 +47,63 @@ function! airline#themes#onedark#refresh()
   let g:airline#themes#onedark#palette.inactive_modified = {
         \ 'airline_c': [ group[0], '', group[2], '', '' ]
         \ }
+
+  " Warning/Error styling code from vim-airline's ["base16" theme](https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/base16.vim)
+
+  " Warnings
+  let s:WI = airline#themes#get_highlight2(['WarningMsg', 'bg'], ['WarningMsg', 'fg'], 'bold')
+  let g:airline#themes#onedark#palette.normal.airline_warning = [
+       \ s:WI[0], s:WI[1], s:WI[2], s:WI[3]
+       \ ]
+
+  let g:airline#themes#onedark#palette.normal_modified.airline_warning =
+      \ g:airline#themes#onedark#palette.normal.airline_warning
+
+  let g:airline#themes#onedark#palette.insert.airline_warning =
+      \ g:airline#themes#onedark#palette.normal.airline_warning
+
+  let g:airline#themes#onedark#palette.insert_modified.airline_warning =
+      \ g:airline#themes#onedark#palette.normal.airline_warning
+
+  let g:airline#themes#onedark#palette.visual.airline_warning =
+      \ g:airline#themes#onedark#palette.normal.airline_warning
+
+  let g:airline#themes#onedark#palette.visual_modified.airline_warning =
+      \ g:airline#themes#onedark#palette.normal.airline_warning
+
+  let g:airline#themes#onedark#palette.replace.airline_warning =
+      \ g:airline#themes#onedark#palette.normal.airline_warning
+
+  let g:airline#themes#onedark#palette.replace_modified.airline_warning =
+      \ g:airline#themes#onedark#palette.normal.airline_warning
+
+  " Errors
+  let s:ER = airline#themes#get_highlight2(['ErrorMsg', 'bg'], ['ErrorMsg', 'fg'], 'bold')
+  let g:airline#themes#onedark#palette.normal.airline_error = [
+       \ s:ER[0], s:ER[1], s:ER[2], s:ER[3]
+       \ ]
+
+  let g:airline#themes#onedark#palette.normal_modified.airline_error =
+      \ g:airline#themes#onedark#palette.normal.airline_error
+
+  let g:airline#themes#onedark#palette.insert.airline_error =
+      \ g:airline#themes#onedark#palette.normal.airline_error
+
+  let g:airline#themes#onedark#palette.insert_modified.airline_error =
+      \ g:airline#themes#onedark#palette.normal.airline_error
+
+  let g:airline#themes#onedark#palette.visual.airline_error =
+      \ g:airline#themes#onedark#palette.normal.airline_error
+
+  let g:airline#themes#onedark#palette.visual_modified.airline_error =
+      \ g:airline#themes#onedark#palette.normal.airline_error
+
+  let g:airline#themes#onedark#palette.replace.airline_error =
+      \ g:airline#themes#onedark#palette.normal.airline_error
+
+  let g:airline#themes#onedark#palette.replace_modified.airline_error =
+      \ g:airline#themes#onedark#palette.normal.airline_error
+
 endfunction
 
 call airline#themes#onedark#refresh()
