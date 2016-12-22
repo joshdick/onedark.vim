@@ -98,6 +98,14 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
+"public {{
+
+function! onedark#set_highlight(group, style)
+  call s:h(a:group, a:style)
+endfunction
+
+"public end }}
+
 " +-----------------+
 " | Color Variables |
 " +-----------------+
