@@ -400,6 +400,26 @@ call s:h("xmlEndTag", { "fg": s:red })
 call s:h("xmlTag", { "fg": s:red })
 call s:h("xmlTagName", { "fg": s:red })
 
+" PHP
+call s:h("phpVarSelector", { "fg": s:red })
+call s:h("phpOperator", { "fg": s:white })
+call s:h("phpParent", { "fg": s:white })
+call s:h("phpMemberSelector", { "fg": s:white })
+call s:h("phpType", { "fg": s:purple })
+call s:h("phpKeyword", { "fg": s:purple })
+call s:h("phpClass", { "fg": s:yellow })
+call s:h("phpUseClass", { "fg": s:white })
+call s:h("phpUseAlias", { "fg": s:white })
+call s:h("phpInclude", { "fg": s:purple })
+call s:h("phpClassExtends", { "fg": s:green })
+call s:h("phpDocTags", { "fg": s:white })
+call s:h("phpFunction", { "fg": s:blue })
+call s:h("phpFunctions", { "fg": s:cyan })
+call s:h("phpMethodsVar", { "fg": s:dark_yellow })
+call s:h("phpMagicConstants", { "fg": s:dark_yellow })
+call s:h("phpSuperglobals", { "fg": s:red })
+call s:h("phpConstants", { "fg": s:dark_yellow })
+
 " +---------------------+
 " | Plugin Highlighting |
 " +---------------------+
