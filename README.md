@@ -114,9 +114,9 @@ Place `onedark.vim/autoload/airline/themes/onedark.vim` in your `~/.vim/autoload
 let g:airline_theme='onedark'
 ```
 
-## FAQ
+## Miscellaneous
 
-### How can I customize onedark.vim's look without forking the repository?
+### Customizing onedark.vim's Look Without Forking the Repository
 
 onedark.vim exposes a function called `onedark#set_highlight` that you can call from within your `~/.vimrc` in order to customize the look of onedark.vim by overriding its defaults.
 
@@ -137,6 +137,10 @@ end
 ```
 
 More examples of highlight group names and style data can be found in onedark.vim's source code (`colors/onedark.vim` inside this repository).
+
+### tmux theme
+
+If you'd like a tmux theme that complements onedark.vim, [@odedlaz has you covered](https://github.com/odedlaz/tmux-onedark-theme).
 
 ---
 
