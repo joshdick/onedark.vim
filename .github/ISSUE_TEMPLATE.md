@@ -1,13 +1,19 @@
-If the issue you're having is related to color rendering or incorrect colors, **please ensure that you have carefully read and gone through the Installation section of the README at https://github.com/joshdick/onedark.vim#installation before submitting your issue.**
+<!--
+  If you are making a feature request, feel free to delete all of this template text.
 
-(If not a feature request)
+  If you need help (especially related to color rendering/incorrect colors) or are filing a bug, please ensure
+  that you've checked all boxes and provided all requested information in the template below before submitting.
 
-Output from `vim --version`:
+  Thank you!
+-->
+- [ ] I have carefully read and followed the [Installation section of the README](https://github.com/joshdick/onedark.vim#installation)
+- [ ] I have searched through the [closed issues](https://github.com/joshdick/onedark.vim/issues?q=is%3Aissue+is%3Aclosed) to see if there is an existing solution for my issue
+
+* Terminal emulator(s) and their version(s) used, if applicable: `Replace this text if applicable, or delete this line`
+
+* Output from `vim --version`:
 
 ```
 Replace this text with the output
 ```
 
-Terminal emulator(s) and their version(s) used, if applicable: `Replace this text if applicable, or delete this line`
-
-Thank you!
