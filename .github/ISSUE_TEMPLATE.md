@@ -9,11 +9,16 @@
 - [ ] I have carefully read and followed the [Installation section of the README](https://github.com/joshdick/onedark.vim#installation)
 - [ ] I have searched through the [closed issues](https://github.com/joshdick/onedark.vim/issues?q=is%3Aissue+is%3Aclosed) to see if there is an existing solution for my issue
 
-* Terminal emulator(s) and their version(s) used, if applicable: `Replace this text if applicable, or delete this line`
+### Terminal Emulator Info
 
-* Output from `vim --version`:
+Terminal emulator(s) and their version(s) used, if applicable: `Replace this text if applicable; otherwise delete this section`
+
+### Output From `vim --version`
 
 ```
 Replace this text with the output
 ```
 
+### Issue Description
+
+Write your issue description here.
