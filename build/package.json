@@ -1,0 +1,28 @@
+{
+  "name": "onedark.vim-builder",
+  "version": "1.0.0",
+  "description": "Builds the onedark.vim Vim colorscheme and associated files",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "precommit": "npm test",
+    "test": "eslint build.js && node build.js check"
+  },
+  "author": {
+    "name": "Josh Dick",
+    "email": "josh@joshdick.net",
+    "url": "http://joshdick.net"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshdick/onedark.vim.git"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "husky": "^0.13.1"
+  },
+  "dependencies": {
+    "dot": "^1.1.1"
+  }
+}

@@ -142,6 +142,10 @@ More examples of highlight group names and style data can be found in onedark.vi
 
 If you'd like a tmux theme that complements onedark.vim, [@odedlaz has you covered](https://github.com/odedlaz/tmux-onedark-theme).
 
+### Contributing
+
+If you'd like to contribute to onedark.vim, check out the [contribution guidelines](./CONTRIBUTING.md).
+
 ---
 
 Preview images were taken using:
