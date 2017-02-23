@@ -14,7 +14,7 @@ function! airline#themes#onedark#refresh()
     let s:term_purple = 5
     let s:term_white = 7
     let s:term_black = 0
-    let s:term_visual_grey = 15
+    let s:term_visual_grey = 8
   else
     let s:term_red = 204
     let s:term_green = 114
