@@ -11,7 +11,7 @@ if get(g:, 'onedark_termcolors', 256) == 16
   let s:term_purple = 5
   let s:term_white = 7
   let s:term_black = 0
-  let s:term_visual_grey = 15
+  let s:term_grey = 8
 else
   let s:term_red = 204
   let s:term_green = 114
@@ -20,7 +20,7 @@ else
   let s:term_purple = 170
   let s:term_white = 145
   let s:term_black = 235
-  let s:term_visual_grey = 237
+  let s:term_grey = 236
 endif
 
 let s:red = [ '#E06C75', s:term_red ]
@@ -30,7 +30,7 @@ let s:blue = [ '#61AFEF', s:term_blue ]
 let s:purple = [ '#C678DD', s:term_purple ]
 let s:white = [ '#ABB2BF', s:term_white ]
 let s:black = [ '#282C34', s:term_black ]
-let s:grey = [ '#3E4452', s:term_visual_grey ]
+let s:grey = [ '#3E4452', s:term_grey ]
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 let s:p.normal.left = [ [ s:black, s:green ], [ s:white, s:grey ] ]

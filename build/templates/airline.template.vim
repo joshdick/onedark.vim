@@ -14,7 +14,7 @@ function! airline#themes#onedark#refresh()
     let s:term_purple = {{=it.purple.cterm16}}
     let s:term_white = {{=it.white.cterm16}}
     let s:term_black = {{=it.black.cterm16}}
-    let s:term_visual_grey = {{=it.visual_grey.cterm16}}
+    let s:term_grey = {{=it.cursor_grey.cterm16}}
   else
     let s:term_red = {{=it.red.cterm}}
     let s:term_green = {{=it.green.cterm}}
@@ -23,7 +23,7 @@ function! airline#themes#onedark#refresh()
     let s:term_purple = {{=it.purple.cterm}}
     let s:term_white = {{=it.white.cterm}}
     let s:term_black = {{=it.black.cterm}}
-    let s:term_visual_grey = {{=it.visual_grey.cterm}}
+    let s:term_grey = {{=it.cursor_grey.cterm}}
   endif
 
   let g:airline#themes#onedark#palette = {}
@@ -33,7 +33,7 @@ function! airline#themes#onedark#refresh()
         \ }
 
   let s:N1 = [ '{{=it.black.gui}}', '{{=it.green.gui}}', s:term_black, s:term_green ]
-  let s:N2 = [ '{{=it.white.gui}}', '{{=it.visual_grey.gui}}', s:term_white, s:term_visual_grey ]
+  let s:N2 = [ '{{=it.white.gui}}', '{{=it.visual_grey.gui}}', s:term_white, s:term_grey ]
   let s:N3 = [ '{{=it.green.gui}}', '{{=it.black.gui}}', s:term_green, '' ]
   let g:airline#themes#onedark#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
@@ -61,7 +61,7 @@ function! airline#themes#onedark#refresh()
   let g:airline#themes#onedark#palette.visual_modified = g:airline#themes#onedark#palette.normal_modified
 
   let s:IA1 = [ '{{=it.black.gui}}', '{{=it.white.gui}}', s:term_black, s:term_white ]
-  let s:IA2 = [ '{{=it.white.gui}}', '{{=it.visual_grey.gui}}', s:term_white, s:term_visual_grey ]
+  let s:IA2 = [ '{{=it.white.gui}}', '{{=it.visual_grey.gui}}', s:term_white, s:term_grey ]
   let s:IA3 = s:N2
   let g:airline#themes#onedark#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
   let g:airline#themes#onedark#palette.inactive_modified = {

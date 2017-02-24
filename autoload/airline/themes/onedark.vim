@@ -14,7 +14,7 @@ function! airline#themes#onedark#refresh()
     let s:term_purple = 5
     let s:term_white = 7
     let s:term_black = 0
-    let s:term_visual_grey = 15
+    let s:term_grey = 8
   else
     let s:term_red = 204
     let s:term_green = 114
@@ -23,7 +23,7 @@ function! airline#themes#onedark#refresh()
     let s:term_purple = 170
     let s:term_white = 145
     let s:term_black = 235
-    let s:term_visual_grey = 237
+    let s:term_grey = 236
   endif
 
   let g:airline#themes#onedark#palette = {}
@@ -33,7 +33,7 @@ function! airline#themes#onedark#refresh()
         \ }
 
   let s:N1 = [ '#282C34', '#98C379', s:term_black, s:term_green ]
-  let s:N2 = [ '#ABB2BF', '#3E4452', s:term_white, s:term_visual_grey ]
+  let s:N2 = [ '#ABB2BF', '#3E4452', s:term_white, s:term_grey ]
   let s:N3 = [ '#98C379', '#282C34', s:term_green, '' ]
   let g:airline#themes#onedark#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
@@ -61,7 +61,7 @@ function! airline#themes#onedark#refresh()
   let g:airline#themes#onedark#palette.visual_modified = g:airline#themes#onedark#palette.normal_modified
 
   let s:IA1 = [ '#282C34', '#ABB2BF', s:term_black, s:term_white ]
-  let s:IA2 = [ '#ABB2BF', '#3E4452', s:term_white, s:term_visual_grey ]
+  let s:IA2 = [ '#ABB2BF', '#3E4452', s:term_white, s:term_grey ]
   let s:IA3 = s:N2
   let g:airline#themes#onedark#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
   let g:airline#themes#onedark#palette.inactive_modified = {
