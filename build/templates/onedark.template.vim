@@ -170,7 +170,7 @@ call s:h("Special", { "fg": s:blue }) " any special symbol
 call s:h("SpecialChar", {}) " special character in a constant
 call s:h("Tag", {}) " you can use CTRL-] on this
 call s:h("Delimiter", {}) " character that needs attention
-call s:h("SpecialComment", {}) " special things inside a comment
+call s:h("SpecialComment", { "fg": s:comment_grey }) " special things inside a comment
 call s:h("Debug", {}) " debugging statements
 call s:h("Underlined", {}) " text that stands out, HTML links
 call s:h("Ignore", {}) " left blank, hidden
