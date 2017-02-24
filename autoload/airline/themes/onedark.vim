@@ -1,4 +1,4 @@
-"[onedark.vim](https://github.com/joshdick/onedark.vim/)
+" [onedark.vim](https://github.com/joshdick/onedark.vim/)
 
 " This is a [vim-airline](https://github.com/vim-airline/vim-airline) theme for use with
 " the [onedark.vim](https://github.com/joshdick/onedark.vim) colorscheme.
