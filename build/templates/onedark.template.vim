@@ -358,6 +358,22 @@ call s:h("markdownLinkText", { "fg": s:blue })
 call s:h("markdownLinkDelimiter", { "fg": s:white })
 call s:h("markdownUrl", { "fg": s:purple })
 
+" Perl
+call s:h("perlFiledescRead", { "fg": s:green })
+call s:h("perlFunction", { "fg": s:purple })
+call s:h("perlMatchStartEnd",{ "fg": s:blue })
+call s:h("perlMethod", { "fg": s:purple })
+call s:h("perlPOD", { "fg": s:comment_grey })
+call s:h("perlSharpBang", { "fg": s:comment_grey })
+call s:h("perlSpecialString",{ "fg": s:cyan })
+call s:h("perlStatementFiledesc", { "fg": s:red })
+call s:h("perlStatementFlow",{ "fg": s:red })
+call s:h("perlStatementInclude", { "fg": s:purple })
+call s:h("perlStatementScalar",{ "fg": s:purple })
+call s:h("perlStatementStorage", { "fg": s:purple })
+call s:h("perlSubName",{ "fg": s:yellow })
+call s:h("perlVarPlain",{ "fg": s:blue })
+
 " PHP
 call s:h("phpVarSelector", { "fg": s:red })
 call s:h("phpOperator", { "fg": s:white })
@@ -423,22 +439,6 @@ call s:h("xmlAttrib", { "fg": s:dark_yellow })
 call s:h("xmlEndTag", { "fg": s:red })
 call s:h("xmlTag", { "fg": s:red })
 call s:h("xmlTagName", { "fg": s:red })
-
-" Perl
-call s:h("perlFiledescRead", { "fg": s:green })
-call s:h("perlFunction", { "fg": s:purple })
-call s:h("perlMatchStartEnd",{ "fg": s:blue })
-call s:h("perlMethod", { "fg": s:purple })
-call s:h("perlPOD", { "fg": s:comment_grey })
-call s:h("perlSharpBang", { "fg": s:comment_grey })
-call s:h("perlSpecialString",{ "fg": s:cyan })
-call s:h("perlStatementFiledesc", { "fg": s:red })
-call s:h("perlStatementFlow",{ "fg": s:red })
-call s:h("perlStatementInclude", { "fg": s:purple })
-call s:h("perlStatementScalar",{ "fg": s:purple })
-call s:h("perlStatementStorage", { "fg": s:purple })
-call s:h("perlSubName",{ "fg": s:yellow })
-call s:h("perlVarPlain",{ "fg": s:blue })
 
 " +---------------------+
 " | Plugin Highlighting |
