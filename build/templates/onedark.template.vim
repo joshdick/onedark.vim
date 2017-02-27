@@ -421,6 +421,21 @@ call s:h("xmlEndTag", { "fg": s:red })
 call s:h("xmlTag", { "fg": s:red })
 call s:h("xmlTagName", { "fg": s:red })
 
+" Perl
+call s:h("perlFiledescRead", { "fg": s:green })
+call s:h("perlFunction", { "fg": s:purple })
+call s:h("perlMatchStartEnd",{ "fg": s:blue })
+call s:h("perlMethod", { "fg": s:purple })
+call s:h("perlSharpBang", { "fg": s:comment_grey })
+call s:h("perlSpecialString",{ "fg": s:cyan })
+call s:h("perlStatementFiledesc", { "fg": s:red })
+call s:h("perlStatementFlow",{ "fg": s:red })
+call s:h("perlStatementInclude", { "fg": s:purple })
+call s:h("perlStatementScalar",{ "fg": s:purple })
+call s:h("perlStatementStorage", { "fg": s:purple })
+call s:h("perlSubName",{ "fg": s:yellow })
+call s:h("perlVarPlain",{ "fg": s:blue })
+
 " +---------------------+
 " | Plugin Highlighting |
 " +---------------------+
