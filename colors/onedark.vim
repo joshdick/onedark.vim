@@ -252,6 +252,9 @@ call s:h("cssSelectorOp", { "fg": s:purple })
 call s:h("cssSelectorOp2", { "fg": s:purple })
 call s:h("cssTagName", { "fg": s:red })
 
+" Go
+call s:h("goDeclaration", { "fg": s:purple })
+
 " HTML
 call s:h("htmlTitle", { "fg": s:white })
 call s:h("htmlArg", { "fg": s:dark_yellow })
