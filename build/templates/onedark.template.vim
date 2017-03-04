@@ -333,6 +333,11 @@ call s:h("jsonString", { "fg": s:green })
 call s:h("jsonStringSQError", { "fg": s:red, "gui": "reverse" })
 call s:h("jsonSemicolonError", { "fg": s:red, "gui": "reverse" })
 
+" LESS
+call s:h("lessVariable", { "fg": s:purple })
+call s:h("lessAmpersandChar", { "fg": s:white })
+call s:h("lessClass", { "fg": s:dark_yellow })
+
 " Markdown
 call s:h("markdownCode", { "fg": s:green })
 call s:h("markdownCodeBlock", { "fg": s:green })
