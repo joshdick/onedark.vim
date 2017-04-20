@@ -494,6 +494,7 @@ call s:h("gitcommitDiscardedFile", { "fg": s:red })
 call s:h("gitcommitSelectedFile", { "fg": s:green })
 call s:h("gitcommitUnmergedFile", { "fg": s:yellow })
 call s:h("gitcommitFile", {})
+call s:h("gitcommitSummary", { "fg": s:white })
 hi link gitcommitNoBranch gitcommitBranch
 hi link gitcommitUntracked gitcommitComment
 hi link gitcommitDiscarded gitcommitComment
