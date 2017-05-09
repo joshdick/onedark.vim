@@ -44,8 +44,6 @@
 " | Initialization |
 " +----------------+
 
-set background=dark
-
 highlight clear
 
 if exists("syntax_on")
@@ -528,3 +526,7 @@ if has("nvim")
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
 endif
+
+" Must appear at the end of the file to work around this oddity:
+" https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
+set background=dark
