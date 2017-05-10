@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const doT = require('doT')
+const termcolors = require('termcolors')
 const { readFileSync, writeFileSync } = require('fs')
 const { resolve } = require('path')
 
@@ -42,9 +43,10 @@ const specialColors = Object.freeze({
 const colors = Object.assign({}, baseColors, specialColors)
 
 const templateMap = Object.freeze({
-	'./templates/onedark.template.vim': '../colors/onedark.vim',
-	'./templates/lightline.template.vim': '../autoload/lightline/colorscheme/onedark.vim',
-	'./templates/airline.template.vim': '../autoload/airline/themes/onedark.vim'
+	'templates/onedark.template.vim': '../colors/onedark.vim',
+	'templates/lightline.template.vim': '../autoload/lightline/colorscheme/onedark.vim',
+	'templates/airline.template.vim': '../autoload/airline/themes/onedark.vim',
+	'templates/One Dark.Xresources': '../term/One Dark.Xresources'
 })
 
 const shouldCheck = String(process.argv[2]).toLowerCase() === 'check'
@@ -109,6 +111,22 @@ Object.keys(templateMap).forEach(templateFilename => {
 	}
 
 })
+
+try {
+	// Use the Xresources theme as a color source since it was generated above via templating
+	const xresources = readFileSync(resolve(__dirname, '../term/One Dark.Xresources'), 'utf8')
+	const terminalPalette = termcolors.xresources.import(xresources)
+
+	try {
+		writeFileSync(resolve(__dirname, '../term/One\ Dark.itermcolors'), termcolors.iterm.export(terminalPalette))
+		writeFileSync(resolve(__dirname, '../term/One\ Dark.terminal'), termcolors.terminalapp.export(terminalPalette))
+	} catch (e) {
+		handleError('Error writing terminal color file', e)
+	}
+
+} catch (e) {
+	handleError('Error reading Xresources terminal color file', e)
+}
 
 console.log('Success!')
 

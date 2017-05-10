@@ -1,0 +1,37 @@
+! special
+*.foreground:   <%=it.white.gui%>
+*.background:   <%=it.black.gui%>
+*.cursorColor:  <%=it.white.gui%>
+
+! black
+*.color0:       <%=it.black.gui%>
+*.color8:       <%=it.visual_grey.gui%>
+
+! red
+*.color1:       <%=it.red.gui%>
+*.color9:       <%=it.dark_red.gui%>
+
+! green
+*.color2:       <%=it.green.gui%>
+*.color10:      <%=it.green.gui%>
+
+! yellow
+*.color3:       <%=it.yellow.gui%>
+*.color11:      <%=it.dark_yellow.gui%>
+
+! blue
+*.color4:       <%=it.blue.gui%>
+*.color12:      <%=it.blue.gui%>
+
+! magenta
+*.color5:       <%=it.purple.gui%>
+*.color13:      <%=it.purple.gui%>
+
+! cyan
+*.color6:       <%=it.cyan.gui%>
+*.color14:      <%=it.cyan.gui%>
+
+! white
+*.color7:       <%=it.white.gui%>
+*.color15:      <%=it.comment_grey.gui%>
+
