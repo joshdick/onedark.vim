@@ -31,7 +31,7 @@ const baseColors = Object.freeze({
 
 const specialColors = Object.freeze({
 	comment_grey: { gui: '#5C6370', cterm: '59', cterm16: '15' },
-	gutter_fg_grey: { gui: '#636D83', cterm: '238', cterm16: '15' },
+	gutter_fg_grey: { gui: '#4B5263', cterm: '238', cterm16: '15' },
 	cursor_grey:  { gui: '#2C323C', cterm: '236', cterm16: '8' },
 	visual_grey: { gui: '#3E4452', cterm: '237', cterm16: '15' },
 	menu_grey: { cterm16: '8' }, // vim theme handles gui/cterm values
