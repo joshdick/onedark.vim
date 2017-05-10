@@ -146,6 +146,17 @@ If you'd like a tmux theme that complements onedark.vim, [@odedlaz has you cover
 
 If you'd like to contribute to onedark.vim, check out the [contribution guidelines](./CONTRIBUTING.md).
 
+### Relatives of onedark.vim
+
+Several other themes and projects have reused code and/or colors from this project, or were otherwise inspired by it.
+
+If onedark.vim isn't meeting your needs, try one of its relatives!
+
+* [KeitaNakamura/neodark.vim](https://github.com/KeitaNakamura/neodark.vim)
+* [base16-onedark.vim](https://github.com/chriskempson/base16-vim/blob/master/colors/base16-onedark.vim)
+  * Associated base16 scheme: [tilal6991/base16-onedark-scheme](https://github.com/tilal6991/base16-onedark-scheme)
+* [rakr/vim-one](https://github.com/rakr/vim-one)
+
 ---
 
 Preview images were taken using:
