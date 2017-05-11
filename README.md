@@ -18,7 +18,7 @@ A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, base
     printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
     ```
 
-    If your terminal emulator **does NOT display the word `TRUECOLOR` in red**, it does not support 24-bit color. If you don't want to switch to a different terminal emulator that [supports 24-bit color](https://gist.github.com/XVilka/8346728), **proceed to step 3**. (After installation, the [`g:onedark_termcolors` setting](#options) may interest you.)
+    If your terminal emulator **does NOT display the word `TRUECOLOR` in red**, it does not support 24-bit color. If you don't want to switch to a different terminal emulator that [supports 24-bit color](https://gist.github.com/XVilka/8346728), **proceed to step 3**. (After installation, the [`g:onedark_termcolors` option](#options) may interest you.)
 
     If your terminal emulator displays the word `TRUECOLOR` **in red**, it supports 24-bit color, and you should add the following lines to your `~/.vimrc` to enable 24-bit color terminal support inside Vim.
 
@@ -55,7 +55,7 @@ A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, base
 
 **Note:** All options should be set **before** the `colorscheme onedark` line in your `~/.vimrc`.
 
-* `g:onedark_termcolors` **(see [Troubleshooting](#troubleshooting) (below) for more information about this setting)**: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native 16 colors.
+* `g:onedark_termcolors` **(see [Troubleshooting](#troubleshooting) (below) for more information about this option)**: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native 16 colors.
 
 * `g:onedark_terminal_italics`: Set to `1` if your terminal emulator supports italics; `0` otherwise (the default).
 
@@ -116,11 +116,11 @@ If Vim looks similar to the screenshot above, you have enabled Vim's 24-bit colo
 
 If your terminal doesn't support 24-bit color as described in the [Installation](#installation) of this README, or 24-bit color support is not always available everwhere you use your Vim configuration, colors will not look like they do in the preview image.
 
-However, you can use the `g:onedark_termcolors` setting to control onedark.vim's fallback colors in situations where 24-bit color terminal support is not available.
+However, you can use the `g:onedark_termcolors` option to control onedark.vim's fallback colors in situations where 24-bit color terminal support is not available.
 
 `g:onedark_termcolors` can be set to one of two values, `256` for 256-color mode (the default), or `16` for 16-color mode (which uses your terminal emulator's native 16 colors.)
 
-**When Vim/Neovim are configured to use use 24-bit color, the `g:onedark_termcolors` setting is ignored. However, `g:onedark_termcolors` can still coexist with 24-bit color configuration.** For instance, when tmux 2.1 or earlier and/or older Vim/Neovim versions that don't support 24-bit color are used, the `g:onedark_termcolors` setting will take effect.
+**When Vim/Neovim are configured to use use 24-bit color, the `g:onedark_termcolors` option is ignored. However, `g:onedark_termcolors` can still coexist with 24-bit color configuration.** For instance, when tmux 2.1 or earlier and/or older Vim/Neovim versions that don't support 24-bit color are used, the `g:onedark_termcolors` option will take effect.
 
 * **256-color mode** is enabled by default with no additional configuration, but colors are less accurate since they are approximated using a 256-color palette. The background color will appear darker than in the preview image, and most other colors will appear brighter than in the preview image. If you don't want to change your terminal's color palette as described in the 16-color mode section below, and your terminal doesn't support 24-bit color, 256-color mode is your only option.
 
@@ -144,7 +144,7 @@ However, you can use the `g:onedark_termcolors` setting to control onedark.vim's
 
 ![Broken Italics](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/broken_italics.png)
 
-If all comments look like the one in the screenshot above, you have enabled italics in onedark.vim by setting `g:onedark_terminal_italics=1` in your `~/.vimrc`, but your terminal isn't displaying italics correctly. You can either remove the setting or [try to fix your terminal](https://github.com/joshdick/onedark.vim/issues/97#issuecomment-299719352). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
+If all comments look like the one in the screenshot above, you have enabled italics in onedark.vim by setting `g:onedark_terminal_italics=1` in your `~/.vimrc`, but your terminal isn't displaying italics correctly. You can either remove the option or [try to fix your terminal](https://github.com/joshdick/onedark.vim/issues/97#issuecomment-299719352). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
 
 ## Miscellaneous
 
