@@ -114,7 +114,7 @@ If Vim looks similar to the screenshot above, you have enabled Vim's 24-bit colo
 
 **Why do the colors in terminal Vim look slightly off/not like the preview image at the top of this README?**
 
-If your terminal doesn't support 24-bit color as described in the [Installation](#installation) of this README, or 24-bit color support is not always available everwhere you use your Vim configuration, colors will not look like they do in the preview image.
+If your terminal doesn't support 24-bit color as described in the [Installation](#installation) section of this README, or 24-bit color support is not always available everywhere you use your Vim configuration, colors will not look like they do in the preview image.
 
 However, you can use the `g:onedark_termcolors` option to control onedark.vim's fallback colors in situations where 24-bit color terminal support is not available.
 
