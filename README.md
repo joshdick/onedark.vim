@@ -106,13 +106,13 @@ let g:airline_theme='onedark'
 
 ## Troubleshooting
 
-**Why do the colors in terminal Vim look totally crazy?**
+### Why do the colors in terminal Vim look totally crazy?
 
 ![Broken Colors](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/broken_colors.png)
 
 If Vim looks similar to the screenshot above, you have enabled Vim's 24-bit color terminal support, but your terminal doesn't support 24 bit color. Remove the relevant `~/.vimrc` configuration for enabling 24-bit color support to get things looking better.
 
-**Why do the colors in terminal Vim look slightly off/not like the preview image at the top of this README?**
+### Why do the colors in terminal Vim look slightly off/not like the preview image at the top of this README?
 
 If your terminal doesn't support 24-bit color as described in the [Installation](#installation) section of this README, or 24-bit color support is not always available everywhere you use your Vim configuration, colors will not look like they do in the preview image.
 
@@ -140,7 +140,7 @@ However, you can use the `g:onedark_termcolors` option to control onedark.vim's 
    let g:onedark_termcolors=16
    ```
 
-**Why do all comments look like they're highlighted?**
+### Why do all comments look like they're highlighted?
 
 ![Broken Italics](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/broken_italics.png)
 
@@ -148,7 +148,7 @@ If all comments look like the one in the screenshot above, you have enabled ital
 
 ## Miscellaneous
 
-### Customizing onedark.vim's Look Without Forking the Repository
+### Customizing onedark.vim's look without forking the repository
 
 onedark.vim exposes a function called `onedark#set_highlight` that you can call from within your `~/.vimrc` in order to customize the look of onedark.vim by overriding its defaults.
 
@@ -189,7 +189,7 @@ If onedark.vim isn't meeting your needs, try one of its relatives!
   * Associated base16 scheme: [tilal6991/base16-onedark-scheme](https://github.com/tilal6991/base16-onedark-scheme)
 * [rakr/vim-one](https://github.com/rakr/vim-one)
 
----
+### Preview images
 
 Preview images were taken using:
 
