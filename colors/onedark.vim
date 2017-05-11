@@ -1,3 +1,4 @@
+" vim:fdm=marker
 " Vim Color File
 " Name:       onedark.vim
 " Maintainer: https://github.com/joshdick/onedark.vim/
@@ -6,9 +7,7 @@
 
 " A companion [vim-airline](https://github.com/bling/vim-airline) theme is available at: https://github.com/joshdick/airline-onedark.vim
 
-" +-----------------+
-" | Color Reference |
-" +-----------------+
+" Color Reference {{{
 
 " The following colors were measured inside Atom using its built-in inspector.
 
@@ -35,14 +34,14 @@
 " |--------------+--------------------+---------|
 " | Cyan         | rgb(86, 182, 194)  | #56b6c2 |
 " |--------------+--------------------+---------|
-" | Gutter Grey  | rgb(99, 109, 131)  | #636d83 |
+" | Gutter Grey  | rgb(76, 82, 99)    | #4b5263 |
 " |--------------+--------------------+---------|
 " | Comment Grey | rgb(92, 99, 112)   | #5c6370 |
 " +---------------------------------------------+
 
-" +----------------+
-" | Initialization |
-" +----------------+
+" }}}
+
+" Initialization {{{
 
 highlight clear
 
@@ -96,17 +95,17 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
-" public
+" public {{{
 
 function! onedark#set_highlight(group, style)
   call s:h(a:group, a:style)
 endfunction
 
-" /public
+" }}}
 
-" +-----------------+
-" | Color Variables |
-" +-----------------+
+" }}}
+
+" Color Variables {{{
 
 let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" }
 let s:dark_red = { "gui": "#BE5046", "cterm": "196", "cterm16": "9" }
@@ -128,16 +127,16 @@ let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
 
 let s:comment_grey = { "gui": "#5C6370", "cterm": "59", "cterm16": "15" }
-let s:gutter_fg_grey = { "gui": "#636D83", "cterm": "238", "cterm16": "15" }
+let s:gutter_fg_grey = { "gui": "#4B5263", "cterm": "238", "cterm16": "15" }
 let s:cursor_grey = { "gui": "#2C323C", "cterm": "236", "cterm16": "8" }
 let s:visual_grey = { "gui": "#3E4452", "cterm": "237", "cterm16": "15" }
 let s:menu_grey = { "gui": s:visual_grey.gui, "cterm": s:visual_grey.cterm, "cterm16": "8" }
 let s:special_grey = { "gui": "#3B4048", "cterm": "238", "cterm16": "15" }
 let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
 
-" +---------------------------------------------------------+
-" | Syntax Groups (descriptions and ordering from `:h w18`) |
-" +---------------------------------------------------------+
+" }}}
+
+" Syntax Groups (descriptions and ordering from `:h w18`) {{{
 
 call s:h("Comment", { "fg": s:comment_grey, "gui": "italic", "cterm": "italic" }) " any comment
 call s:h("Constant", { "fg": s:cyan }) " any constant
@@ -170,14 +169,14 @@ call s:h("Tag", {}) " you can use CTRL-] on this
 call s:h("Delimiter", {}) " character that needs attention
 call s:h("SpecialComment", { "fg": s:comment_grey }) " special things inside a comment
 call s:h("Debug", {}) " debugging statements
-call s:h("Underlined", {}) " text that stands out, HTML links
+call s:h("Underlined", { "gui": "underline", "cterm": "underline" }) " text that stands out, HTML links
 call s:h("Ignore", {}) " left blank, hidden
 call s:h("Error", { "fg": s:red }) " any erroneous construct
 call s:h("Todo", { "fg": s:purple }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
-" +----------------------------------------------------------------------+
-" | Highlighting Groups (descriptions and ordering from `:h hitest.vim`) |
-" +----------------------------------------------------------------------+
+" }}}
+
+" Highlighting Groups (descriptions and ordering from `:h hitest.vim`) {{{
 
 call s:h("ColorColumn", { "bg": s:cursor_grey }) " used for the columns set with 'colorcolumn'
 call s:h("Conceal", {}) " placeholder characters substituted for concealed text (see 'conceallevel')
@@ -225,9 +224,9 @@ call s:h("VisualNOS", { "bg": s:visual_grey }) " Visual mode selection when vim 
 call s:h("WarningMsg", { "fg": s:yellow }) " warning messages
 call s:h("WildMenu", { "fg": s:black, "bg": s:blue }) " current match in 'wildmenu' completion
 
-" +--------------------------------+
-" | Language-Specific Highlighting |
-" +--------------------------------+
+" }}}
+
+" Language-Specific Highlighting {{{
 
 " CSS
 call s:h("cssAttrComma", { "fg": s:purple })
@@ -453,9 +452,9 @@ call s:h("xmlEndTag", { "fg": s:red })
 call s:h("xmlTag", { "fg": s:red })
 call s:h("xmlTagName", { "fg": s:red })
 
-" +---------------------+
-" | Plugin Highlighting |
-" +---------------------+
+" }}}
+
+" Plugin Highlighting {{{
 
 " airblade/vim-gitgutter
 hi link GitGutterAdd    SignifySignAdd
@@ -476,9 +475,9 @@ call s:h("NeomakeInfoSign", { "fg": s:blue })
 call s:h("diffAdded", { "fg": s:green })
 call s:h("diffRemoved", { "fg": s:red })
 
-" +------------------+
-" | Git Highlighting |
-" +------------------+
+" }}}
+
+" Git Highlighting {{{
 
 call s:h("gitcommitComment", { "fg": s:comment_grey })
 call s:h("gitcommitUnmerged", { "fg": s:green })
@@ -502,9 +501,9 @@ hi link gitcommitDiscardedArrow gitcommitDiscardedFile
 hi link gitcommitSelectedArrow gitcommitSelectedFile
 hi link gitcommitUnmergedArrow gitcommitUnmergedFile
 
-" +------------------------+
-" | Neovim terminal colors |
-" +------------------------+
+" }}}
+
+" Neovim terminal colors {{{
 
 if has("nvim")
   let g:terminal_color_0 =  s:black.gui
@@ -526,6 +525,8 @@ if has("nvim")
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
 endif
+
+" }}}
 
 " Must appear at the end of the file to work around this oddity:
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ

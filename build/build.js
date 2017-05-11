@@ -1,10 +1,21 @@
 #!/usr/bin/env node
 
 const doT = require('doT')
+const termcolors = require('termcolors')
 const { readFileSync, writeFileSync } = require('fs')
 const { resolve } = require('path')
 
-doT.templateSettings.strip = false // preserve whitespace
+doT.templateSettings = {
+	evaluate:    /\<\%([\s\S]+?)\%\>/g,
+	interpolate: /\<\%=([\s\S]+?)\%\>/g,
+	encode:      /\<\%!([\s\S]+?)\%\>/g,
+	use:         /\<\%#([\s\S]+?)\%\>/g,
+	define:      /\<\%##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#\%\>/g,
+	conditional: /\<\%\?(\?)?\s*([\s\S]*?)\s*\%\>/g,
+	iterate:     /\<\%~\s*(?:\%\>|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\%\>)/g,
+	varname: 'it',
+	strip: false, // preserve whitespace
+}
 
 const baseColors = Object.freeze({
 	red: { gui: '#E06C75', cterm: '204', cterm16: '1' }, // alternate cterm: 168
@@ -21,7 +32,7 @@ const baseColors = Object.freeze({
 
 const specialColors = Object.freeze({
 	comment_grey: { gui: '#5C6370', cterm: '59', cterm16: '15' },
-	gutter_fg_grey: { gui: '#636D83', cterm: '238', cterm16: '15' },
+	gutter_fg_grey: { gui: '#4B5263', cterm: '238', cterm16: '15' },
 	cursor_grey:  { gui: '#2C323C', cterm: '236', cterm16: '8' },
 	visual_grey: { gui: '#3E4452', cterm: '237', cterm16: '15' },
 	menu_grey: { cterm16: '8' }, // vim theme handles gui/cterm values
@@ -32,9 +43,10 @@ const specialColors = Object.freeze({
 const colors = Object.assign({}, baseColors, specialColors)
 
 const templateMap = Object.freeze({
-	'./templates/onedark.template.vim': '../colors/onedark.vim',
-	'./templates/lightline.template.vim': '../autoload/lightline/colorscheme/onedark.vim',
-	'./templates/airline.template.vim': '../autoload/airline/themes/onedark.vim'
+	'templates/onedark.template.vim': '../colors/onedark.vim',
+	'templates/lightline.template.vim': '../autoload/lightline/colorscheme/onedark.vim',
+	'templates/airline.template.vim': '../autoload/airline/themes/onedark.vim',
+	'templates/One Dark.Xresources': '../term/One Dark.Xresources'
 })
 
 const shouldCheck = String(process.argv[2]).toLowerCase() === 'check'
@@ -99,6 +111,22 @@ Object.keys(templateMap).forEach(templateFilename => {
 	}
 
 })
+
+try {
+	// Use the Xresources theme as a color source since it was generated above via templating
+	const xresources = readFileSync(resolve(__dirname, '../term/One Dark.Xresources'), 'utf8')
+	const terminalPalette = termcolors.xresources.import(xresources)
+
+	try {
+		writeFileSync(resolve(__dirname, '../term/One\ Dark.itermcolors'), termcolors.iterm.export(terminalPalette))
+		writeFileSync(resolve(__dirname, '../term/One\ Dark.terminal'), termcolors.terminalapp.export(terminalPalette))
+	} catch (e) {
+		handleError('Error writing terminal color file', e)
+	}
+
+} catch (e) {
+	handleError('Error reading Xresources terminal color file', e)
+}
 
 console.log('Success!')
 
