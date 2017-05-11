@@ -193,8 +193,8 @@ If onedark.vim isn't meeting your needs, try one of its relatives!
 
 ---
 
-Preview images were taken using:
+Preview image was taken using:
 
 * [iTerm2](https://iterm2.com) terminal emulator on macOS
-* 12 pt. [PragmataPro Mono](http://www.fsd.it/fonts/pragmatapro.htm#.VlDa1q6rTOY) font
+* 13 pt. [PragmataPro Mono](http://www.fsd.it/fonts/pragmatapro.htm#.VlDa1q6rTOY) font
 * [vim-polyglot](https://github.com/sheerun/vim-polyglot) plug-in
