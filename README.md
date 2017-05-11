@@ -110,7 +110,7 @@ let g:airline_theme='onedark'
 
 ![Broken Colors](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/broken_colors.png)
 
-If Vim looks similar the screenshot above, you have enabled Vim's 24-bit color terminal support, but your terminal doesn't support 24 bit color. Remove the relevant `~/.vimrc` configuration for enabling 24-bit color support to get things looking better.
+If Vim looks similar to the screenshot above, you have enabled Vim's 24-bit color terminal support, but your terminal doesn't support 24 bit color. Remove the relevant `~/.vimrc` configuration for enabling 24-bit color support to get things looking better.
 
 **Why do the colors in terminal Vim look slightly off/not like the preview image at the top of this README?**
 
@@ -144,9 +144,7 @@ However, you can use the `g:onedark_termcolors` setting to control onedark.vim's
 
 ![Broken Italics](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/broken_italics.png)
 
-If comments look like this:
-
-You have enabled italics in onedark.vim by setting `g:onedark_terminal_italics=1` in your `~/.vimrc`, but your terminal isn't displaying italics correctly. You can either remove the setting or [try to fix your terminal](https://github.com/joshdick/onedark.vim/issues/97#issuecomment-299719352). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
+If all comments look like the one in the screenshot above, you have enabled italics in onedark.vim by setting `g:onedark_terminal_italics=1` in your `~/.vimrc`, but your terminal isn't displaying italics correctly. You can either remove the setting or [try to fix your terminal](https://github.com/joshdick/onedark.vim/issues/97#issuecomment-299719352). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
 
 ## Miscellaneous
 
