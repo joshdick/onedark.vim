@@ -6,7 +6,7 @@ A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, base
 
 ## Installation
 
-1. Install the theme using your Vim plug-in manager of choice, or by manually placing `colors/onedark.vim` in your `~/.vim/colors/` directory.
+1. Install the theme using your Vim plug-in manager of choice (or manually, by placing `colors/onedark.vim` in your `~/.vim/colors/` directory and `autoload/onedark.vim` in your `~/.vim/autoload/` directory.)
 
 2. If you use Vim in a terminal, do the following to test whether your terminal emulator supports [24-bit/"true" color](https://gist.github.com/XVilka/8346728), then add relevant `~/.vimrc` configuration if so:
 
@@ -67,7 +67,7 @@ This repository includes a companion [lightline.vim](https://github.com/itchyny/
 
 The lightline.vim colorscheme:
 
-* Depends on onedark.vim for its colors, and must therefore be used in conjunction with it.
+* Depends on `autoload/onedark.vim` for its colors, and must therefore be used in conjunction with it.
 * Works with both color modes available in onedark.vim (16 or 256 colors), as specified in the configuration for onedark.vim.
 
 ### Installation
@@ -90,7 +90,7 @@ This repository includes a companion [vim-airline](https://github.com/vim-airlin
 
 The vim-airline theme:
 
-* Depends on onedark.vim for its colors, and must therefore be used in conjunction with it.
+* Depends on `autoload/onedark.vim` for its colors, and must therefore be used in conjunction with it.
 * Works with both color modes available in onedark.vim (16 or 256 colors), as specified in the configuration for onedark.vim.
 * Is based on vim-airline's ["tomorrow" theme](https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/tomorrow.vim).
 
@@ -167,6 +167,17 @@ if (has("autocmd") && !has("gui"))
   autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " No `bg` setting
 end
 ```
+
+You can also override a color across all highlights by adding the color definitions to the `g:onedark_color_overrides` dictionary in your `~/.vimrc` like so:
+
+```vim
+let g:onedark_color_overrides = {
+\ "black": {"gui": "#2F343F", "cterm": "235", "cterm16": "0" },
+\ "purple": { "gui": "#C678DF", "cterm": "170", "cterm16": "5" }
+\}
+```
+
+This also needs to be done **before** `colorscheme onedark`.
 
 More examples of highlight group names and style data can be found in onedark.vim's source code (`colors/onedark.vim` inside this repository).
 
