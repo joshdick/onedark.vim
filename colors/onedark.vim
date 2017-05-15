@@ -107,32 +107,26 @@ endfunction
 
 " Color Variables {{{
 
-let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" }
-let s:dark_red = { "gui": "#BE5046", "cterm": "196", "cterm16": "9" }
+let s:colors = onedark#GetColors()
 
-let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2" }
-
-let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" }
-let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
-
-let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" }
-
-let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5" }
-
-let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" }
-
-let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16": "7" }
-
-let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
-let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
-
-let s:comment_grey = { "gui": "#5C6370", "cterm": "59", "cterm16": "15" }
-let s:gutter_fg_grey = { "gui": "#4B5263", "cterm": "238", "cterm16": "15" }
-let s:cursor_grey = { "gui": "#2C323C", "cterm": "236", "cterm16": "8" }
-let s:visual_grey = { "gui": "#3E4452", "cterm": "237", "cterm16": "15" }
-let s:menu_grey = { "gui": s:visual_grey.gui, "cterm": s:visual_grey.cterm, "cterm16": "8" }
-let s:special_grey = { "gui": "#3B4048", "cterm": "238", "cterm16": "15" }
-let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
+let s:red = s:colors.red
+let s:dark_red = s:colors.dark_red
+let s:green = s:colors.green
+let s:yellow = s:colors.yellow
+let s:dark_yellow = s:colors.dark_yellow
+let s:blue = s:colors.blue
+let s:purple = s:colors.purple
+let s:cyan = s:colors.cyan
+let s:white = s:colors.white
+let s:black = s:colors.black
+let s:visual_black = s:colors.visual_black
+let s:comment_grey = s:colors.comment_grey
+let s:gutter_fg_grey = s:colors.gutter_fg_grey
+let s:cursor_grey = s:colors.cursor_grey
+let s:visual_grey = s:colors.visual_grey
+let s:menu_grey = s:colors.menu_grey
+let s:special_grey = s:colors.special_grey
+let s:vertsplit = s:colors.vertsplit
 
 " }}}
 

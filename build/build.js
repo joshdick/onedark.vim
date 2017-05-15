@@ -43,9 +43,7 @@ const specialColors = Object.freeze({
 const colors = Object.assign({}, baseColors, specialColors)
 
 const templateMap = Object.freeze({
-	'templates/onedark.template.vim': '../colors/onedark.vim',
-	'templates/lightline.template.vim': '../autoload/lightline/colorscheme/onedark.vim',
-	'templates/airline.template.vim': '../autoload/airline/themes/onedark.vim',
+	'templates/autoload.template.vim': '../autoload/onedark.vim',
 	'templates/One Dark.Xresources': '../term/One Dark.Xresources'
 })
 
