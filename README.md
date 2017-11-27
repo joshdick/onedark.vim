@@ -170,6 +170,11 @@ if (has("autocmd") && !has("gui_running"))
 end
 ```
 
+If you want to change only some parts of highlight group, you can use `onedark#extend_highlight` that will change only keys you provide. For example, if you want functions to be bold in GUI, you can do something like this:
+```vim
+call onedark#extend_highlight("Function", { "gui": "bold" })
+```
+
 You can also override a color across all highlights by adding the color definitions to the `g:onedark_color_overrides` dictionary in your `~/.vimrc` like so:
 
 ```vim

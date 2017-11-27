@@ -52,6 +52,7 @@ endif
 set t_Co=256
 
 let g:colors_name="onedark"
+let s:group_colors = {}
 
 " Set to "256" for 256-color terminals, or
 " set to "16" to use your terminal emulator's native colors
@@ -69,36 +70,43 @@ endif
 
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
-function! s:h(group, style)
+function! s:h(group, style, ...)
+  let a:highlight = a:0 > 0 ? extend(s:group_colors[a:group], a:style) : a:style
   if g:onedark_terminal_italics == 0
-    if has_key(a:style, "cterm") && a:style["cterm"] == "italic"
-      unlet a:style.cterm
+    if has_key(a:highlight, "cterm") && a:highlight["cterm"] == "italic"
+      unlet a:highlight.cterm
     endif
-    if has_key(a:style, "gui") && a:style["gui"] == "italic"
-      unlet a:style.gui
+    if has_key(a:highlight, "gui") && a:highlight["gui"] == "italic"
+      unlet a:highlight.gui
     endif
   endif
+
   if g:onedark_termcolors == 16
-    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "NONE")
-    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm16 : "NONE")
+    let l:ctermfg = (has_key(a:highlight, "fg") ? a:highlight.fg.cterm16 : "NONE")
+    let l:ctermbg = (has_key(a:highlight, "bg") ? a:highlight.bg.cterm16 : "NONE")
   else
-    let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm : "NONE")
-    let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm : "NONE")
+    let l:ctermfg = (has_key(a:highlight, "fg") ? a:highlight.fg.cterm : "NONE")
+    let l:ctermbg = (has_key(a:highlight, "bg") ? a:highlight.bg.cterm : "NONE")
   endif
   execute "highlight" a:group
-    \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
-    \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
-    \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
-    \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
+    \ "guifg="   (has_key(a:highlight, "fg")    ? a:highlight.fg.gui   : "NONE")
+    \ "guibg="   (has_key(a:highlight, "bg")    ? a:highlight.bg.gui   : "NONE")
+    \ "guisp="   (has_key(a:highlight, "sp")    ? a:highlight.sp.gui   : "NONE")
+    \ "gui="     (has_key(a:highlight, "gui")   ? a:highlight.gui      : "NONE")
     \ "ctermfg=" . l:ctermfg
     \ "ctermbg=" . l:ctermbg
-    \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
+    \ "cterm="   (has_key(a:highlight, "cterm") ? a:highlight.cterm    : "NONE")
+  let s:group_colors[a:group] = a:highlight
 endfunction
 
 " public {{{
 
 function! onedark#set_highlight(group, style)
   call s:h(a:group, a:style)
+endfunction
+
+function! onedark#extend_highlight(group, style)
+  call s:h(a:group, a:style, 1)
 endfunction
 
 " }}}
