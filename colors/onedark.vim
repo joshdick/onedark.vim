@@ -52,7 +52,6 @@ endif
 set t_Co=256
 
 let g:colors_name="onedark"
-let s:group_colors = {}
 
 " Set to "256" for 256-color terminals, or
 " set to "16" to use your terminal emulator's native colors
@@ -70,8 +69,10 @@ endif
 
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
+let s:group_colors = {} " Cache of default highlight group settings, for later reference via `onedark#extend_highlight`
 function! s:h(group, style, ...)
   let a:highlight = a:0 > 0 ? extend(s:group_colors[a:group], a:style) : a:style
+
   if g:onedark_terminal_italics == 0
     if has_key(a:highlight, "cterm") && a:highlight["cterm"] == "italic"
       unlet a:highlight.cterm
@@ -88,6 +89,7 @@ function! s:h(group, style, ...)
     let l:ctermfg = (has_key(a:highlight, "fg") ? a:highlight.fg.cterm : "NONE")
     let l:ctermbg = (has_key(a:highlight, "bg") ? a:highlight.bg.cterm : "NONE")
   endif
+
   execute "highlight" a:group
     \ "guifg="   (has_key(a:highlight, "fg")    ? a:highlight.fg.gui   : "NONE")
     \ "guibg="   (has_key(a:highlight, "bg")    ? a:highlight.bg.gui   : "NONE")
@@ -96,6 +98,7 @@ function! s:h(group, style, ...)
     \ "ctermfg=" . l:ctermfg
     \ "ctermbg=" . l:ctermbg
     \ "cterm="   (has_key(a:highlight, "cterm") ? a:highlight.cterm    : "NONE")
+
   let s:group_colors[a:group] = a:highlight
 endfunction
 

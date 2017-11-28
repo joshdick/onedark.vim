@@ -152,9 +152,27 @@ If all comments look like the one in the screenshot above, you have enabled ital
 
 ### Customizing onedark.vim's look without forking the repository
 
-onedark.vim exposes a function called `onedark#set_highlight` that you can call from within your `~/.vimrc` in order to customize the look of onedark.vim by overriding its defaults.
+onedark.vim exposes `onedark#extend_highlight` and `onedark#set_highlight` functions that you can call from within your `~/.vimrc` in order to customize the look of onedark.vim.
 
-The function's first argument should be the name of a highlight group, and its second argument should be style data.
+#### `onedark#extend_highlight`
+
+`onedark#extend_highlight` allows you to customize individual aspects of onedark.vim's existing highlight groups, overriding only the keys you provide. (To completely redefine/override an existing highlight group, see `onedark#set_highlight` below.)
+
+`onedark#extend_highlight`'s first argunment should be the name of a highlight group, and its second argument should be style data.
+
+For example, if you want functions to be bold only in GUI mode, place the following lines **before** the `colorscheme onedark` line in your `~/.vimrc`:
+
+```vim
+if (has("autocmd") && has("gui_running"))
+  autocmd ColorScheme * call onedark#extend_highlight("Function", { "gui": "bold" })
+end
+```
+
+#### `onedark#set_highlight`
+
+`onedark#set_highlight` allows you to completely redefine/override highlight groups of your choosing.
+
+`onedark#set_highlight`'s first argument should be the name of a highlight group, and its second argument should be style data.
 
 For example, to remove the background color only when running in terminals (outside GUI mode and for use in transparent terminals,) place the following lines **before** the `colorscheme onedark` line in your `~/.vimrc`:
 
@@ -170,12 +188,7 @@ if (has("autocmd") && !has("gui_running"))
 end
 ```
 
-If you want to change only some parts of highlight group, you can use `onedark#extend_highlight` that will change only keys you provide. For example, if you want functions to be bold in GUI, you can do something like this:
-```vim
-call onedark#extend_highlight("Function", { "gui": "bold" })
-```
-
-You can also override a color across all highlights by adding the color definitions to the `g:onedark_color_overrides` dictionary in your `~/.vimrc` like so:
+Finally, you can also override a color across all highlights by adding color definitions to the `g:onedark_color_overrides` dictionary in your `~/.vimrc` like so:
 
 ```vim
 let g:onedark_color_overrides = {
