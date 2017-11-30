@@ -71,7 +71,21 @@ endif
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
 let s:group_colors = {} " Cache of default highlight group settings, for later reference via `onedark#extend_highlight`
 function! s:h(group, style, ...)
-  let a:highlight = a:0 > 0 ? extend(s:group_colors[a:group], a:style) : a:style
+  if (a:0 > 0) " Will be true if we got here from onedark#extend_highlight
+    let a:highlight = s:group_colors[a:group]
+    for style_type in ["fg", "bg", "sp"]
+      if (has_key(a:style, style_type))
+        let l:default_style = (has_key(a:highlight, style_type) ? a:highlight[style_type] : { "cterm16": "NONE", "cterm": "NONE", "gui": "NONE" })
+        let a:highlight[style_type] = extend(l:default_style, a:style[style_type])
+      endif
+    endfor
+    if (has_key(a:style, "gui"))
+      let a:highlight.gui = a:style.gui
+    endif
+  else
+    let a:highlight = a:style
+    let s:group_colors[a:group] = a:highlight " Cache default highlight group settings
+  endif
 
   if g:onedark_terminal_italics == 0
     if has_key(a:highlight, "cterm") && a:highlight["cterm"] == "italic"
@@ -98,8 +112,6 @@ function! s:h(group, style, ...)
     \ "ctermfg=" . l:ctermfg
     \ "ctermbg=" . l:ctermbg
     \ "cterm="   (has_key(a:highlight, "cterm") ? a:highlight.cterm    : "NONE")
-
-  let s:group_colors[a:group] = a:highlight
 endfunction
 
 " public {{{
