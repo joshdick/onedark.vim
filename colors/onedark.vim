@@ -497,6 +497,12 @@ call s:h("NeomakeInfoSign", { "fg": s:blue })
 call s:h("diffAdded", { "fg": s:green })
 call s:h("diffRemoved", { "fg": s:red })
 
+" easymotion/vim-easymotion
+call s:h("EasyMotionTarget", {"fg": s:red, "gui": "bold", "cterm": "bold"})
+call s:h("EasyMotionTarget2First", {"fg": s:red, "gui": "bold", "cterm": "bold"})
+call s:h("EasyMotionTarget2Second", {"fg": s:purple, "gui": "bold", "cterm": "bold"})
+call s:h("EasyMotionShade",  {"fg": s:comment_grey})
+
 " }}}
 
 " Git Highlighting {{{
