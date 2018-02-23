@@ -483,6 +483,12 @@ hi link GitGutterAdd    SignifySignAdd
 hi link GitGutterChange SignifySignChange
 hi link GitGutterDelete SignifySignDelete
 
+" easymotion/vim-easymotion
+call s:h("EasyMotionTarget", { "fg": s:red, "gui": "bold", "cterm": "bold" })
+call s:h("EasyMotionTarget2First", { "fg": s:yellow, "gui": "bold", "cterm": "bold" })
+call s:h("EasyMotionTarget2Second", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
+call s:h("EasyMotionShade",  { "fg": s:comment_grey })
+
 " mhinz/vim-signify
 call s:h("SignifySignAdd", { "fg": s:green })
 call s:h("SignifySignChange", { "fg": s:yellow })
