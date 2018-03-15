@@ -7,13 +7,13 @@ const { readFileSync, writeFileSync } = require('fs')
 const { resolve } = require('path')
 
 doT.templateSettings = {
-	evaluate:    /\<\%([\s\S]+?)\%\>/g,
-	interpolate: /\<\%=([\s\S]+?)\%\>/g,
-	encode:      /\<\%!([\s\S]+?)\%\>/g,
-	use:         /\<\%#([\s\S]+?)\%\>/g,
-	define:      /\<\%##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#\%\>/g,
-	conditional: /\<\%\?(\?)?\s*([\s\S]*?)\s*\%\>/g,
-	iterate:     /\<\%~\s*(?:\%\>|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*\%\>)/g,
+	evaluate:    /<%([\s\S]+?)%>/g,
+	interpolate: /<%=([\s\S]+?)%>/g,
+	encode:      /<%!([\s\S]+?)%>/g,
+	use:         /<%#([\s\S]+?)%>/g,
+	define:      /<%##\s*([\w.$]+)\s*(:|=)([\s\S]+?)#%>/g,
+	conditional: /<%\?(\?)?\s*([\s\S]*?)\s*%>/g,
+	iterate:     /<%~\s*(?:%>|([\s\S]+?)\s*:\s*([\w$]+)\s*(?::\s*([\w$]+))?\s*%>)/g,
 	varname: 'it',
 	strip: false, // preserve whitespace
 }
@@ -58,9 +58,9 @@ const handleError = (message, cause) => {
 
 console.log(
 	shouldCheck ?
-	'Checking for inconsistencies between templates and existing output files...'
-	:
-	'Generating output files from templates...'
+		'Checking for inconsistencies between templates and existing output files...'
+		:
+		'Generating output files from templates...'
 )
 
 Object.keys(templateMap).forEach(templateFilename => {
@@ -122,7 +122,7 @@ try {
 	try {
 		itermTemplate = termcolors.export(
 			// From termcolors/lib/formats/iterm.js
-			readFileSync(resolve(__dirname, 'templates/One\ Dark.itermcolors')),
+			readFileSync(resolve(__dirname, 'templates/One Dark.itermcolors')),
 			_.partialRight(_.mapValues, function (color) {
 				return color.toAvgRgbArray()
 			})
@@ -135,7 +135,7 @@ try {
 		]
 
 		terminalAppTemplate = termcolors.export(
-			readFileSync(resolve(__dirname, 'templates/One\ Dark.terminal')),
+			readFileSync(resolve(__dirname, 'templates/One Dark.terminal')),
 			// From termcolors/lib/formats/terminal-app.js
 			_.partialRight(_.mapValues, function (color) {
 				var srgb = color.toAvgRgbArray()
@@ -153,8 +153,8 @@ try {
 	}
 
 	try {
-		writeFileSync(resolve(__dirname, '../term/One\ Dark.itermcolors'), itermTemplate(terminalPalette))
-		writeFileSync(resolve(__dirname, '../term/One\ Dark.terminal'), terminalAppTemplate(terminalPalette))
+		writeFileSync(resolve(__dirname, '../term/One Dark.itermcolors'), itermTemplate(terminalPalette))
+		writeFileSync(resolve(__dirname, '../term/One Dark.terminal'), terminalAppTemplate(terminalPalette))
 	} catch (e) {
 		handleError('Error writing terminal color file', e)
 	}
