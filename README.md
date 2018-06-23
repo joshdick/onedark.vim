@@ -228,6 +228,7 @@ Several other themes and projects have reused code and/or colors from this proje
 
 If onedark.vim isn't meeting your needs, try one of its relatives!
 
+* [drewtempelmeyer/palenight.vim](https://github.com/drewtempelmeyer/palenight.vim)
 * [KeitaNakamura/neodark.vim](https://github.com/KeitaNakamura/neodark.vim)
 * [base16-onedark.vim](https://github.com/chriskempson/base16-vim/blob/master/colors/base16-onedark.vim)
   * Associated base16 scheme: [tilal6991/base16-onedark-scheme](https://github.com/tilal6991/base16-onedark-scheme)
