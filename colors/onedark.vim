@@ -285,6 +285,17 @@ call s:h("htmlSpecialTagName", { "fg": s:red })
 call s:h("htmlTag", { "fg": s:white })
 call s:h("htmlTagName", { "fg": s:red })
 
+" Java
+call s:h("javaCommentTitle", { "fg": s:comment_grey, "gui": "italic", "cterm": "italic"})
+call s:h("javaConstant", { "fg": s:dark_yellow})
+call s:h("javaDocTags", { "fg": s:purple})
+call s:h("javaDocParam", { "fg": s:white})
+call s:h("javaExternal", { "fg": s:purple})
+call s:h("javaScopeDecl", { "fg": s:purple})
+call s:h("javaStorageClass", { "fg": s:purple})
+call s:h("javaTodo", { "fg": s:yellow, "gui": "italic", "cterm": "italic"})
+call s:h("javaTypedef", { "fg": s:red})
+
 " JavaScript
 call s:h("javaScriptBraces", { "fg": s:white })
 call s:h("javaScriptFunction", { "fg": s:purple })
