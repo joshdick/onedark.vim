@@ -116,7 +116,7 @@ try {
 	const xresources = readFileSync(resolve(__dirname, '../term/One Dark.Xresources'), 'utf8')
 	const terminalPalette = termcolors.xresources.import(xresources)
 
-	let itermTemplate, terminalAppTemplate
+	let itermTemplate, terminalAppTemplate, alacrittyTemplate
 
 	// Compile custom terminal color templates based on ones that ship with termcolors
 	try {
@@ -125,6 +125,13 @@ try {
 			readFileSync(resolve(__dirname, 'templates/One Dark.itermcolors')),
 			_.partialRight(_.mapValues, function (color) {
 				return color.toAvgRgbArray()
+			})
+		)
+
+		alacrittyTemplate = termcolors.export(
+			readFileSync(resolve(__dirname, 'templates/One Dark.alacritty')),
+			_.partialRight(_.mapValues, function (color) {
+				return color.toHex().slice(1)
 			})
 		)
 
@@ -155,6 +162,7 @@ try {
 	try {
 		writeFileSync(resolve(__dirname, '../term/One Dark.itermcolors'), itermTemplate(terminalPalette))
 		writeFileSync(resolve(__dirname, '../term/One Dark.terminal'), terminalAppTemplate(terminalPalette))
+		writeFileSync(resolve(__dirname, '../term/One Dark.alacritty'), alacrittyTemplate(terminalPalette))
 	} catch (e) {
 		handleError('Error writing terminal color file', e)
 	}

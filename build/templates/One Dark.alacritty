@@ -1,0 +1,34 @@
+# Colors (One Dark)
+colors:
+  # Default colors
+  primary:
+    background: '0x{{=c[0]}}'
+    foreground: '0x{{=c[7]}}'
+
+  # Cursor colors
+  cursor:
+    background: '0x{{=c[7]}}'
+    foreground: '0x{{=c[0]}}'
+
+  # Normal colors
+  normal:
+    black:   '0x{{=c[0]}}'
+    red:     '0x{{=c[1]}}'
+    green:   '0x{{=c[2]}}'
+    yellow:  '0x{{=c[3]}}'
+    blue:    '0x{{=c[4]}}'
+    magenta: '0x{{=c[5]}}'
+    cyan:    '0x{{=c[6]}}'
+    white:   '0x{{=c[7]}}'
+
+  # Bright colors
+  bright:
+    black:   '0x{{=c[8]}}'
+    red:     '0x{{=c[9]}}'
+    green:   '0x{{=c[10]}}'
+    yellow:  '0x{{=c[11]}}'
+    blue:    '0x{{=c[12]}}'
+    magenta: '0x{{=c[13]}}'
+    cyan:    '0x{{=c[14]}}'
+    white:   '0x{{=c[15]}}'
+
