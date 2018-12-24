@@ -283,6 +283,10 @@ call s:h("cssSelectorOp", { "fg": s:purple })
 call s:h("cssSelectorOp2", { "fg": s:purple })
 call s:h("cssTagName", { "fg": s:red })
 
+" Fish Shell
+call s:h("fishKeyword", { "fg": s:purple })
+call s:h("fishConditional", { "fg": s:purple })
+
 " Go
 call s:h("goDeclaration", { "fg": s:purple })
 
