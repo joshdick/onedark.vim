@@ -17,8 +17,8 @@ jobs:
     working_directory: ~/onedark.vim/build
 
     steps:
-      - checkout
-        path: ~/onedark.vim
+      - checkout:
+          path: ~/onedark.vim
 
       # Download and cache dependencies
       - restore_cache:
