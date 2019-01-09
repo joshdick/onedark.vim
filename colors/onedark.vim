@@ -67,11 +67,6 @@ if !exists("g:onedark_terminal_italics")
   let g:onedark_terminal_italics = 0
 endif
 
-" If you want to remove tildes ('~') at end of buffer, opt in
-if !exists("g:onedark_hide_endofbuffer")
-    let g:onedark_hide_endofbuffer = 0
-endif
-
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
 let s:group_colors = {} " Cache of default highlight group settings, for later reference via `onedark#extend_highlight`
@@ -264,8 +259,8 @@ call s:h("Visual", { "fg": s:visual_black, "bg": s:visual_grey }) " Visual mode 
 call s:h("VisualNOS", { "bg": s:visual_grey }) " Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
 call s:h("WarningMsg", { "fg": s:yellow }) " warning messages
 call s:h("WildMenu", { "fg": s:black, "bg": s:blue }) " current match in 'wildmenu' completion
-if g:onedark_hide_endofbuffer
-    call s:h("EndOfBuffer", { "fg": s:black, "bg": s:black }) " Remove '~' at end of buffer for cleaner look
+if get(g:, 'onedark_hide_endofbuffer', 1)
+    call s:h("EndOfBuffer", { "fg": s:black, "bg": s:black }) " Remove '~' at end of buffer for cleaner look. Opt-in in vimrc
 endif
 
 " }}}
