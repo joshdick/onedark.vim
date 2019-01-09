@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const _ = require('lodash') // ships with termcolors; only used because of termcolors customization
-const doT = require('doT')
+const doT = require('dot')
 const termcolors = require('termcolors')
 const { readFileSync, writeFileSync } = require('fs')
 const { resolve } = require('path')
