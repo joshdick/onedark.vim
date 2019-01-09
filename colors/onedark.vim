@@ -221,6 +221,10 @@ call s:h("DiffAdd", { "bg": s:green, "fg": s:black }) " diff mode: Added line
 call s:h("DiffChange", { "fg": s:yellow, "gui": "underline", "cterm": "underline" }) " diff mode: Changed line
 call s:h("DiffDelete", { "bg": s:red, "fg": s:black }) " diff mode: Deleted line
 call s:h("DiffText", { "bg": s:yellow, "fg": s:black }) " diff mode: Changed text within a changed line
+if get(g:, 'onedark_hide_endofbuffer', 0)
+    " If enabled, will style end-of-buffer filler lines (~) to appear to be hidden.
+    call s:h("EndOfBuffer", { "fg": s:black, "bg": s:black }) " filler lines (~) after the last line in the buffer
+endif
 call s:h("ErrorMsg", { "fg": s:red }) " error messages on the command line
 call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
 call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
