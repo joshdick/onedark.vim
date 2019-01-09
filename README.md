@@ -55,6 +55,8 @@ A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, base
 
 **Note:** All options should be set **before** the `colorscheme onedark` line in your `~/.vimrc`.
 
+* `g:onedark_hide_endofbuffer`: Set to `1` if you want to hide end-of-buffer filler lines (~) for a cleaner look; `0` otherwise (the default).
+
 * `g:onedark_termcolors` **(see [Troubleshooting](#troubleshooting) (below) for more information about this option)**: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native 16 colors.
 
 * `g:onedark_terminal_italics`: Set to `1` if your terminal emulator supports italics; `0` otherwise (the default).
