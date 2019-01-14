@@ -266,6 +266,14 @@ call s:h("WildMenu", { "fg": s:black, "bg": s:blue }) " current match in 'wildme
 
 " }}}
 
+" Termdebug highlighting for Vim 8.1+ {{{
+
+" See `:h hl-debugPC` and `:h hl-debugBreakpoint`.
+call s:h("debugPC", { "bg": s:special_grey }) " the current position
+call s:h("debugBreakpoint", { "fg": s:black, "bg": s:red }) " a breakpoint
+
+" }}}
+
 " Language-Specific Highlighting {{{
 
 " CSS
