@@ -4,6 +4,8 @@ A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, base
 
 ## Installation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/joshdick/onedark.vim.svg)](https://greenkeeper.io/)
+
 1. Install the theme using your Vim plug-in manager of choice (or manually, by placing `colors/onedark.vim` in your `~/.vim/colors/` directory and `autoload/onedark.vim` in your `~/.vim/autoload/` directory.)
 
    The theme also supports being installed as a Vim 8 package. Simply clone this repository into `~/.vim/pack/*/opt/` (so that the local path to this README would end up being `~/.vim/pack/*/opt/onedark.vim/README.md`) and add `packadd! onedark.vim` to your `~/.vimrc`. (The `*` in the path can be any value; see `:help packages` for more information.)
