@@ -1,10 +1,12 @@
+# onedark.vim
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/joshdick/onedark.vim.svg)](https://greenkeeper.io/)
+
 ![onedark.vim](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/readme_header.png)
 
 A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, based on [FlatColor](https://github.com/MaxSt/FlatColor), with colors inspired by the excellent [One Dark syntax theme](https://github.com/atom/one-dark-syntax) for the [Atom text editor](https://atom.io).
 
 ## Installation
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/joshdick/onedark.vim.svg)](https://greenkeeper.io/)
 
 1. Install the theme using your Vim plug-in manager of choice (or manually, by placing `colors/onedark.vim` in your `~/.vim/colors/` directory and `autoload/onedark.vim` in your `~/.vim/autoload/` directory.)
 

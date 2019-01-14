@@ -5,7 +5,6 @@
   "main": "build.js",
   "scripts": {
     "build": "node build.js",
-    "precommit": "npm test",
     "test": "eslint build.js && node build.js check"
   },
   "author": {
@@ -25,5 +24,10 @@
   "dependencies": {
     "dot": "1.1.2",
     "termcolors": "latest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   }
 }
