@@ -150,6 +150,10 @@ However, you can use the `g:onedark_termcolors` option to control onedark.vim's 
 
 If all comments look like the one in the screenshot above, you have enabled italics in onedark.vim by setting `g:onedark_terminal_italics=1` in your `~/.vimrc`, but your terminal isn't displaying italics correctly. You can either remove the option or [try to fix your terminal](https://github.com/joshdick/onedark.vim/issues/97#issuecomment-299719352). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
 
+### Why do colors looked washed out when using [iTerm2](https://www.iterm2.com)?
+
+Make sure that in Preferences, Profiles -> [Active Profile] -> Colors -> Minimum Contrast is turned all the way down. See [#145](https://github.com/joshdick/onedark.vim/issues/145) for more information.
+
 ## Miscellaneous
 
 ### Customizing onedark.vim's look without forking the repository
