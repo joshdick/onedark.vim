@@ -164,7 +164,7 @@ onedark.vim exposes `onedark#extend_highlight` and `onedark#set_highlight` funct
 
 `onedark#extend_highlight` allows you to customize individual aspects of onedark.vim's existing highlight groups, overriding only the keys you provide. (To completely redefine/override an existing highlight group, see `onedark#set_highlight` below.)
 
-`onedark#extend_highlight`'s first argunment should be the name of a highlight group, and its second argument should be **partial** style data.
+`onedark#extend_highlight`'s first argument should be the name of a highlight group, and its second argument should be **partial** style data.
 
 Place the following lines **before** the `colorscheme onedark` line in your `~/.vimrc`, then change the example overrides to suit your needs:
 
