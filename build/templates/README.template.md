@@ -23,19 +23,19 @@ A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, base
     font-size: 15px;
     font-family: monospace;
     font-weight: bold;
-    color: #282c34;
+    color: #{{=c[0]}};
     text-transform:uppercase;
   }
 </style>
 <div class="swatchGroup">
-  <div style="background:#282c34; color:#abb2bf">#282c34</div>
-  <div style="background:#e06c75">#e06c75</div>
-  <div style="background:#98c379">#98c379</div>
-  <div style="background:#e5c07b">#e5c07b</div>
-  <div style="background:#61afef">#61afef</div>
-  <div style="background:#c678dd">#c678dd</div>
-  <div style="background:#56b6c2">#56b6c2</div>
-  <div style="background:#abb2bf">#abb2bf</div>
+  <div style="background:#{{=c[0]}}; color:#{{=c[7]}}">#{{=c[0]}}</div>
+  <div style="background:#{{=c[1]}}">#{{=c[1]}}</div>
+  <div style="background:#{{=c[2]}}">#{{=c[2]}}</div>
+  <div style="background:#{{=c[3]}}">#{{=c[3]}}</div>
+  <div style="background:#{{=c[4]}}">#{{=c[4]}}</div>
+  <div style="background:#{{=c[5]}}">#{{=c[5]}}</div>
+  <div style="background:#{{=c[6]}}">#{{=c[6]}}</div>
+  <div style="background:#{{=c[7]}}">#{{=c[7]}}</div>
 </div>
 
 ## Installation
