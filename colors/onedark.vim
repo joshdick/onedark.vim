@@ -506,7 +506,7 @@ call s:h("texDelimiter", { "fg": s:dark_yellow })
 call s:h("texSpecialChar", { "fg": s:dark_yellow })
 call s:h("texCite", { "fg": s:blue })
 call s:h("texRefZone", { "fg": s:blue })
-"
+
 " TypeScript
 call s:h("typescriptReserved", { "fg": s:purple })
 call s:h("typescriptEndColons", { "fg": s:white })
