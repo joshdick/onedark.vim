@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "eslint": "^5",
-    "husky": "^1"
+    "husky": "^2.0.0"
   },
   "dependencies": {
     "dot": "1.1.2",
