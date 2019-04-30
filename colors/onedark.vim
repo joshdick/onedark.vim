@@ -303,11 +303,19 @@ call s:h("fishConditional", { "fg": s:purple })
 
 " Go
 call s:h("goDeclaration", { "fg": s:purple })
-call s:h("goFunctionCall", { "fg": s:blue })
+call s:h("goFunctionCall", { "fg": s:cyan })
 call s:h("goVarDefs", { "fg": s:red })
 call s:h("goVarAssign", { "fg": s:red })
 call s:h("goVar", { "fg": s:purple })
 call s:h("goConst", { "fg": s:purple })
+call s:h("goType", { "fg": s:purple })
+call s:h("goSignedInts", { "fg": s:purple })
+call s:h("goUnsignedInts", { "fg": s:purple })
+call s:h("goFloats", { "fg": s:purple })
+call s:h("goComplexes", { "fg": s:purple })
+call s:h("goTypeName", { "fg": s:yellow })
+call s:h("goDeclType", { "fg": s:purple })
+call s:h("goTypeDecl", { "fg": s:purple })
 
 " HTML
 call s:h("htmlTitle", { "fg": s:white })
