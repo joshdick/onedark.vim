@@ -303,6 +303,7 @@ call s:h("fishConditional", { "fg": s:purple })
 
 " Go
 call s:h("goDeclaration", { "fg": s:purple })
+call s:h("goBuiltins", { "fg": s:cyan })
 call s:h("goFunctionCall", { "fg": s:cyan })
 call s:h("goVarDefs", { "fg": s:red })
 call s:h("goVarAssign", { "fg": s:red })
