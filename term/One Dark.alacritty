@@ -7,8 +7,8 @@ colors:
 
   # Cursor colors
   cursor:
-    background: '0xabb2bf'
-    foreground: '0x282c34'
+    text: '0x282c34'
+    cursor: '0xabb2bf'
 
   # Normal colors
   normal:
