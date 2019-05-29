@@ -7,8 +7,8 @@ colors:
 
   # Cursor colors
   cursor:
-    background: '0x{{=c[7]}}'
-    foreground: '0x{{=c[0]}}'
+    text: '0x{{=c[0]}}'
+    cursor: '0x{{=c[7]}}'
 
   # Normal colors
   normal:
