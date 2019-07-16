@@ -51,8 +51,8 @@ A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, base
 3. Add the following to your `~/.vimrc` (below any lines you may have added in steps 1 and 2):
 
    ```vim
-   syntax on
    colorscheme onedark
+   syntax on
    ```
 
 4. Installing the [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) plug-in is recommended for improved syntax highlighting for various languages, but is not required.
