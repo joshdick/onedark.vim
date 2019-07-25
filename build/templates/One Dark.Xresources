@@ -8,16 +8,16 @@
 *.color8:       <%=it.visual_grey.gui%>
 
 ! red
-*.color1:       <%=it.red.gui%>
-*.color9:       <%=it.dark_red.gui%>
+*.color1:       <%=it.dark_red.gui%>
+*.color9:       <%=it.red.gui%>
 
 ! green
 *.color2:       <%=it.green.gui%>
 *.color10:      <%=it.green.gui%>
 
 ! yellow
-*.color3:       <%=it.yellow.gui%>
-*.color11:      <%=it.dark_yellow.gui%>
+*.color3:       <%=it.dark_yellow.gui%>
+*.color11:      <%=it.yellow.gui%>
 
 ! blue
 *.color4:       <%=it.blue.gui%>
@@ -32,6 +32,6 @@
 *.color14:      <%=it.cyan.gui%>
 
 ! white
-*.color7:       <%=it.white.gui%>
-*.color15:      <%=it.comment_grey.gui%>
+*.color7:       <%=it.comment_grey.gui%>
+*.color15:      <%=it.white.gui%>
 
