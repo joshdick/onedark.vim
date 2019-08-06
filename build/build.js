@@ -1,22 +1,9 @@
 #!/usr/bin/env node
 
 const _ = require('lodash') // ships with termcolors; only used because of termcolors customization
-const doT = require('dot')
 const termcolors = require('termcolors')
 const { readFileSync, writeFileSync } = require('fs')
 const { resolve } = require('path')
-
-doT.templateSettings = {
-	evaluate:    /<%([\s\S]+?)%>/g,
-	interpolate: /<%=([\s\S]+?)%>/g,
-	encode:      /<%!([\s\S]+?)%>/g,
-	use:         /<%#([\s\S]+?)%>/g,
-	define:      /<%##\s*([\w.$]+)\s*(:|=)([\s\S]+?)#%>/g,
-	conditional: /<%\?(\?)?\s*([\s\S]*?)\s*%>/g,
-	iterate:     /<%~\s*(?:%>|([\s\S]+?)\s*:\s*([\w$]+)\s*(?::\s*([\w$]+))?\s*%>)/g,
-	varname: 'it',
-	strip: false, // preserve whitespace
-}
 
 const baseColors = Object.freeze({
 	red: { gui: '#E06C75', cterm: '204', cterm16: '1' }, // alternate cterm: 168
@@ -77,7 +64,7 @@ Object.keys(templateMap).forEach(templateFilename => {
 	// Compile the template
 	let template
 	try {
-		template = doT.template(templateText)
+		template = _.template(templateText)
 	} catch (e) {
 		handleError(`Error compiling template ${templatePath}`, e)
 	}

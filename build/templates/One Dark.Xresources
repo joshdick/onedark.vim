@@ -1,37 +1,37 @@
 ! special
-*.foreground:   <%=it.white.gui%>
-*.background:   <%=it.black.gui%>
-*.cursorColor:  <%=it.white.gui%>
+*.foreground:   <%=white.gui%>
+*.background:   <%=black.gui%>
+*.cursorColor:  <%=white.gui%>
 
 ! black
-*.color0:       <%=it.black.gui%>
-*.color8:       <%=it.visual_grey.gui%>
+*.color0:       <%=black.gui%>
+*.color8:       <%=visual_grey.gui%>
 
 ! red
-*.color1:       <%=it.red.gui%>
-*.color9:       <%=it.dark_red.gui%>
+*.color1:       <%=red.gui%>
+*.color9:       <%=dark_red.gui%>
 
 ! green
-*.color2:       <%=it.green.gui%>
-*.color10:      <%=it.green.gui%>
+*.color2:       <%=green.gui%>
+*.color10:      <%=green.gui%>
 
 ! yellow
-*.color3:       <%=it.yellow.gui%>
-*.color11:      <%=it.dark_yellow.gui%>
+*.color3:       <%=yellow.gui%>
+*.color11:      <%=dark_yellow.gui%>
 
 ! blue
-*.color4:       <%=it.blue.gui%>
-*.color12:      <%=it.blue.gui%>
+*.color4:       <%=blue.gui%>
+*.color12:      <%=blue.gui%>
 
 ! magenta
-*.color5:       <%=it.purple.gui%>
-*.color13:      <%=it.purple.gui%>
+*.color5:       <%=purple.gui%>
+*.color13:      <%=purple.gui%>
 
 ! cyan
-*.color6:       <%=it.cyan.gui%>
-*.color14:      <%=it.cyan.gui%>
+*.color6:       <%=cyan.gui%>
+*.color14:      <%=cyan.gui%>
 
 ! white
-*.color7:       <%=it.white.gui%>
-*.color15:      <%=it.comment_grey.gui%>
+*.color7:       <%=white.gui%>
+*.color15:      <%=comment_grey.gui%>
 
