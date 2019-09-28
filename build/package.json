@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "eslint": "^6.1.0",
-    "husky": "^3.0.4"
+    "husky": "^3.0.7"
   },
   "dependencies": {
     "termcolors": "latest"
