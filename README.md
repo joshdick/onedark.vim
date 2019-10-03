@@ -128,7 +128,7 @@ However, you can use the `g:onedark_termcolors` option to control onedark.vim's 
 
 `g:onedark_termcolors` can be set to one of two values, `256` for 256-color mode (the default), or `16` for 16-color mode (which uses your terminal emulator's native 16 colors.)
 
-**When Vim/Neovim are configured to use use 24-bit color, the `g:onedark_termcolors` option is ignored. However, `g:onedark_termcolors` can still coexist with 24-bit color configuration.** For instance, when tmux 2.1 or earlier and/or older Vim/Neovim versions that don't support 24-bit color are used, the `g:onedark_termcolors` option will take effect.
+**When Vim/Neovim are configured to use 24-bit color, the `g:onedark_termcolors` option is ignored. However, `g:onedark_termcolors` can still coexist with 24-bit color configuration.** For instance, when tmux 2.1 or earlier and/or older Vim/Neovim versions that don't support 24-bit color are used, the `g:onedark_termcolors` option will take effect.
 
 * **256-color mode** is enabled by default with no additional configuration, but colors are less accurate since they are approximated using a 256-color palette. The background color will appear darker than in the preview image, and most other colors will appear brighter than in the preview image. If you don't want to change your terminal's color palette as described in the 16-color mode section below, and your terminal doesn't support 24-bit color, 256-color mode is your only option.
 
