@@ -18,7 +18,7 @@
     "url": "https://github.com/joshdick/onedark.vim.git"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
+    "eslint": "^6.5.1",
     "husky": "^3.0.9"
   },
   "dependencies": {
