@@ -2,8 +2,8 @@
 colors:
   # Default colors
   primary:
-    background: '0x{{=c[0]}}'
-    foreground: '0x{{=c[7]}}'
+    foreground: '0x{{=c.foreground}}'
+    background: '0x{{=c.background}}'
 
   # Cursor colors
   cursor:

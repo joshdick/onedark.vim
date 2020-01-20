@@ -1,0 +1,41 @@
+# Cursor
+cursor                   #{{=c[7]}}
+cursor_text_color        #{{=c[0]}}
+
+# Special
+foreground               #{{=c.foreground}}
+background               #{{=c.background}}
+selection_foreground     #{{=c[0]}}
+selection_background     #{{=c[7]}}
+
+# Black
+color0                   #{{=c[0]}}
+color8                   #{{=c[8]}}
+
+# Red
+color1                   #{{=c[1]}}
+color9                   #{{=c[9]}}
+
+# Green
+color2                   #{{=c[2]}}
+color10                  #{{=c[10]}}
+
+# Yellow
+color3                   #{{=c[3]}}
+color11                  #{{=c[11]}}
+
+# Blue
+color4                   #{{=c[4]}}
+color12                  #{{=c[12]}}
+
+# Magenta
+color5                   #{{=c[5]}}
+color13                  #{{=c[13]}}
+
+# Cyan
+color6                   #{{=c[6]}}
+color14                  #{{=c[14]}}
+
+# White
+color7                   #{{=c[7]}}
+color15                  #{{=c[15]}}
