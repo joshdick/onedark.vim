@@ -330,6 +330,7 @@ call s:h("htmlSpecialChar", { "fg": s:dark_yellow })
 call s:h("htmlSpecialTagName", { "fg": s:red })
 call s:h("htmlTag", { "fg": s:white })
 call s:h("htmlTagName", { "fg": s:red })
+call s:h('htmlTagN',    { "fg": s:red })
 call s:h("htmlTitle", { "fg": s:white })
 
 " JavaScript
