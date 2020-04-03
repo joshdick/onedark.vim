@@ -2,8 +2,6 @@
 
 A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, based on [FlatColor](https://github.com/MaxSt/FlatColor), with colors inspired by the excellent [One Dark syntax theme](https://github.com/atom/one-dark-syntax) for the [Atom text editor](https://atom.io).
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/joshdick/onedark.vim.svg)](https://greenkeeper.io/)
-
 ## Color Reference
 
 ![Color Reference](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/color_reference.png)
