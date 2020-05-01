@@ -5,7 +5,9 @@
   "main": "build.js",
   "scripts": {
     "build": "node build.js",
-    "test": "eslint build.js && node build.js check"
+    "test": "eslint build.js && node build.js check",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": {
     "name": "Josh Dick",
@@ -22,11 +24,13 @@
     "husky": "^4.2.3"
   },
   "dependencies": {
-    "termcolors": "latest"
+    "termcolors": "latest",
+    "snyk": "^1.316.1"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm test"
     }
-  }
+  },
+  "snyk": true
 }
