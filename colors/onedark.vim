@@ -297,6 +297,18 @@ call s:h("cssSelectorOp", { "fg": s:purple })
 call s:h("cssSelectorOp2", { "fg": s:purple })
 call s:h("cssTagName", { "fg": s:red })
 
+" Dart
+call s:h("dartTypeDef", { "fg": s:red })
+call s:h("dartClassDecl", { "fg": s:red })
+call s:h("dartInterpolation", { "fg": s:blue })
+highlight link dartLibrary Include
+call s:h("dartCoreClasses", { "fg": s:cyan })
+call s:h("dartSdkClas", { "fg": s:cyan })
+call s:h("dartStorageClass", { "fg": s:dark_red })
+highlight link dartExceptions Exception
+highlight link dartStatement Statement
+call s:h("dartConstant", { "fg": s:dark_yellow })
+
 " Fish Shell
 call s:h("fishKeyword", { "fg": s:purple })
 call s:h("fishConditional", { "fg": s:purple })
