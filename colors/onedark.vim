@@ -302,7 +302,6 @@ call s:h("dartTypeDef", { "fg": s:red })
 call s:h("dartClassDecl", { "fg": s:red })
 call s:h("dartInterpolation", { "fg": s:blue })
 highlight link dartLibrary Include
-call s:h("dartCoreClasses", { "fg": s:cyan })
 call s:h("dartSdkClass", { "fg": s:cyan })
 call s:h("dartStorageClass", { "fg": s:dark_red })
 highlight link dartExceptions Exception
