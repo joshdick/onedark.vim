@@ -565,7 +565,7 @@ call s:h("NeomakeInfoSign", { "fg": s:blue })
 call s:h("mkdDelimiter", { "fg": s:purple })
 call s:h("mkdHeading", { "fg": s:red })
 call s:h("mkdLink", { "fg": s:blue })
-call s:h("mkdUrl", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
+call s:h("mkdURL", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
 
 " tpope/vim-fugitive
 call s:h("diffAdded", { "fg": s:green })
