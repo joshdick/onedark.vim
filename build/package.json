@@ -22,7 +22,7 @@
     "husky": "^4.2.3"
   },
   "dependencies": {
-    "termcolors": "latest"
+    "termcolors": "0.7.0"
   },
   "husky": {
     "hooks": {
