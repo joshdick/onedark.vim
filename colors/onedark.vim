@@ -545,6 +545,11 @@ hi link GitGutterAdd    SignifySignAdd
 hi link GitGutterChange SignifySignChange
 hi link GitGutterDelete SignifySignDelete
 
+" dense-analysis/ale
+call s:h("ALEError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
+call s:h("ALEWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline"})
+call s:h("ALEInfo", { "gui": "underline", "cterm": "underline"})
+
 " easymotion/vim-easymotion
 call s:h("EasyMotionTarget", { "fg": s:red, "gui": "bold", "cterm": "bold" })
 call s:h("EasyMotionTarget2First", { "fg": s:yellow, "gui": "bold", "cterm": "bold" })
