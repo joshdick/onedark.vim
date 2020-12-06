@@ -629,6 +629,21 @@ endif
 
 " }}}
 
+" Neovim LSP colors {{{
+
+if has("nvim")
+  call s:h("LspDiagnosticsDefaultError", { "fg": s:red })
+  call s:h("LspDiagnosticsDefaultWarning", { "fg": s:yellow })
+  call s:h("LspDiagnosticsDefaultInformation", { "fg": s:white })
+  call s:h("LspDiagnosticsDefaultHint", { "fg": s:comment_grey })
+  call s:h("LspDiagnosticsUnderlineError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
+  call s:h("LspDiagnosticsUnderlineWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
+  call s:h("LspDiagnosticsUnderlineInformation", { "fg": s:white, "gui": "underline", "cterm": "underline" })
+  call s:h("LspDiagnosticsUnderlineHint", { "fg": s:comment_grey, "gui": "underline", "cterm": "underline" })
+endi
+
+" }}}
+
 " Must appear at the end of the file to work around this oddity:
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
