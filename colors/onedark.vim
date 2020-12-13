@@ -604,9 +604,10 @@ hi link gitcommitUnmergedArrow gitcommitUnmergedFile
 
 " }}}
 
-" Neovim terminal colors {{{
+" Neovim-Specific Highlighting {{{
 
 if has("nvim")
+  " Neovim terminal colors {{{
   let g:terminal_color_0 =  s:black.gui
   let g:terminal_color_1 =  s:red.gui
   let g:terminal_color_2 =  s:green.gui
@@ -625,13 +626,8 @@ if has("nvim")
   let g:terminal_color_15 = s:comment_grey.gui
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
-endif
-
-" }}}
-
-" Neovim LSP colors {{{
-
-if has("nvim")
+  " }}}
+  " Neovim LSP colors {{{
   call s:h("LspDiagnosticsDefaultError", { "fg": s:red })
   call s:h("LspDiagnosticsDefaultWarning", { "fg": s:yellow })
   call s:h("LspDiagnosticsDefaultInformation", { "fg": s:white })
@@ -640,7 +636,8 @@ if has("nvim")
   call s:h("LspDiagnosticsUnderlineWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
   call s:h("LspDiagnosticsUnderlineInformation", { "fg": s:white, "gui": "underline", "cterm": "underline" })
   call s:h("LspDiagnosticsUnderlineHint", { "fg": s:comment_grey, "gui": "underline", "cterm": "underline" })
-endi
+" }}}
+endif
 
 " }}}
 
