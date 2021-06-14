@@ -149,7 +149,7 @@ let s:cursor_grey = s:colors.cursor_grey
 let s:visual_grey = s:colors.visual_grey
 let s:menu_grey = s:colors.menu_grey
 let s:special_grey = s:colors.special_grey
-let s:vertsplit = s:colors.vertsplit
+let s:vertsplit = s:colors.gutter_fg_grey
 
 " }}}
 
