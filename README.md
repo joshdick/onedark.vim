@@ -242,6 +242,7 @@ If onedark.vim isn't meeting your needs, try one of its relatives!
   * Associated base16 scheme: [tilal6991/base16-onedark-scheme](https://github.com/tilal6991/base16-onedark-scheme)
 * [rakr/vim-one](https://github.com/rakr/vim-one)
 * Neovim-only Lua port: [ii14/onedark.nvim](https://github.com/ii14/onedark.nvim)
+* For Neovim >= 0.5 with treesitter support: [navarasu/onedark.nvim](https://github.com/navarasu/onedark.nvim)
 
 ### Preview images
 
