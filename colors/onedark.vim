@@ -633,7 +633,12 @@ if has("nvim")
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
   " }}}
-  " Neovim LSP colors {{{
+
+  " Neovim LSP {{{
+  call s:h("LspError", { "fg": s:red })
+  call s:h("LspWarning", { "fg": s:yellow })
+  call s:h("LspInformation", { "fg": s:blue })
+  call s:h("LspHint", { "fg": s:cyan })
   call s:h("LspDiagnosticsDefaultError", { "fg": s:red })
   call s:h("LspDiagnosticsDefaultWarning", { "fg": s:yellow })
   call s:h("LspDiagnosticsDefaultInformation", { "fg": s:white })
@@ -642,7 +647,7 @@ if has("nvim")
   call s:h("LspDiagnosticsUnderlineWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
   call s:h("LspDiagnosticsUnderlineInformation", { "fg": s:white, "gui": "underline", "cterm": "underline" })
   call s:h("LspDiagnosticsUnderlineHint", { "fg": s:comment_grey, "gui": "underline", "cterm": "underline" })
-" }}}
+  " }}}
 endif
 
 " }}}
