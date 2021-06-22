@@ -578,6 +578,12 @@ call s:h("mkdHeading", { "fg": s:red })
 call s:h("mkdLink", { "fg": s:blue })
 call s:h("mkdURL", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
 
+" prabirshrestha/vim-lsp
+call s:h("LspError", { "fg": s:red })
+call s:h("LspWarning", { "fg": s:yellow })
+call s:h("LspInformation", { "fg": s:blue })
+call s:h("LspHint", { "fg": s:cyan })
+
 " tpope/vim-fugitive
 call s:h("diffAdded", { "fg": s:green })
 call s:h("diffRemoved", { "fg": s:red })
@@ -635,10 +641,6 @@ if has("nvim")
   " }}}
 
   " Neovim LSP {{{
-  call s:h("LspError", { "fg": s:red })
-  call s:h("LspWarning", { "fg": s:yellow })
-  call s:h("LspInformation", { "fg": s:blue })
-  call s:h("LspHint", { "fg": s:cyan })
   call s:h("LspDiagnosticsDefaultError", { "fg": s:red })
   call s:h("LspDiagnosticsDefaultWarning", { "fg": s:yellow })
   call s:h("LspDiagnosticsDefaultInformation", { "fg": s:white })
