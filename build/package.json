@@ -5,7 +5,8 @@
   "main": "build.js",
   "scripts": {
     "build": "node build.js",
-    "test": "eslint build.js && node build.js check"
+    "test": "eslint build.js && node build.js check",
+    "prepare": "cd .. && husky install build/.husky"
   },
   "author": {
     "name": "Josh Dick",
@@ -18,15 +19,10 @@
     "url": "https://github.com/joshdick/onedark.vim.git"
   },
   "devDependencies": {
-    "eslint": "^7.14.0",
-    "husky": "^4.3.0"
+    "eslint": "^7.29.0",
+    "husky": "^6.0.0"
   },
   "dependencies": {
     "termcolors": "0.7.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
   }
 }
