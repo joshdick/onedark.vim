@@ -15,17 +15,17 @@ const baseColors = Object.freeze({
 	purple: { gui: '#C678DD', cterm: '170', cterm16: '5' }, // alternate cterm: 176
 	cyan: { gui: '#56B6C2', cterm: '38', cterm16: '6' }, // alternate cterm: 73
 	white: { gui: '#ABB2BF', cterm: '145', cterm16: '15' },
-	black: { gui: '#282C34', cterm: '235', cterm16: '8' },
+	black: { gui: '#282C34', cterm: '235', cterm16: '0' }, // TODO: Verify all cterm16 usage of color0 works as expected; especially for g:onedark_hide_endofbuffer=1
 })
 
 const specialColors = Object.freeze({
-	comment_grey: { gui: '#5C6370', cterm: '59', cterm16: '8' }, // TODO: MODIFIED
+	comment_grey: { gui: '#5C6370', cterm: '59', cterm16: '7' },
 	gutter_fg_grey: { gui: '#4B5263', cterm: '238', cterm16: '7' },
 	cursor_grey: { gui: '#2C323C', cterm: '236', cterm16: '0' },
-	visual_grey: { gui: '#3E4452', cterm: '237', cterm16: '7' },
-	menu_grey: { cterm16: '7' }, // vim theme handles gui/cterm values // TODO: MODIFIED
-	special_grey: { gui: '#3B4048', cterm: '238', cterm16: '7' },
-	vertsplit: { gui: '#181A1F', cterm: '59', cterm16: '7' },
+	visual_grey: { gui: '#3E4452', cterm: '237', cterm16: '8' },
+	menu_grey: { cterm16: '8' }, // vim theme handles gui/cterm values
+	special_grey: { gui: '#3B4048', cterm: '238', cterm16: '8' },
+	vertsplit: { gui: '#3E4452', cterm: '59', cterm16: '8' },
 })
 
 const colors = Object.assign({}, baseColors, specialColors)
