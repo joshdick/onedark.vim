@@ -158,9 +158,9 @@ let s:vertsplit = s:colors.vertsplit
 
 let g:terminal_ansi_colors = [
   \ s:black.gui, s:red.gui, s:green.gui, s:yellow.gui,
-  \ s:blue.gui, s:purple.gui, s:cyan.gui, s:white.gui,
+  \ s:blue.gui, s:purple.gui, s:cyan.gui, s:comment_grey.gui,
   \ s:visual_grey.gui, s:red.gui, s:green.gui, s:yellow.gui,
-  \ s:blue.gui, s:purple.gui, s:cyan.gui, s:comment_grey.gui
+  \ s:blue.gui, s:purple.gui, s:cyan.gui, s:white.gui
 \]
 
 " }}}
@@ -637,8 +637,8 @@ if has("nvim")
   let g:terminal_color_13 = s:purple.gui " No dark version
   let g:terminal_color_14 = s:cyan.gui " No dark version
   let g:terminal_color_15 = s:comment_grey.gui
-  let g:terminal_color_background = g:terminal_color_0
-  let g:terminal_color_foreground = g:terminal_color_7
+  let g:terminal_color_background = s:background.gui
+  let g:terminal_color_foreground = s:foreground.gui
   " }}}
 
   " Neovim LSP {{{
