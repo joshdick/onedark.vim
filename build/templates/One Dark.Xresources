@@ -5,7 +5,7 @@
 
 ! black
 *.color0:       <%=cursor_grey.gui%>
-*.color8:       <%=comment_grey.gui%>
+*.color8:       <%=visual_grey.gui%>
 
 ! red
 *.color1:       <%=red.gui%>
@@ -32,6 +32,6 @@
 *.color14:      <%=cyan.gui%>
 
 ! white
-*.color7:       <%=visual_grey.gui%>
+*.color7:       <%=comment_grey.gui%>
 *.color15:      <%=white.gui%>
 

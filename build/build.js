@@ -19,13 +19,13 @@ const baseColors = Object.freeze({
 })
 
 const specialColors = Object.freeze({
-	comment_grey: { gui: '#5C6370', cterm: '59', cterm16: '8' },
-	gutter_fg_grey: { gui: '#4B5263', cterm: '238', cterm16: '7' },
+	comment_grey: { gui: '#5C6370', cterm: '59', cterm16: '7' },
+	gutter_fg_grey: { gui: '#4B5263', cterm: '238', cterm16: '8' },
 	cursor_grey: { gui: '#2C323C', cterm: '236', cterm16: '0' },
-	visual_grey: { gui: '#3E4452', cterm: '237', cterm16: '7' },
-	menu_grey: { cterm16: '8' }, // vim theme handles gui/cterm values
-	special_grey: { gui: '#3B4048', cterm: '238', cterm16: '8' },
-	vertsplit: { gui: '#3E4452', cterm: '59', cterm16: '8' },
+	visual_grey: { gui: '#3E4452', cterm: '237', cterm16: '8' },
+	menu_grey: { cterm16: '7' }, // vim theme handles gui/cterm values
+	special_grey: { gui: '#3B4048', cterm: '238', cterm16: '7' },
+	vertsplit: { gui: '#3E4452', cterm: '59', cterm16: '7' },
 })
 
 const colors = Object.assign({}, baseColors, specialColors)
