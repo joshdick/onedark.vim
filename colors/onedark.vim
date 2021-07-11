@@ -541,9 +541,9 @@ call s:h("xmlTagName", { "fg": s:red })
 " Plugin Highlighting {{{
 
 " airblade/vim-gitgutter
-hi link GitGutterAdd    SignifySignAdd
-hi link GitGutterChange SignifySignChange
-hi link GitGutterDelete SignifySignDelete
+call s:h("GitGutterAdd", { "fg": s:green })
+call s:h("GitGutterChange", { "fg": s:yellow })
+call s:h("GitGutterDelete", { "fg": s:red })
 
 " dense-analysis/ale
 call s:h("ALEError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
@@ -556,10 +556,15 @@ call s:h("EasyMotionTarget2First", { "fg": s:yellow, "gui": "bold", "cterm": "bo
 call s:h("EasyMotionTarget2Second", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
 call s:h("EasyMotionShade",  { "fg": s:comment_grey })
 
+" lewis6991/gitsigns.nvim
+hi link GitSignsAdd    GitGutterAdd
+hi link GitSignsChange GitGutterChange
+hi link GitSignsDelete GitGutterDelete
+
 " mhinz/vim-signify
-call s:h("SignifySignAdd", { "fg": s:green })
-call s:h("SignifySignChange", { "fg": s:yellow })
-call s:h("SignifySignDelete", { "fg": s:red })
+hi link SignifySignAdd    GitGutterAdd
+hi link SignifySignChange GitGutterChange
+hi link SignifySignDelete GitGutterDelete
 
 " neoclide/coc.nvim
 call s:h("CocErrorSign", { "fg": s:red })
