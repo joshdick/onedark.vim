@@ -5,7 +5,10 @@
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
 
-" A companion [vim-airline](https://github.com/bling/vim-airline) theme is available at: https://github.com/joshdick/airline-onedark.vim
+" Companion statusline plugin and terminal themes are included with onedark.vim:
+"  * https://github.com/joshdick/onedark.vim#lightlinevim-colorscheme
+"  * https://github.com/joshdick/onedark.vim#vim-airline-theme
+"  * https://github.com/joshdick/onedark.vim/tree/master/term
 
 " Color Reference {{{
 
@@ -542,9 +545,9 @@ call s:h("xmlTagName", { "fg": s:red })
 " Plugin Highlighting {{{
 
 " airblade/vim-gitgutter
-hi link GitGutterAdd    SignifySignAdd
-hi link GitGutterChange SignifySignChange
-hi link GitGutterDelete SignifySignDelete
+call s:h("GitGutterAdd", { "fg": s:green })
+call s:h("GitGutterChange", { "fg": s:yellow })
+call s:h("GitGutterDelete", { "fg": s:red })
 
 " dense-analysis/ale
 call s:h("ALEError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
@@ -557,10 +560,15 @@ call s:h("EasyMotionTarget2First", { "fg": s:yellow, "gui": "bold", "cterm": "bo
 call s:h("EasyMotionTarget2Second", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
 call s:h("EasyMotionShade",  { "fg": s:comment_grey })
 
+" lewis6991/gitsigns.nvim
+hi link GitSignsAdd    GitGutterAdd
+hi link GitSignsChange GitGutterChange
+hi link GitSignsDelete GitGutterDelete
+
 " mhinz/vim-signify
-call s:h("SignifySignAdd", { "fg": s:green })
-call s:h("SignifySignChange", { "fg": s:yellow })
-call s:h("SignifySignDelete", { "fg": s:red })
+hi link SignifySignAdd    GitGutterAdd
+hi link SignifySignChange GitGutterChange
+hi link SignifySignDelete GitGutterDelete
 
 " neoclide/coc.nvim
 call s:h("CocErrorSign", { "fg": s:red })
@@ -644,12 +652,16 @@ if has("nvim")
   " Neovim LSP {{{
   call s:h("LspDiagnosticsDefaultError", { "fg": s:red })
   call s:h("LspDiagnosticsDefaultWarning", { "fg": s:yellow })
-  call s:h("LspDiagnosticsDefaultInformation", { "fg": s:white })
-  call s:h("LspDiagnosticsDefaultHint", { "fg": s:comment_grey })
+  call s:h("LspDiagnosticsDefaultInformation", { "fg": s:blue })
+  call s:h("LspDiagnosticsDefaultHint", { "fg": s:cyan })
   call s:h("LspDiagnosticsUnderlineError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
   call s:h("LspDiagnosticsUnderlineWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineInformation", { "fg": s:white, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineHint", { "fg": s:comment_grey, "gui": "underline", "cterm": "underline" })
+  call s:h("LspDiagnosticsUnderlineInformation", { "fg": s:blue, "gui": "underline", "cterm": "underline" })
+  call s:h("LspDiagnosticsUnderlineHint", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
+  call s:h("LspDiagnosticsVirtualTextError", { "fg": s:red, "bg": s:cursor_grey  })
+  call s:h("LspDiagnosticsVirtualTextWarning", { "fg": s:yellow, "bg": s:cursor_grey  })
+  call s:h("LspDiagnosticsVirtualTextInformation", { "fg": s:blue, "bg": s:cursor_grey  })
+  call s:h("LspDiagnosticsVirtualTextHint", { "fg": s:cyan, "bg": s:cursor_grey  })
   " }}}
 endif
 
