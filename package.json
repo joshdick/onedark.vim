@@ -1,0 +1,45 @@
+{
+  "name": "onedark.vim-builder",
+  "version": "1.0.0",
+  "description": "Builds the onedark.vim Vim colorscheme and associated files",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build/build.js",
+    "test": "npm run lint && node build/build.js check",
+    "prepare": "husky install",
+    "lint": "run-p eslint:check prettier:check",
+    "lint:fix": "run-s eslint:fix prettier:fix",
+    "eslint:check": "eslint '**/*.js'",
+    "eslint:fix": "eslint --fix '**/*.js'",
+    "prettier:check": "prettier --check '**/*.{js,json,md}'",
+    "prettier:fix": "prettier --write '**/*.{js,json,md}'"
+  },
+  "author": {
+    "name": "Josh Dick",
+    "email": "josh@joshdick.net",
+    "url": "http://joshdick.net"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshdick/onedark.vim.git"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "termcolors": "0.7.3"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --check"
+    ],
+    "*.{js}": [
+      "eslint"
+    ]
+  }
+}
