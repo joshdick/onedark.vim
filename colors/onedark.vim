@@ -268,7 +268,7 @@ call s:h("VisualNOS", { "bg": s:visual_grey }) " Visual mode selection when vim 
 call s:h("WarningMsg", { "fg": s:yellow }) " warning messages
 call s:h("WildMenu", { "fg": s:black, "bg": s:blue }) " current match in 'wildmenu' completion
 
-" }}
+" }}}
 
 " Termdebug highlighting for Vim 8.1+ {{{
 
