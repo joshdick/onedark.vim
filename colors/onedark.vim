@@ -643,12 +643,16 @@ if has("nvim")
   " Neovim LSP {{{
   call s:h("LspDiagnosticsDefaultError", { "fg": s:red })
   call s:h("LspDiagnosticsDefaultWarning", { "fg": s:yellow })
-  call s:h("LspDiagnosticsDefaultInformation", { "fg": s:white })
-  call s:h("LspDiagnosticsDefaultHint", { "fg": s:comment_grey })
+  call s:h("LspDiagnosticsDefaultInformation", { "fg": s:blue })
+  call s:h("LspDiagnosticsDefaultHint", { "fg": s:cyan })
   call s:h("LspDiagnosticsUnderlineError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
   call s:h("LspDiagnosticsUnderlineWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineInformation", { "fg": s:white, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineHint", { "fg": s:comment_grey, "gui": "underline", "cterm": "underline" })
+  call s:h("LspDiagnosticsUnderlineInformation", { "fg": s:blue, "gui": "underline", "cterm": "underline" })
+  call s:h("LspDiagnosticsUnderlineHint", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
+  call s:h("LspDiagnosticsVirtualTextError", { "fg": s:red, "bg": s:cursor_grey  })
+  call s:h("LspDiagnosticsVirtualTextWarning", { "fg": s:yellow, "bg": s:cursor_grey  })
+  call s:h("LspDiagnosticsVirtualTextInformation", { "fg": s:blue, "bg": s:cursor_grey  })
+  call s:h("LspDiagnosticsVirtualTextHint", { "fg": s:cyan, "bg": s:cursor_grey  })
   " }}}
 endif
 
