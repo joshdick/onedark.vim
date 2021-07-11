@@ -5,7 +5,10 @@
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
 
-" A companion [vim-airline](https://github.com/bling/vim-airline) theme is available at: https://github.com/joshdick/airline-onedark.vim
+" Companion statusline plugin and terminal themes are included with onedark.vim:
+"  * https://github.com/joshdick/onedark.vim#lightlinevim-colorscheme
+"  * https://github.com/joshdick/onedark.vim#vim-airline-theme
+"  * https://github.com/joshdick/onedark.vim/tree/master/term
 
 " Color Reference {{{
 

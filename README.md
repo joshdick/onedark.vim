@@ -6,6 +6,24 @@ A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, base
 
 ![Color Reference](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/color_reference.png)
 
+## Supported Plugins
+
+onedark.vim includes support for the following Vim and Neovim plugins:
+
+* [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+* [dense-analysis/ale](https://github.com/dense-analysis/ale)
+* [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)
+* [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim)
+* [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+* [mhinz/vim-signify](https://github.com/mhinz/vim-signify)
+* [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)
+* [neomake/neomake](https://github.com/neomake/neomake)
+* [Neovim LSP](https://neovim.io/doc/user/lsp.html)
+* [plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown)
+* [prabirshrestha/vim-lsp](https://github.com/prabirshrestha/vim-lsp)
+* [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+* [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)
+
 ## Installation
 
 1. Install the theme using your Vim plug-in manager of choice (or manually, by placing `colors/onedark.vim` in your `~/.vim/colors/` directory and `autoload/onedark.vim` in your `~/.vim/autoload/` directory.)
