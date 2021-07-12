@@ -4,12 +4,12 @@
 *.cursorColor:  #ABB2BF
 
 ! black
-*.color0:       #5C6370
-*.color8:       #4B5263
+*.color0:       #2C323C
+*.color8:       #3E4452
 
 ! red
 *.color1:       #E06C75
-*.color9:       #BE5046
+*.color9:       #E06C75
 
 ! green
 *.color2:       #98C379
@@ -17,7 +17,7 @@
 
 ! yellow
 *.color3:       #E5C07B
-*.color11:      #D19A66
+*.color11:      #E5C07B
 
 ! blue
 *.color4:       #61AFEF
@@ -32,6 +32,6 @@
 *.color14:      #56B6C2
 
 ! white
-*.color7:       #ABB2BF
-*.color15:      #3E4452
+*.color7:       #5C6370
+*.color15:      #ABB2BF
 

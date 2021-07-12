@@ -6,6 +6,12 @@ A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, base
 
 ![Color Reference](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/color_reference.png)
 
+## Breaking Changes
+
+[Pull request #271](https://github.com/joshdick/onedark.vim/pull/271), merged July 11, 2021, contained several breaking changes, especially for 16-color users.
+
+If you are an existing onedark.vim user that is suddenly having issues after this PR was merged, see the [PR description](https://github.com/joshdick/onedark.vim/pull/271) for details.
+
 ## Supported Plugins
 
 onedark.vim includes support for the following Vim and Neovim plugins:

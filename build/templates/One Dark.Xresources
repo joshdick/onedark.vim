@@ -4,12 +4,12 @@
 *.cursorColor:  <%=white.gui%>
 
 ! black
-*.color0:       <%=comment_grey.gui%>
-*.color8:       <%=gutter_fg_grey.gui%>
+*.color0:       <%=cursor_grey.gui%>
+*.color8:       <%=visual_grey.gui%>
 
 ! red
 *.color1:       <%=red.gui%>
-*.color9:       <%=dark_red.gui%>
+*.color9:       <%=red.gui%>
 
 ! green
 *.color2:       <%=green.gui%>
@@ -17,7 +17,7 @@
 
 ! yellow
 *.color3:       <%=yellow.gui%>
-*.color11:      <%=dark_yellow.gui%>
+*.color11:      <%=yellow.gui%>
 
 ! blue
 *.color4:       <%=blue.gui%>
@@ -32,6 +32,6 @@
 *.color14:      <%=cyan.gui%>
 
 ! white
-*.color7:       <%=white.gui%>
-*.color15:      <%=visual_grey.gui%>
+*.color7:       <%=comment_grey.gui%>
+*.color15:      <%=white.gui%>
 

@@ -1,20 +1,20 @@
 # Cursor
-cursor                   #abb2bf
-cursor_text_color        #5c6370
+cursor                   #5c6370
+cursor_text_color        #2c323c
 
 # Special
 foreground               #abb2bf
 background               #282c34
-selection_foreground     #5c6370
-selection_background     #abb2bf
+selection_foreground     #2c323c
+selection_background     #5c6370
 
 # Black
-color0                   #5c6370
-color8                   #4b5263
+color0                   #2c323c
+color8                   #3e4452
 
 # Red
 color1                   #e06c75
-color9                   #be5046
+color9                   #e06c75
 
 # Green
 color2                   #98c379
@@ -22,7 +22,7 @@ color10                  #98c379
 
 # Yellow
 color3                   #e5c07b
-color11                  #d19a66
+color11                  #e5c07b
 
 # Blue
 color4                   #61afef
@@ -37,5 +37,5 @@ color6                   #56b6c2
 color14                  #56b6c2
 
 # White
-color7                   #abb2bf
-color15                  #3e4452
+color7                   #5c6370
+color15                  #abb2bf
