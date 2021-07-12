@@ -8,7 +8,7 @@
 " Companion statusline plugin and terminal themes are included with onedark.vim:
 "  * https://github.com/joshdick/onedark.vim#lightlinevim-colorscheme
 "  * https://github.com/joshdick/onedark.vim#vim-airline-theme
-"  * https://github.com/joshdick/onedark.vim/tree/master/term
+"  * https://github.com/joshdick/onedark.vim/tree/main/term
 
 " Color Reference {{{
 
@@ -59,7 +59,7 @@ let g:colors_name="onedark"
 " Set to "256" for 256-color terminals, or
 " set to "16" to use your terminal emulator's native colors
 " (a 16-color palette for this color scheme is available; see
-" < https://github.com/joshdick/onedark.vim/blob/master/README.md >
+" < https://github.com/joshdick/onedark.vim/blob/main/README.md >
 " for more information.)
 if !exists("g:onedark_termcolors")
   let g:onedark_termcolors = 256

@@ -1,10 +1,10 @@
-![onedark.vim](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/readme_header.png)
+![onedark.vim](https://raw.githubusercontent.com/joshdick/onedark.vim/main/img/readme_header.png)
 
 A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, based on [FlatColor](https://github.com/MaxSt/FlatColor), with colors inspired by the excellent [One Dark syntax theme](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) for the [Atom text editor](https://atom.io).
 
 ## Color Reference
 
-![Color Reference](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/color_reference.png)
+![Color Reference](https://raw.githubusercontent.com/joshdick/onedark.vim/main/img/color_reference.png)
 
 ## Breaking Changes
 
@@ -91,7 +91,7 @@ onedark.vim includes support for the following Vim and Neovim plugins:
 
 ## lightline.vim Colorscheme
 
-![lightline-onedark.vim Preview](https://raw.github.com/joshdick/onedark.vim/master/img/preview_lightline.png)
+![lightline-onedark.vim Preview](https://raw.github.com/joshdick/onedark.vim/main/img/preview_lightline.png)
 
 This repository includes a companion [lightline.vim](https://github.com/itchyny/lightline.vim) colorscheme for use with onedark.vim.
 
@@ -114,7 +114,7 @@ let g:lightline = {
 
 ## vim-airline Theme
 
-![airline-onedark.vim Preview](https://raw.github.com/joshdick/onedark.vim/master/img/preview_airline.png)
+![airline-onedark.vim Preview](https://raw.github.com/joshdick/onedark.vim/main/img/preview_airline.png)
 
 This repository includes a companion [vim-airline](https://github.com/vim-airline/vim-airline) theme for use with onedark.vim.
 
@@ -138,7 +138,7 @@ let g:airline_theme='onedark'
 
 ### Why do the colors in terminal Vim look totally crazy?
 
-![Broken Colors](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/broken_colors.png)
+![Broken Colors](https://raw.githubusercontent.com/joshdick/onedark.vim/main/img/broken_colors.png)
 
 If Vim looks similar to the screenshot above, you have enabled Vim's 24-bit color terminal support, but your terminal doesn't support 24 bit color. Remove the relevant `~/.vimrc` configuration for enabling 24-bit color support to get things looking better.
 
@@ -172,7 +172,7 @@ However, you can use the `g:onedark_termcolors` option to control onedark.vim's 
 
 ### Why do all comments look like they're highlighted?
 
-![Broken Italics](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/broken_italics.png)
+![Broken Italics](https://raw.githubusercontent.com/joshdick/onedark.vim/main/img/broken_italics.png)
 
 If all comments look like the one in the screenshot above, you have enabled italics in onedark.vim by setting `g:onedark_terminal_italics=1` in your `~/.vimrc`, but your terminal isn't displaying italics correctly. You can either remove the option or [try to fix your terminal](https://github.com/joshdick/onedark.vim/issues/97#issuecomment-299719352). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
 
