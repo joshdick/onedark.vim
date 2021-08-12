@@ -10,6 +10,11 @@ colors:
     text: '0x{{=c[0]}}'
     cursor: '0x{{=c[7]}}'
 
+  # Selection colors
+  selection:
+    text: CellForeground
+    background: '0x{{=c[8]}}'
+
   # Normal colors
   normal:
     black:   '0x{{=c[0]}}'
@@ -31,4 +36,3 @@ colors:
     magenta: '0x{{=c[13]}}'
     cyan:    '0x{{=c[14]}}'
     white:   '0x{{=c[15]}}'
-
