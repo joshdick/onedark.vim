@@ -649,19 +649,26 @@ if has("nvim")
   let g:terminal_color_foreground = s:foreground.gui
   " }}}
 
-  " Neovim LSP {{{
-  call s:h("LspDiagnosticsDefaultError", { "fg": s:red })
-  call s:h("LspDiagnosticsDefaultWarning", { "fg": s:yellow })
-  call s:h("LspDiagnosticsDefaultInformation", { "fg": s:blue })
-  call s:h("LspDiagnosticsDefaultHint", { "fg": s:cyan })
-  call s:h("LspDiagnosticsUnderlineError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineInformation", { "fg": s:blue, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineHint", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsVirtualTextError", { "fg": s:red, "bg": s:cursor_grey  })
-  call s:h("LspDiagnosticsVirtualTextWarning", { "fg": s:yellow, "bg": s:cursor_grey  })
-  call s:h("LspDiagnosticsVirtualTextInformation", { "fg": s:blue, "bg": s:cursor_grey  })
-  call s:h("LspDiagnosticsVirtualTextHint", { "fg": s:cyan, "bg": s:cursor_grey  })
+  " Neovim Diagnostics {{{
+  call s:h("DiagnosticError", { "fg": s:red })
+  call s:h("DiagnosticWarn", { "fg": s:yellow })
+  call s:h("DiagnosticInfo", { "fg": s:blue })
+  call s:h("DiagnosticHint", { "fg": s:cyan })
+  call s:h("DiagnosticUnderlineError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineWarn", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineInfo", { "fg": s:blue, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineHint", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
+  " }}}
+
+  " Neovim LSP (for versions < 0.5.1) {{{
+  hi link LspDiagnosticsDefaultError DiagnosticError
+  hi link LspDiagnosticsDefaultWarning DiagnosticWarn
+  hi link LspDiagnosticsDefaultInformation DiagnosticInfo
+  hi link LspDiagnosticsDefaultHint DiagnosticHint
+  hi link LspDiagnosticsUnderlineError DiagnosticUnderlineError
+  hi link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
+  hi link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
+  hi link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
   " }}}
 endif
 
