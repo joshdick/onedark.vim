@@ -596,6 +596,7 @@ call s:h("CocErrorSign", { "fg": s:red })
 call s:h("CocWarningSign", { "fg": s:yellow })
 call s:h("CocInfoSign", { "fg": s:blue })
 call s:h("CocHintSign", { "fg": s:cyan })
+call s:h("CocFadeOut", { "fg": s:comment_grey })
 
 " neomake/neomake
 call s:h("NeomakeErrorSign", { "fg": s:red })
