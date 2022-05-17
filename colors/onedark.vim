@@ -647,6 +647,12 @@ hi link gitcommitUnmergedArrow gitcommitUnmergedFile
 
 " }}}
 
+" Vim-Specific Terminal Highlighting {{{
+"
+let g:terminal_ansi_color = [s:black.gui, s:red.gui, s:green.gui, s:yellow.gui, s:blue.gui, s:purple.gui, s:cyan.gui, s:white.gui, s:visual_grey.gui, s:dark_red.gui, s:green.gui,  s:dark_yellow.gui, s:blue.gui, s:purple.gui, s:cyan.gui, s:comment_grey.gui, s:background.gui, s:foreground.gui]
+"}}}
+"
+
 " Neovim-Specific Highlighting {{{
 
 if has("nvim")
