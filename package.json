@@ -25,11 +25,11 @@
     "url": "https://github.com/joshdick/onedark.vim.git"
   },
   "devDependencies": {
-    "eslint": "^7.30.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
+    "eslint": "^8.18.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.3.2"
+    "prettier": "^2.7.1"
   },
   "dependencies": {
     "termcolors": "0.7.3"
