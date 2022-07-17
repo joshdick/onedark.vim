@@ -85,6 +85,9 @@ function! s:h(group, style, ...)
     if (has_key(a:style, "gui"))
       let s:highlight.gui = a:style.gui
     endif
+    if (has_key(a:style, "cterm"))
+      let s:highlight.cterm = a:style.cterm
+    endif
   else
     let s:highlight = a:style
     let s:group_colors[a:group] = s:highlight " Cache default highlight group settings
