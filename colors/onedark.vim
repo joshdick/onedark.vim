@@ -600,6 +600,8 @@ call s:h("CocWarningSign", { "fg": s:yellow })
 call s:h("CocInfoSign", { "fg": s:blue })
 call s:h("CocHintSign", { "fg": s:cyan })
 call s:h("CocFadeOut", { "fg": s:comment_grey })
+" https://github.com/joshdick/onedark.vim/issues/313
+highlight! link CocMenuSel PmenuSel
 
 " neomake/neomake
 call s:h("NeomakeErrorSign", { "fg": s:red })
