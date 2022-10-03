@@ -85,6 +85,9 @@ function! s:h(group, style, ...)
     if (has_key(a:style, "gui"))
       let s:highlight.gui = a:style.gui
     endif
+    if (has_key(a:style, "cterm"))
+      let s:highlight.cterm = a:style.cterm
+    endif
   else
     let s:highlight = a:style
     let s:group_colors[a:group] = s:highlight " Cache default highlight group settings
@@ -159,12 +162,31 @@ let s:vertsplit = s:colors.vertsplit
 
 " Terminal Colors {{{
 
-let g:terminal_ansi_colors = [
-  \ s:black.gui, s:red.gui, s:green.gui, s:yellow.gui,
-  \ s:blue.gui, s:purple.gui, s:cyan.gui, s:comment_grey.gui,
-  \ s:visual_grey.gui, s:red.gui, s:green.gui, s:yellow.gui,
-  \ s:blue.gui, s:purple.gui, s:cyan.gui, s:white.gui
-\]
+if has('nvim')
+  let g:terminal_color_0 = s:black.gui
+  let g:terminal_color_1 = s:red.gui
+  let g:terminal_color_2 = s:green.gui
+  let g:terminal_color_3 = s:yellow.gui
+  let g:terminal_color_4 = s:blue.gui
+  let g:terminal_color_5 = s:purple.gui
+  let g:terminal_color_6 = s:cyan.gui
+  let g:terminal_color_7 = s:comment_grey.gui
+  let g:terminal_color_8 = s:visual_grey.gui
+  let g:terminal_color_9 = s:red.gui
+  let g:terminal_color_10 = s:green.gui
+  let g:terminal_color_11 = s:yellow.gui
+  let g:terminal_color_12 = s:blue.gui
+  let g:terminal_color_13 = s:purple.gui
+  let g:terminal_color_14 = s:cyan.gui
+  let g:terminal_color_15 = s:white.gui
+else
+  let g:terminal_ansi_colors = [
+    \ s:black.gui, s:red.gui, s:green.gui, s:yellow.gui,
+    \ s:blue.gui, s:purple.gui, s:cyan.gui, s:comment_grey.gui,
+    \ s:visual_grey.gui, s:red.gui, s:green.gui, s:yellow.gui,
+    \ s:blue.gui, s:purple.gui, s:cyan.gui, s:white.gui
+  \]
+endif
 
 " }}}
 
@@ -321,6 +343,7 @@ call s:h("goTypeDecl", { "fg": s:purple })
 " HTML (keep consistent with Markdown, below)
 call s:h("htmlArg", { "fg": s:dark_yellow })
 call s:h("htmlBold", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
+call s:h("htmlBoldItalic", { "fg": s:green, "gui": "bold,italic", "cterm": "bold,italic" })
 call s:h("htmlEndTag", { "fg": s:white })
 call s:h("htmlH1", { "fg": s:red })
 call s:h("htmlH2", { "fg": s:red })
@@ -413,6 +436,7 @@ call s:h("lessClass", { "fg": s:dark_yellow })
 " Markdown (keep consistent with HTML, above)
 call s:h("markdownBlockquote", { "fg": s:comment_grey })
 call s:h("markdownBold", { "fg": s:dark_yellow, "gui": "bold", "cterm": "bold" })
+call s:h("markdownBoldItalic", { "fg": s:green, "gui": "bold,italic", "cterm": "bold,italic" })
 call s:h("markdownCode", { "fg": s:green })
 call s:h("markdownCodeBlock", { "fg": s:green })
 call s:h("markdownCodeDelimiter", { "fg": s:green })
@@ -551,8 +575,8 @@ call s:h("GitGutterDelete", { "fg": s:red })
 
 " dense-analysis/ale
 call s:h("ALEError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
-call s:h("ALEWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline"})
-call s:h("ALEInfo", { "gui": "underline", "cterm": "underline"})
+call s:h("ALEWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
+call s:h("ALEInfo", { "gui": "underline", "cterm": "underline" })
 
 " easymotion/vim-easymotion
 call s:h("EasyMotionTarget", { "fg": s:red, "gui": "bold", "cterm": "bold" })
@@ -575,6 +599,7 @@ call s:h("CocErrorSign", { "fg": s:red })
 call s:h("CocWarningSign", { "fg": s:yellow })
 call s:h("CocInfoSign", { "fg": s:blue })
 call s:h("CocHintSign", { "fg": s:cyan })
+call s:h("CocFadeOut", { "fg": s:comment_grey })
 
 " neomake/neomake
 call s:h("NeomakeErrorSign", { "fg": s:red })
@@ -588,10 +613,14 @@ call s:h("mkdLink", { "fg": s:blue })
 call s:h("mkdURL", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
 
 " prabirshrestha/vim-lsp
-call s:h("LspError", { "fg": s:red })
-call s:h("LspWarning", { "fg": s:yellow })
-call s:h("LspInformation", { "fg": s:blue })
-call s:h("LspHint", { "fg": s:cyan })
+call s:h("LspErrorText", { "fg": s:red })
+call s:h("LspWarningText", { "fg": s:yellow })
+call s:h("LspInformationText", { "fg":s:blue })
+call s:h("LspHintText", { "fg":s:cyan })
+call s:h("LspErrorHighlight", { "fg": s:red, "gui": "underline", "cterm": "underline" })
+call s:h("LspWarningHighlight", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
+call s:h("LspInformationHighlight", { "fg":s:blue, "gui": "underline", "cterm": "underline" })
+call s:h("LspHintHighlight", { "fg":s:cyan, "gui": "underline", "cterm": "underline" })
 
 " tpope/vim-fugitive
 call s:h("diffAdded", { "fg": s:green })
@@ -649,19 +678,26 @@ if has("nvim")
   let g:terminal_color_foreground = s:foreground.gui
   " }}}
 
-  " Neovim LSP {{{
-  call s:h("LspDiagnosticsDefaultError", { "fg": s:red })
-  call s:h("LspDiagnosticsDefaultWarning", { "fg": s:yellow })
-  call s:h("LspDiagnosticsDefaultInformation", { "fg": s:blue })
-  call s:h("LspDiagnosticsDefaultHint", { "fg": s:cyan })
-  call s:h("LspDiagnosticsUnderlineError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineInformation", { "fg": s:blue, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsUnderlineHint", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
-  call s:h("LspDiagnosticsVirtualTextError", { "fg": s:red, "bg": s:cursor_grey  })
-  call s:h("LspDiagnosticsVirtualTextWarning", { "fg": s:yellow, "bg": s:cursor_grey  })
-  call s:h("LspDiagnosticsVirtualTextInformation", { "fg": s:blue, "bg": s:cursor_grey  })
-  call s:h("LspDiagnosticsVirtualTextHint", { "fg": s:cyan, "bg": s:cursor_grey  })
+  " Neovim Diagnostics {{{
+  call s:h("DiagnosticError", { "fg": s:red })
+  call s:h("DiagnosticWarn", { "fg": s:yellow })
+  call s:h("DiagnosticInfo", { "fg": s:blue })
+  call s:h("DiagnosticHint", { "fg": s:cyan })
+  call s:h("DiagnosticUnderlineError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineWarn", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineInfo", { "fg": s:blue, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineHint", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
+  " }}}
+
+  " Neovim LSP (for versions < 0.5.1) {{{
+  hi link LspDiagnosticsDefaultError DiagnosticError
+  hi link LspDiagnosticsDefaultWarning DiagnosticWarn
+  hi link LspDiagnosticsDefaultInformation DiagnosticInfo
+  hi link LspDiagnosticsDefaultHint DiagnosticHint
+  hi link LspDiagnosticsUnderlineError DiagnosticUnderlineError
+  hi link LspDiagnosticsUnderlineWarning DiagnosticUnderlineWarn
+  hi link LspDiagnosticsUnderlineInformation DiagnosticUnderlineInfo
+  hi link LspDiagnosticsUnderlineHint DiagnosticUnderlineHint
   " }}}
 endif
 

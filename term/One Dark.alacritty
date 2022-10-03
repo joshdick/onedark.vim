@@ -10,6 +10,11 @@ colors:
     text: '0x2c323c'
     cursor: '0x5c6370'
 
+  # Selection colors
+  selection:
+    text: CellForeground
+    background: '0x3e4452'
+
   # Normal colors
   normal:
     black:   '0x2c323c'
@@ -31,4 +36,3 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0xabb2bf'
-
