@@ -577,6 +577,9 @@ call s:h("GitGutterDelete", { "fg": s:red })
 call s:h("ALEError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
 call s:h("ALEWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
 call s:h("ALEInfo", { "gui": "underline", "cterm": "underline" })
+call s:h("ALEErrorSign", { "fg": s:red })
+call s:h("ALEWarningSign", { "fg": s:yellow })
+call s:h("ALEInfoSign", { })
 
 " easymotion/vim-easymotion
 call s:h("EasyMotionTarget", { "fg": s:red, "gui": "bold", "cterm": "bold" })
