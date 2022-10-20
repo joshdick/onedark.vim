@@ -193,19 +193,19 @@ endif
 " Syntax Groups (descriptions and ordering from `:h w18`) {{{
 
 call s:h("Comment", { "fg": s:comment_grey, "gui": "italic", "cterm": "italic" }) " any comment
-call s:h("Constant", { "fg": s:cyan }) " any constant
+call s:h("Constant", { "fg": s:red }) " any constant
 call s:h("String", { "fg": s:green }) " a string constant: "this is a string"
 call s:h("Character", { "fg": s:green }) " a character constant: 'c', '\n'
 call s:h("Number", { "fg": s:dark_yellow }) " a number constant: 234, 0xff
 call s:h("Boolean", { "fg": s:dark_yellow }) " a boolean constant: TRUE, false
 call s:h("Float", { "fg": s:dark_yellow }) " a floating point constant: 2.3e10
-call s:h("Identifier", { "fg": s:red }) " any variable name
+call s:h("Identifier", { "fg": s:white }) " any variable name
 call s:h("Function", { "fg": s:blue }) " function name (also: methods for classes)
 call s:h("Statement", { "fg": s:purple }) " any statement
 call s:h("Conditional", { "fg": s:purple }) " if, then, else, endif, switch, etc.
 call s:h("Repeat", { "fg": s:purple }) " for, do, while, etc.
 call s:h("Label", { "fg": s:purple }) " case, default, etc.
-call s:h("Operator", { "fg": s:purple }) " sizeof", "+", "*", etc.
+call s:h("Operator", { "fg": s:red }) " sizeof", "+", "*", etc.
 call s:h("Keyword", { "fg": s:purple }) " any other keyword
 call s:h("Exception", { "fg": s:purple }) " try, catch, throw
 call s:h("PreProc", { "fg": s:yellow }) " generic Preprocessor
@@ -214,8 +214,8 @@ call s:h("Define", { "fg": s:purple }) " preprocessor #define
 call s:h("Macro", { "fg": s:purple }) " same as Define
 call s:h("PreCondit", { "fg": s:yellow }) " preprocessor #if, #else, #endif, etc.
 call s:h("Type", { "fg": s:yellow }) " int, long, char, etc.
-call s:h("StorageClass", { "fg": s:yellow }) " static, register, volatile, etc.
-call s:h("Structure", { "fg": s:yellow }) " struct, union, enum, etc.
+call s:h("StorageClass", { "fg": s:cyan }) " static, register, volatile, etc.
+call s:h("Structure", { "fg": s:cyan }) " struct, union, enum, etc.
 call s:h("Typedef", { "fg": s:yellow }) " A typedef
 call s:h("Special", { "fg": s:blue }) " any special symbol
 call s:h("SpecialChar", { "fg": s:dark_yellow }) " special character in a constant
@@ -225,7 +225,7 @@ call s:h("SpecialComment", { "fg": s:comment_grey }) " special things inside a c
 call s:h("Debug", {}) " debugging statements
 call s:h("Underlined", { "gui": "underline", "cterm": "underline" }) " text that stands out, HTML links
 call s:h("Ignore", {}) " left blank, hidden
-call s:h("Error", { "fg": s:red }) " any erroneous construct
+call s:h("Error", { "fg": s:dark_red }) " any erroneous construct
 call s:h("Todo", { "fg": s:purple }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 " }}}
@@ -251,7 +251,7 @@ if get(g:, 'onedark_hide_endofbuffer', 0)
     " If enabled, will style end-of-buffer filler lines (~) to appear to be hidden.
     call s:h("EndOfBuffer", { "fg": s:black }) " filler lines (~) after the last line in the buffer
 endif
-call s:h("ErrorMsg", { "fg": s:red }) " error messages on the command line
+call s:h("ErrorMsg", { "fg": s:dark_red }) " error messages on the command line
 call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
 call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
 call s:h("FoldColumn", {}) " 'foldcolumn'
@@ -574,7 +574,7 @@ call s:h("GitGutterChange", { "fg": s:yellow })
 call s:h("GitGutterDelete", { "fg": s:red })
 
 " dense-analysis/ale
-call s:h("ALEError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
+call s:h("ALEError", { "fg": s:dark_red, "gui": "underline", "cterm": "underline" })
 call s:h("ALEWarning", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
 call s:h("ALEInfo", { "gui": "underline", "cterm": "underline" })
 call s:h("ALEErrorSign", { "fg": s:red })
@@ -598,7 +598,7 @@ hi link SignifySignChange GitGutterChange
 hi link SignifySignDelete GitGutterDelete
 
 " neoclide/coc.nvim
-call s:h("CocErrorSign", { "fg": s:red })
+call s:h("CocErrorSign", { "fg": s:dark_red })
 call s:h("CocWarningSign", { "fg": s:yellow })
 call s:h("CocInfoSign", { "fg": s:blue })
 call s:h("CocHintSign", { "fg": s:cyan })
@@ -618,11 +618,11 @@ call s:h("mkdLink", { "fg": s:blue })
 call s:h("mkdURL", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
 
 " prabirshrestha/vim-lsp
-call s:h("LspErrorText", { "fg": s:red })
+call s:h("LspErrorText", { "fg": s:dark_red })
 call s:h("LspWarningText", { "fg": s:yellow })
 call s:h("LspInformationText", { "fg":s:blue })
 call s:h("LspHintText", { "fg":s:cyan })
-call s:h("LspErrorHighlight", { "fg": s:red, "gui": "underline", "cterm": "underline" })
+call s:h("LspErrorHighlight", { "fg": s:dark_red, "gui": "underline", "cterm": "underline" })
 call s:h("LspWarningHighlight", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
 call s:h("LspInformationHighlight", { "fg":s:blue, "gui": "underline", "cterm": "underline" })
 call s:h("LspHintHighlight", { "fg":s:cyan, "gui": "underline", "cterm": "underline" })
@@ -684,11 +684,11 @@ if has("nvim")
   " }}}
 
   " Neovim Diagnostics {{{
-  call s:h("DiagnosticError", { "fg": s:red })
+  call s:h("DiagnosticError", { "fg": s:dark_red })
   call s:h("DiagnosticWarn", { "fg": s:yellow })
   call s:h("DiagnosticInfo", { "fg": s:blue })
   call s:h("DiagnosticHint", { "fg": s:cyan })
-  call s:h("DiagnosticUnderlineError", { "fg": s:red, "gui": "underline", "cterm": "underline" })
+  call s:h("DiagnosticUnderlineError", { "fg": s:dark_red, "gui": "underline", "cterm": "underline" })
   call s:h("DiagnosticUnderlineWarn", { "fg": s:yellow, "gui": "underline", "cterm": "underline" })
   call s:h("DiagnosticUnderlineInfo", { "fg": s:blue, "gui": "underline", "cterm": "underline" })
   call s:h("DiagnosticUnderlineHint", { "fg": s:cyan, "gui": "underline", "cterm": "underline" })
