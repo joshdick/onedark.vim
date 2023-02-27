@@ -603,6 +603,12 @@ call s:h("CocWarningSign", { "fg": s:yellow })
 call s:h("CocInfoSign", { "fg": s:blue })
 call s:h("CocHintSign", { "fg": s:cyan })
 call s:h("CocFadeOut", { "fg": s:comment_grey })
+call s:h("CocErrorHighlight",
+      \ { "fg": s:red, "gui": "underline", "cterm": "underline"  })
+call s:h("CocWarningHighlight",
+      \ { "fg": s:yellow, "gui": "underline", "cterm": "underline"  })
+call s:h("CocInfoHighlight",
+      \ { "fg": s:blue, "gui": "underline", "cterm": "underline"  })
 " https://github.com/joshdick/onedark.vim/issues/313
 highlight! link CocMenuSel PmenuSel
 
