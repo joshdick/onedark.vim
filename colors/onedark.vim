@@ -162,29 +162,12 @@ let s:vertsplit = s:colors.vertsplit
 
 " Terminal Colors {{{
 
-if has('nvim')
-  let g:terminal_color_0 = s:black.gui
-  let g:terminal_color_1 = s:red.gui
-  let g:terminal_color_2 = s:green.gui
-  let g:terminal_color_3 = s:yellow.gui
-  let g:terminal_color_4 = s:blue.gui
-  let g:terminal_color_5 = s:purple.gui
-  let g:terminal_color_6 = s:cyan.gui
-  let g:terminal_color_7 = s:comment_grey.gui
-  let g:terminal_color_8 = s:visual_grey.gui
-  let g:terminal_color_9 = s:red.gui
-  let g:terminal_color_10 = s:green.gui
-  let g:terminal_color_11 = s:yellow.gui
-  let g:terminal_color_12 = s:blue.gui
-  let g:terminal_color_13 = s:purple.gui
-  let g:terminal_color_14 = s:cyan.gui
-  let g:terminal_color_15 = s:white.gui
-else
+if !has('nvim')
   let g:terminal_ansi_colors = [
     \ s:black.gui, s:red.gui, s:green.gui, s:yellow.gui,
-    \ s:blue.gui, s:purple.gui, s:cyan.gui, s:comment_grey.gui,
-    \ s:visual_grey.gui, s:red.gui, s:green.gui, s:yellow.gui,
-    \ s:blue.gui, s:purple.gui, s:cyan.gui, s:white.gui
+    \ s:blue.gui, s:purple.gui, s:cyan.gui, s:white.gui,
+    \ s:visual_grey.gui, s:dark_red.gui, s:green.gui, s:dark_yellow.gui,
+    \ s:blue.gui, s:purple.gui, s:cyan.gui, s:comment_grey.gui
   \]
 endif
 
