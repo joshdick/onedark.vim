@@ -218,13 +218,17 @@ call s:h("ColorColumn", { "bg": s:cursor_grey }) " used for the columns set with
 call s:h("Conceal", {}) " placeholder characters substituted for concealed text (see 'conceallevel')
 call s:h("Cursor", { "fg": s:black, "bg": s:blue }) " the character under the cursor
 call s:h("CursorIM", {}) " like Cursor, but used when in IME mode
-call s:h("CursorColumn", { "bg": s:cursor_grey }) " the screen column that the cursor is in when 'cursorcolumn' is set
-if &diff
-  " Don't change the background color in diff mode
-  call s:h("CursorLine", { "gui": "underline" }) " the screen line that the cursor is in when 'cursorline' is set
-else
-  call s:h("CursorLine", { "bg": s:cursor_grey }) " the screen line that the cursor is in when 'cursorline' is set
-endif
+function! s:update_cursor_highlighting()
+  if &diff
+    call s:h("CursorLine", { "gui": "underline", "cterm": "underline" })   " the screen line that the cursor is in when 'cursorline' is set
+    call s:h("CursorColumn", {})                     " the screen line that the cursor is in when 'cursorcolumn' is set
+  else
+    call s:h("CursorLine", { "bg": s:cursor_grey })   " the screen line that the cursor is in when 'cursorline' is set
+    call s:h("CursorColumn", { "bg": s:cursor_grey }) " the screen line that the cursor is in when 'cursorcolumn' is set
+  endif
+endfunction
+call s:update_cursor_highlighting()
+autocmd OptionSet diff call s:update_cursor_highlighting()
 call s:h("Directory", { "fg": s:blue }) " directory names (and other special names in listings)
 call s:h("DiffAdd", { "bg": s:green, "fg": s:black }) " diff mode: Added line
 call s:h("DiffChange", { "fg": s:yellow, "gui": "underline", "cterm": "underline" }) " diff mode: Changed line
