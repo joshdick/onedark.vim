@@ -69,6 +69,17 @@ function! airline#themes#onedark#refresh()
         \ 'airline_c': [ group[0], '', group[2], '', '' ]
         \ }
 
+  " Match :term colors
+  let g:airline#themes#onedark#palette.terminal =
+      \ airline#themes#generate_color_map(s:I1, s:I2, s:I3)
+  let g:airline#themes#onedark#palette.terminal.airline_term = s:I3
+  let g:airline#themes#onedark#palette.normal.airline_term = s:N3
+  let g:airline#themes#onedark#palette.normal_modified.airline_term = s:N3
+  let g:airline#themes#onedark#palette.visual.airline_term = s:V3
+  let g:airline#themes#onedark#palette.visual_modified.airline_term = s:V3
+  let g:airline#themes#onedark#palette.inactive.airline_term = s:IA2
+  let g:airline#themes#onedark#palette.inactive_modified.airline_term = s:IA2
+
   " Warning/Error styling code from vim-airline's ["base16" theme](https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/base16.vim)
 
   " Warnings
